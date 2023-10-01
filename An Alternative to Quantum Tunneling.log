@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  1 OCT 2023 00:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  1 OCT 2023 07:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1214,15 +1214,15 @@ as not changed.
 Here is how much of TeX's memory you used:
  32587 strings out of 478542
  660066 string characters out of 5850401
- 1106481 words of memory out of 5000000
+ 1107482 words of memory out of 5000000
  49899 multiletter control sequences out of 15000+600000
  465888 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,6n,122p,1318b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
-cal/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
-21/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2021/texmf-d
-ist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-dist/fonts/
+cal/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texliv
+e/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-d
+ist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2021/texmf-dist/fonts/
 enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/l
 m/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.p
 fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/l
@@ -1235,14 +1235,15 @@ blic/lm/lmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr
 /local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texli
 ve/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/f
-onts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/
-public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/ty
-pe1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "An Alternative to Quantum Tunneling.pdf" (5 pages, 257920 by
+onts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/
+public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsf
+onts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/
+amsfonts/symbols/msbm7.pfb>
+Output written on "An Alternative to Quantum Tunneling.pdf" (5 pages, 261500 by
 tes).
 PDF statistics:
- 195 PDF objects out of 1000 (max. 8388607)
- 129 compressed objects within 2 object streams
+ 200 PDF objects out of 1000 (max. 8388607)
+ 132 compressed objects within 2 object streams
  21 named destinations out of 1000 (max. 500000)
  189 words of extra memory for PDF output out of 10000 (max. 10000000)
 
