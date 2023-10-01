@@ -328,10 +328,12 @@ $$
 
 Then on the upper-half plane, the projective special linear group $\text{PSL}(2,\mathbb{R})$ is its automorphism group. Furthermore, elements of the group are conformal mapping that preserve not only angles but hyperbolic distance. Hence, $\text{PSL}(2,\mathbb{R})$ is also the isometry group of the upper-half plane.
 
+
+To derive an equivalent model, take any $M\in \text{PSL}(2,\mathbb{R})\setminus\left\lbrace \text{id}\right\rbrace$, then there exists an isomorphism to map $M$ to a linear fractional (M\"{o}bius) map $T_M(z)=\frac{az+b}{cz+d}, a,b,c,d,z\in\mathbb{C}$.
 \begin{definition}[Hyperbolic-Orbit]
-To derive an equivalent model, take any $M\in \text{PSL}(2,\mathbb{R})\setminus\left\lbrace \text{id}\right\rbrace$ where there exists an isomorphism to map $M$ to a linear fractional (M\"{o}bius) map $T_M(z)=\frac{az+b}{cz+d}, a,b,c,d,z\in\mathbb{C}$. Then, 
+Define the hyperbolic-orbit algorithm to be the following new operation:
 $$
-\left( T_M(A) \odot_{\mathbb{H}^2} T_M(B)\right)_{kl} := \sum\limits_{i=1}^m d_{\mathbb{H}^2} \left(T_M \left( a_{ki} \right) ,T_M\left( b_{il}\right) \right) =  \sum\limits_{i=1}^m d_{\mathbb{H}^2} \left( a_{ki}  , b_{il} \right)  =\left( A\odot_{\mathbb{H}^2} B\right)_{kl},
+\left( T_M(A) \odot_{\mathbb{H}^2} T_M(B)\right)_{kl} := \sum\limits_{i=1}^m d_{\mathbb{H}^2} \left(T_M \left( a_{ki} \right) ,T_M\left( b_{il}\right) \right) =  \sum\limits_{i=1}^m d_{\mathbb{H}^2} \left( a_{ki}  , b_{il} \right)  =\left( A\odot_{\mathbb{H}^2} B\right)_{kl}.
 $$
 
 \end{definition}
