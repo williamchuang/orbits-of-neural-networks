@@ -331,10 +331,17 @@ Then on the upper-half plane, the projective special linear group $\text{PSL}(2,
 
 To derive an equivalent model, take any $M\in \text{PSL}(2,\mathbb{R})\setminus\left\lbrace \text{id}\right\rbrace$, then there exists an isomorphism to map $M$ to a linear fractional (M\"{o}bius) map $T_M(z)=\frac{az+b}{cz+d}, a,b,c,d,z\in\mathbb{C}$.
 \begin{definition}[Hyperbolic-Orbit]
-Define the hyperbolic-orbit algorithm to be the following new operation:
+Define \textit{the hyperbolic-orbit product} is the following new operation: 
 $$
 \left( T_M(A) \odot_{\mathbb{H}^2} T_M(B)\right)_{kl} := \sum\limits_{i=1}^m d_{\mathbb{H}^2} \left(T_M \left( a_{ki} \right) ,T_M\left( b_{il}\right) \right).
 $$
+\end{definition}
+\begin{definition}
+Let $W$ be a neural network model and assume $W$ converged already with the hyperbolic-orbit product implemented. Then with the above notations, the orbit of $W$ of the given weights (points in the hyperbolic space) is the set
+$$
+\left\lbrace T_M(a_{ki}) \right\rbrace \cup \left\lbrace T_M(b_{il}) \right\rbrace
+$$
+for all $M\in \text{PSL}(2,\mathbb{R})$, and for all $k\in\left\lbrace 1,...,n\right\rbrace$, $l\in\left\lbrace 1,...,d\right\rbrace$, and $i\in\left\lbrace 1,...,m\right\rbrace$.
 \end{definition}
 \begin{proposition}
 With the above notations, then the newly defined product is an invariant:
