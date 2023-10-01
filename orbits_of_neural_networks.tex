@@ -328,19 +328,22 @@ $$
 
 Then on the upper-half plane, the projective special linear group $\text{PSL}(2,\mathbb{R})$ is its automorphism group. Furthermore, elements of the group are conformal mapping that preserve not only angles but hyperbolic distance. Hence, $\text{PSL}(2,\mathbb{R})$ is also the isometry group of the upper-half plane.
 
+\begin{definition}[Hyperbolic-Orbit]
 To derive an equivalent model, take any $M\in \text{PSL}(2,\mathbb{R})\setminus\left\lbrace \text{id}\right\rbrace$, 
 $$
 \left( M(A) \odot_{\mathbb{H}^2} M(B)\right)_{kl} := \sum\limits_{i=1}^n d_{\mathbb{H}^2} \left(M \left( a_{ki} \right) ,M\left( b_{il}\right) \right) =  \sum\limits_{i=1}^n d_{\mathbb{H}^2} \left( a_{ki}  , b_{il} \right)  =\left( A\odot_{\mathbb{H}^2} B\right)_{kl}.
 $$
+\end{definition}
 
 
-
-\section{Empirical example}
-\subsection{Example 1}
+\section{Example}
+All layers of a given neural network model can be implemented the above hyperbolic-orbit algorithm. The following is an example when the hyperbolic-orbit algorithm is applied to self-attention mechanism, i.e. transformer-based models.
 Let $A=Q$ and $B=K^T$ in self-attention mechanism\cite{vaswani2017attention} using dynamic scaling factor $\beta$.
 
 \section{Discussion}
-\section{Conclusion}
+With the hyperbolic-orbit algorithm, it is possible to find an appropriate M\"{o}bius mapping $M\in\text{PSL}(2,\mathbb{R})$ such that training a 3-node neural network become not necessarily NP-hard in \cite{blum1988training}. Further, if every layer of a given neural network is implemented with the hyperbolic-orbit algorithm introduced in this paper, by combining with perturbations and parallel computing, the steepest descent path toward the global minimum could be designed. The algorithm introduced by the paper can help to save training time for parallel computing in the ensemble method, that is, instead of starting over from the beginning to train $N$ models in parallel, the training can start with $N$ models that are equivalent to a trained model that already has a small error. Then, in each epoch, the best model could be selected and instantaneously its $N$ equivalent models could be obtained using the hyperbolic-orbit algorithm.
+
+
 %\section{Limitation}
 
 
