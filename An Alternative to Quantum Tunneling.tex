@@ -372,18 +372,66 @@ Since for each $z_1,z_2\in\mathbb{H}^2$, $d_{\mathbb{H}^2}(z_1,z_2)=\rho_{\mathb
 All layers of a given neural network model can be implemented with the above hyperbolic-orbit algorithm. The following is an example when the hyperbolic-orbit algorithm is applied to the self-attention mechanism, i.e. transformer-based models.
 Let $A=Q\in \mathbb{C}^{n\times d_q}$ and $B=K^t\in \mathbb{C}^{d_k\times n}$ in self-attention mechanism\cite{vaswani2017attention} using dynamic scaling factor $\beta$ (defined in our another work in progress), and by convention let $d_q=d_k$.
 
+
+
 \subsection{Apply to models that were trained without using the hyperbolic-length product}
 Hyperbolic-orbit Algorithm can be implemented into any models that is trained in a traditional method immediately. Let $\Omega$ be a model that is trained without using hyperbolic-length product. Once the matrix multiplication between two matrices called $A$ and $B$ within $\Omega$ is chosen to be replaced with hyperbolic-length product, the matrices $A\in\mathbb{R}^{n\times m}$ and $B \in\mathbb{R}^{m\times d}$ can be easily embedded into $\mathbb{H}^2$. 
 
 In matrix $A$, the $i$-th column which has $n$ entries, and in matrix $B$, the $i$-th row which has $d$ entries will have $n\times d$ products and this gives $n\times d$ equations to determine where to embedded $a_{ki}$ and $b_{il}$. 
 
+Denote the images of $a_{ki}$ and $b_{il}$ in $\mathbb{H}^2$ using $a_{ki}'$ and $b_{il}'$. 
 The following embedding algorithm can test if the hyperbolic-orbit algorithm is applicable.
 For each i in 1,...,m,\\
 For each l in 1,...,d\\
-Consider hyperbolic circles center at $b_{il}$ with radii $d_{\mathbb{H}^2}(a_{ki}, b_{il} )=a_{ki}b_{il} $, and k from 1 to n. 
-Consider hyperbolic circles center at $b_{ij}$ for each $j\neq l$  with radii $d_{\mathbb{H}^2}(a_{ki}, b_{ij} )=a_{ki}b_{ij} $, and k from 1 to n. 
-If for each $k$, each pair of hyperbolic circles that are corresponding to the same k, one has radius $d_{\mathbb{H}^2}(a_{ki}, b_{il} )$ and the other has radius $d_{\mathbb{H}^2}(a_{ki}, b_{ij}) $ has an interception, then do the next $j$ of $b_{ij}$.
+Consider hyperbolic circles center at $b_{il}'$ with radii $d_{\mathbb{H}^2}(a_{ki}', b_{il}' )=a_{ki}b_{il} $, and k from 1 to n. 
+Consider hyperbolic circles center at $b_{ij}'$ for each $j\neq l$  with radii $d_{\mathbb{H}^2}(a_{ki}', b_{ij}' )=a_{ki}b_{ij} $, and k from 1 to n. 
+If for each $k$, each pair of hyperbolic circles that are corresponding to the same k, one has radius $d_{\mathbb{H}^2}(a_{ki}', b_{il}' )$ and the other has radius $d_{\mathbb{H}^2}(a_{ki}', b_{ij}') $ has an interception, then do the next $j$ of $b_{ij}'$.
 Finally, if there exist interceptions in the above process for all i, then $A$ and $B$ can be embedded into $\mathbb{H}^2$ and use the hyperbolic-orbit algorithm to replace matrix multiplication.
+
+\subsection{Apply to any models that were trained without using the hyperbolic-length product}
+A special case that can guarantee that the matrix multiplication between $A$ and $B$ can be replaced by the hyperbolic-orbit algorithm is that if $A$ is a row vector, or $B$ is a column vector.
+
+Let $\Omega$ be a model that is trained without using hyperbolic-length product. Once the matrix multiplication between $A$ and $B$ within $\Omega$ is chosen to be replaced with hyperbolic-length product, the matrices $A\in\mathbb{R}^{n\times m}$ and $B \in\mathbb{R}^{m\times d}$ can be easily embedded into $\mathbb{H}^2$. For instance, let $b_{il}\mapsto b_{il} + \delta_2 i$ where $\delta_2>0$. Then, the point on $\mathbb{H}^2$ that $a_{ki}$ is mapped to can be easily computed, since $a_{ki}b_{il}$ and $\delta_2$ are fixed. 
+
+Let $ a_{ki} \mapsto a_{ki}+\delta_1 i $, $b_{il}\mapsto b_{il} + \delta_2 i$ where $\delta_1, \delta_2>0$  so the goal is to find $\delta_1, \delta_2$ using the following two given conditions:
+
+$$
+d_{\mathbb{H}^2}\left(a_{ki}+\delta_1 i, b_{il}+\delta_2 i\right) = a_{ki}b_{il},
+$$
+and
+$$
+d_{\mathbb{H}^2}\left(a_{ki}+\delta_1 i, b_{il}+\delta_2 i\right) = \cosh^{-1}\left( 1+\frac{\vert (a_{ki}+\delta_1 i) -( b_{il}+\delta_2 i) \vert}{2\delta_1\delta_2}\right).
+$$
+Hence,
+$$
+a_{ki}b_{il}=\cosh^{-1}\left( 1+\frac{\vert (a_{ki}+\delta_1 i) -( b_{il}+\delta_2 i) \vert}{2\delta_1\delta_2}\right),
+$$
+$$
+\Rightarrow 4 \delta_1^2\delta_2^2 \left(\cosh\left(a_{ki}b_{il}\right)-1\right)^2=\left((a_{ki}+\delta_1 i) -( b_{il}+\delta_2 i)\right)^2.
+$$
+Let $\gamma=\cosh\left(a_{ki}b_{il}\right)$. Then, 
+$$
+\delta_1:=
+\max\left\lbrace 
+\frac{-\delta_2\pm 
+\sqrt{ 
+\delta_2^2-
+\left( 
+4\delta_2^2
+\left(\gamma-1\right)-1
+\right)
+\left(
+\delta_2^2-\left(a_{ki}-b_{il}\right)^2
+\right)
+}
+}
+{4\delta_2^2\left(\gamma-1\right) -1
+}
+\right\rbrace.
+$$
+
+
+
 
 After implemented the hyperbolic-length product and hyperbolic-orbit algorithm to the trained model, with the same training set the trained the model, the new modified model will give exactly the same output. The only distinction will happen only when the old and new model were fed in samples that were out of the training set. 
 \section{Discussion}
@@ -409,5 +457,6 @@ With the hyperbolic-orbit algorithm, it is possible to find an appropriate M\"{o
 \bibliographystyle{amsplain} % We choose the "plain" reference style
 \bibliography{refs} % Entries are in the refs.bib file
 \end{document}
+
 
 
