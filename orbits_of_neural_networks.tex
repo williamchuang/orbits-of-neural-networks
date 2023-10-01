@@ -345,6 +345,17 @@ $$
 \begin{proof}
 This result follows immediately from the property of the M\"{o}bius mapping $T_M$ when it is corresponding to a matrix $M$ in the projective special linear group $\text{PSL}(2,\mathbb{R})$, then $T_M$ is an isometry under the hyperbolic metric.
 \end{proof}
+Let $\mathbb{B}^2:=\left\lbrace z\in\mathbb{C} : \vert z \vert <1\right\rbrace$ be the Poincare's disc and $\Psi$ be the Cayley's transformation $\Psi: \mathbb{H}^2 \to \mathbb{B}^2$.
+
+\begin{proposition}
+With the above definition and proposition, then the value of the product has the same value when the points $a_{ki}$ and $b_{il}$ are sent to Poincare's disc:
+$$
+\left( T_M(A) \odot_{\mathbb{H}^2} T_M(B)\right)_{kl} = \sum\limits_{i=1}^m d_{\mathbb{H}^2} \left(T_M \left( a_{ki} \right) ,T_M\left( b_{il}\right) \right)
+=  \sum\limits_{i=1}^m \rho_{\mathbb{B}^2} \left(T_M \left( a_{ki} \right) ,T_M\left( b_{il}\right) \right) .$$
+\end{proposition}
+\begin{proof}
+Since for each $z_1,z_2\in\mathbb{H}^2$, $d_{\mathbb{H}^2}(z_1,z_2)=\rho_{\mathbb{B}^2}(\Psi(z_1),\Psi(z_2)).$
+\end{proof}
 
 \section{Example}
 All layers of a given neural network model can be implemented with the above hyperbolic-orbit algorithm. The following is an example when the hyperbolic-orbit algorithm is applied to the self-attention mechanism, i.e. transformer-based models.
