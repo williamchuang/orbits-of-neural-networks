@@ -35,7 +35,7 @@
     {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
     {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
     {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
-    {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+    { }{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
     {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
     {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
     {€}{{\EUR}}1 {£}{{\pounds}}1
@@ -79,7 +79,7 @@
     {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
     {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
     {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
-    {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+    { }{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
     {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
     {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
     {€}{{\EUR}}1 {£}{{\pounds}}1
@@ -297,7 +297,7 @@ graphicx,enumerate,setspace,verbatim,tocloft,rotating}
 Inspired by \cite{yun2017global, blum1988training, judd1990neural}, consider the following question: let a training set and a trained neural network are given where the trained neural network already converges to a local minimum, meaning given a positive real number $\epsilon>0$, then each sample $X_i$ in the given training set, there is $N\in\mathbb{N}$ such that for the number of epoch greater than $N$, the model is in the epsilon ball around the local minimum of the loss surface (i.e. its parameter space or moduli space). Then, is there a way to find equivalent models of this trained model? 
 
 \begin{definition}
-\textit{Two models are equivalent} if they both converges on a fixed training set.
+\textit{Two models are equivalent} if they both converge on a fixed training set.
 \end{definition}
 
 It is necessary to ask this question so that the trained model can be understood better to a point that the distribution of its weights can be studied using random matrix theory, and if all the other equivalent models can be derived instantaneously, then this is also equivalent to apply quantum computing to find all those equivalent solutions in parallel. 
@@ -337,7 +337,7 @@ $$
 
 
 \section{Example}
-All layers of a given neural network model can be implemented the above hyperbolic-orbit algorithm. The following is an example when the hyperbolic-orbit algorithm is applied to self-attention mechanism, i.e. transformer-based models.
+All layers of a given neural network model can be implemented with the above hyperbolic-orbit algorithm. The following is an example when the hyperbolic-orbit algorithm is applied to the self-attention mechanism, i.e. transformer-based models.
 Let $A=Q\in \mathbb{C}^{n\times d_q}$ and $B=K^T\in \mathbb{C}^{d_k\times n}$ in self-attention mechanism\cite{vaswani2017attention} using dynamic scaling factor $\beta$, and by convention let $d_q=d_k$.
 
 \section{Discussion}
@@ -363,4 +363,5 @@ With the hyperbolic-orbit algorithm, it is possible to find an appropriate M\"{o
 \bibliographystyle{amsplain} % We choose the "plain" reference style
 \bibliography{refs} % Entries are in the refs.bib file
 \end{document}
+
 
