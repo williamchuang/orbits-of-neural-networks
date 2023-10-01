@@ -1,0 +1,34 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{1}
+
+\bibitem{beardon2012geometry}
+Alan~F. Beardon, \emph{The geometry of discrete groups}, Graduate Texts in
+  Mathematics, vol.~91, Springer-Verlag, New York, 1995, Corrected reprint of
+  the 1983 original. \MR{1393195}
+
+\bibitem{blum1988training}
+Avrim Blum and Ronald Rivest, \emph{Training a 3-node neural network is
+  np-complete}, Advances in neural information processing systems \textbf{1}
+  (1988).
+
+\bibitem{judd1990neural}
+J~Stephen Judd, \emph{Neural network design and the complexity of learning},
+  MIT press, 1990.
+
+\bibitem{vaswani2017attention}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+  Aidan~N Gomez, {\L}ukasz Kaiser, and Illia Polosukhin, \emph{Attention is all
+  you need}, Advances in neural information processing systems \textbf{30}
+  (2017).
+
+\bibitem{yun2017global}
+Chulhee Yun, Suvrit Sra, and Ali Jadbabaie, \emph{Global optimality conditions
+  for deep neural networks}, arXiv preprint arXiv:1707.02444 (2017).
+
+\end{thebibliography}
