@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  1 OCT 2023 13:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  1 OCT 2023 13:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1210,7 +1210,7 @@ Overfull \hbox (0.26581pt too wide) in paragraph at lines 375--375
 perbolic-
  []
 
-[4] (./An Alternative to Quantum Tunneling.bbl [5]) [6]
+[4] [5] (./An Alternative to Quantum Tunneling.bbl) [6]
 (./An Alternative to Quantum Tunneling.aux)
 Package rerunfilecheck Info: File `"An Alternative to Quantum Tunneling".out' h
 as not changed.
@@ -1223,7 +1223,7 @@ Here is how much of TeX's memory you used:
  49902 multiletter control sequences out of 15000+600000
  468886 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,6n,122p,1318b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 116i,6n,122p,1318b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
 cal/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texliv
 e/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-d
@@ -1244,7 +1244,7 @@ onts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/
 public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsf
 onts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/
 amsfonts/symbols/msbm7.pfb>
-Output written on "An Alternative to Quantum Tunneling.pdf" (6 pages, 270286 by
+Output written on "An Alternative to Quantum Tunneling.pdf" (6 pages, 270573 by
 tes).
 PDF statistics:
  214 PDF objects out of 1000 (max. 8388607)
