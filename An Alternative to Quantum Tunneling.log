@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  1 OCT 2023 16:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  1 OCT 2023 16:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1205,22 +1205,17 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
  [4]
-Overfull \hbox (0.26581pt too wide) in paragraph at lines 391--391
-[]\T1/lmr/bx/n/12 Apply to any mod-els that were trained with-out us-ing the hy
-perbolic-
- []
-
-[5] (./An Alternative to Quantum Tunneling.bbl [6]) [7]
+(./An Alternative to Quantum Tunneling.bbl [5]) [6]
 (./An Alternative to Quantum Tunneling.aux)
 Package rerunfilecheck Info: File `"An Alternative to Quantum Tunneling".out' h
 as not changed.
-(rerunfilecheck)             Checksum: 53CCF1F74B62B24B0EA5CCFD9E4B9580;1774.
+(rerunfilecheck)             Checksum: 1529862B9FCEF5C185137550A3A73B50;1279.
  ) 
 Here is how much of TeX's memory you used:
- 32597 strings out of 478542
- 660191 string characters out of 5850401
+ 32594 strings out of 478542
+ 660155 string characters out of 5850401
  1106487 words of memory out of 5000000
- 49903 multiletter control sequences out of 15000+600000
+ 49902 multiletter control sequences out of 15000+600000
  468886 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,6n,122p,1318b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1244,11 +1239,11 @@ onts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/
 public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsf
 onts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/
 amsfonts/symbols/msbm7.pfb>
-Output written on "An Alternative to Quantum Tunneling.pdf" (7 pages, 273665 by
+Output written on "An Alternative to Quantum Tunneling.pdf" (6 pages, 267504 by
 tes).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
- 154 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 500000)
- 213 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 214 PDF objects out of 1000 (max. 8388607)
+ 145 compressed objects within 2 object streams
+ 25 named destinations out of 1000 (max. 500000)
+ 205 words of extra memory for PDF output out of 10000 (max. 10000000)
 
