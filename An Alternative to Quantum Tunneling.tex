@@ -306,7 +306,7 @@ If a model can be replaced by another equivalent model, then the other model mig
 
 
 \section{Algorithm}
-In Euclidean space, equivalent models of a trained model can be obtained by redefining matrix multiplication using Euclidean distance $d_E(x,y)=\vert x-y\vert$ for all $x, y\in\mathbb{R}$. For instance, let $A$ and $B$ be two $n\times m$ matrices, and their entries are denoted by $a_{ki}$ and $b_{li}$ where $k,l\in\left\lbrace 1,...,n\right\rbrace$, and $i\in\left\lbrace 1,...,m\right\rbrace$. Then, $\left( A B^T\right)_{kl}=\sum\limits_{i=1}^m a_{ki}b_{il}$.
+In Euclidean space, equivalent models of a trained model can be obtained by redefining matrix multiplication using Euclidean distance $d_E(x,y)=\vert x-y\vert$ for all $x, y\in\mathbb{R}$. For instance, let $A$ be in $\mathbb{R}^{n\times m}$, $B$ be in $\mathbb{R}^{d\times m}$, , and their entries are denoted by $a_{ki}$ and $b_{li}$ where $k\in\left\lbrace 1,...,n\right\rbrace$, $l\in\left\lbrace 1,...,d\right\rbrace$, and $i\in\left\lbrace 1,...,m\right\rbrace$. Then, $\left( A B^T\right)_{kl}=\sum\limits_{i=1}^m a_{ki}b_{il}$.
 
 Instead of using matrix multiplication, a new operation using Euclidean distance is defined in the following:
 $$
@@ -319,7 +319,7 @@ $$
 $$
 In other words, the original given model is unchanged. This operation results in a translation of the loss surface. 
 
-Alternatively, every entry of the matrices $A\in\mathbb{R}^{n\times m}$ and $B \in\mathbb{R}^{n\times m}$ can be embedded into the upper half-plane $\mathbb{H}^2$. That is, the entries of $A$ and $B$ become complex numbers with positive imaginary part: $a_{ki}\in\mathbb{H}^2$ and $b_{il}\in\mathbb{H}^2$.
+Alternatively, every entry of the matrices $A\in\mathbb{R}^{n\times m}$ and $B \in\mathbb{R}^{d\times m}$ can be embedded into the upper half-plane $\mathbb{H}^2$. That is, the entries of $A$ and $B$ become complex numbers with positive imaginary part: $a_{ki}\in\mathbb{H}^2$ and $b_{il}\in\mathbb{H}^2$.
 
 Define a new binary operation between $A$ and $B$ using hyperbolic length on the upper-half plane $\mathbb{H}^2$\cite{beardon2012geometry}:
 $$
