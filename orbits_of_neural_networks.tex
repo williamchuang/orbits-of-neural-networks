@@ -306,16 +306,16 @@ If a model can be replaced by another equivalent model, then the other model mig
 
 
 \section{Algorithm}
-In Euclidean space, equivalent models of a trained model can be obtained by redefining matrix multiplication using Euclidean distance $d_E(x,y)=\vert x-y\vert$ for all $x, y\in\mathbb{R}$. For instance, let $A$ be in $\mathbb{R}^{n\times m}$, $B$ be in $\mathbb{R}^{d\times m}$, , and their entries are denoted by $a_{ki}$ and $b_{li}$ where $k\in\left\lbrace 1,...,n\right\rbrace$, $l\in\left\lbrace 1,...,d\right\rbrace$, and $i\in\left\lbrace 1,...,m\right\rbrace$. Then, $\left( A B^T\right)_{kl}=\sum\limits_{i=1}^m a_{ki}b_{il}$.
+In Euclidean space, equivalent models of a trained model can be obtained by redefining matrix multiplication using Euclidean distance $d_E(x,y)=\vert x-y\vert$ for all $x, y\in\mathbb{R}$. For instance, let $A$ be in $\mathbb{R}^{n\times m}$, $B$ be in $\mathbb{R}^{d\times m}$, , and their entries are denoted by $a_{ki}$ and $b_{li}$ where $k\in\left\lbrace 1,...,n\right\rbrace$, $l\in\left\lbrace 1,...,d\right\rbrace$, and $i\in\left\lbrace 1,...,m\right\rbrace$. Then, $\left( A B^t\right)_{kl}=\sum\limits_{i=1}^m a_{ki}b_{il}$.
 
 Instead of using matrix multiplication, a new operation using Euclidean distance is defined in the following:
 $$
-\left( A\odot_{E} B^T \right)_{kl}:= \sum\limits_{i=1}^m d_{E} \left( a_{ki} , b_{il} \right).
+\left( A\odot_{E} B^t \right)_{kl}:= \sum\limits_{i=1}^m d_{E} \left( a_{ki} , b_{il} \right).
 $$
 
 Now, let the above $A$ and $B$ be any two matrices that need to be multiplied in a given model that already converges under the above new operation $\odot_{E}$ between matrices $A$ and $B$. Then by adding a real number $\alpha$ to $A$ and $B$, infinite many equivalent models can be derived, since
 $$
-\left( \left( \alpha + A \right) \odot_{E}\left( \alpha+ B \right)\right)_{kl} := \sum\limits_{i=1}^m d_{E} \left(\alpha + a_{ki} ,\alpha + b_{il} \right) = \sum\limits_{i=1}^m d_{E} \left( a_{ki} ,  b_{il} \right) = \left( A\odot_{E} B\right)_{kl}.
+\left( \left( \alpha + A \right) \odot_{E}\left( \alpha+ B^t \right)\right)_{kl} := \sum\limits_{i=1}^m d_{E} \left(\alpha + a_{ki} ,\alpha + b_{il} \right) = \sum\limits_{i=1}^m d_{E} \left( a_{ki} ,  b_{il} \right) = \left( A\odot_{E} B^t\right)_{kl}.
 $$
 In other words, the original given model is unchanged. This operation results in a translation of the loss surface. 
 
@@ -323,7 +323,7 @@ Alternatively, every entry of the matrices $A\in\mathbb{R}^{n\times m}$ and $B \
 
 Define a new binary operation between $A$ and $B$ using hyperbolic length on the upper-half plane $\mathbb{H}^2$\cite{beardon2012geometry}:
 $$
-\left( A\odot_{\mathbb{H}^2} B \right)_{kl} :=\sum\limits_{i=1}^m d_{\mathbb{H}^2} \left( a_{ki} , b_{il} \right).
+\left( A\odot_{\mathbb{H}^2} B^t \right)_{kl} :=\sum\limits_{i=1}^m d_{\mathbb{H}^2} \left( a_{ki} , b_{il} \right).
 $$
 
 Then on the upper-half plane, the projective special linear group $\text{PSL}(2,\mathbb{R})$ is its automorphism group. Furthermore, elements of the group are conformal mapping that preserve not only angles but hyperbolic distance. Hence, $\text{PSL}(2,\mathbb{R})$ is also the isometry group of the upper-half plane.
@@ -333,7 +333,7 @@ To derive an equivalent model, take any $M\in \text{PSL}(2,\mathbb{R})\setminus\
 \begin{definition}[Hyperbolic-Orbit]
 Define \textit{the hyperbolic-orbit product} is the following new operation: 
 $$
-\left( T_M(A) \odot_{\mathbb{H}^2} T_M(B)\right)_{kl} := \sum\limits_{i=1}^m d_{\mathbb{H}^2} \left(T_M \left( a_{ki} \right) ,T_M\left( b_{il}\right) \right).
+\left( T_M(A) \odot_{\mathbb{H}^2} T_M(B^t)\right)_{kl} := \sum\limits_{i=1}^m d_{\mathbb{H}^2} \left(T_M \left( a_{ki} \right) ,T_M\left( b_{il}\right) \right).
 $$
 \end{definition}
 \begin{definition}
@@ -346,7 +346,7 @@ for all $M\in \text{PSL}(2,\mathbb{R})$, and for all $k\in\left\lbrace 1,...,n\r
 \begin{proposition}
 With the above notations, then the newly defined product is an invariant:
 $$
-\left( T_M(A) \odot_{\mathbb{H}^2} T_M(B)\right)_{kl} = \sum\limits_{i=1}^m d_{\mathbb{H}^2} \left(T_M \left( a_{ki} \right) ,T_M\left( b_{il}\right) \right)
+\left( T_M(A) \odot_{\mathbb{H}^2} T_M(B^t)\right)_{kl} = \sum\limits_{i=1}^m d_{\mathbb{H}^2} \left(T_M \left( a_{ki} \right) ,T_M\left( b_{il}\right) \right)
 =  \sum\limits_{i=1}^m d_{\mathbb{H}^2} \left( a_{ki}  , b_{il} \right)  =\left( A\odot_{\mathbb{H}^2} B\right)_{kl}.$$
 \end{proposition}
 \begin{proof}
@@ -357,7 +357,7 @@ Let $\mathbb{B}^2:=\left\lbrace z\in\mathbb{C} : \vert z \vert <1\right\rbrace$ 
 \begin{proposition}
 With the above definition and proposition, then the value of the product has the same value when the points $a_{ki}$ and $b_{il}$ are sent to Poincare's disc:
 $$
-\left( T_M(A) \odot_{\mathbb{H}^2} T_M(B)\right)_{kl} = \sum\limits_{i=1}^m d_{\mathbb{H}^2} \left(T_M \left( a_{ki} \right) ,T_M\left( b_{il}\right) \right)
+\left( T_M(A) \odot_{\mathbb{H}^2} T_M(B^t)\right)_{kl} = \sum\limits_{i=1}^m d_{\mathbb{H}^2} \left(T_M \left( a_{ki} \right) ,T_M\left( b_{il}\right) \right)
 =  \sum\limits_{i=1}^m \rho_{\mathbb{B}^2} \left(\Psi \left(T_M \left( a_{ki} \right)\right) ,\Psi\left( T_M\left( b_{il}\right) \right)\right) .$$
 \end{proposition}
 \begin{proof}
@@ -366,7 +366,7 @@ Since for each $z_1,z_2\in\mathbb{H}^2$, $d_{\mathbb{H}^2}(z_1,z_2)=\rho_{\mathb
 
 \section{Example}
 All layers of a given neural network model can be implemented with the above hyperbolic-orbit algorithm. The following is an example when the hyperbolic-orbit algorithm is applied to the self-attention mechanism, i.e. transformer-based models.
-Let $A=Q\in \mathbb{C}^{n\times d_q}$ and $B=K^T\in \mathbb{C}^{d_k\times n}$ in self-attention mechanism\cite{vaswani2017attention} using dynamic scaling factor $\beta$ (defined in our another work in progress), and by convention let $d_q=d_k$.
+Let $A=Q\in \mathbb{C}^{n\times d_q}$ and $B=K^t\in \mathbb{C}^{d_k\times n}$ in self-attention mechanism\cite{vaswani2017attention} using dynamic scaling factor $\beta$ (defined in our another work in progress), and by convention let $d_q=d_k$.
 
 \section{Discussion}
 With the hyperbolic-orbit algorithm, it is possible to find an appropriate M\"{o}bius mapping $M\in\text{PSL}(2,\mathbb{R})$ such that training a 3-node neural network become not necessarily NP-hard in \cite{blum1988training}. Further, if every layer of a given neural network is implemented with the hyperbolic-orbit algorithm introduced in this paper, by combining with perturbations and parallel computing, the steepest descent path toward the global minimum could be designed. The algorithm introduced by the paper can help to save training time for parallel computing in the ensemble method, that is, instead of starting over from the beginning to train $N$ models in parallel, $N\in\mathbb{N}$, the training can start with $N$ models that are equivalent to a trained model that already has an error that cannot be reduced by using the old training set--but on the orbits of the trained model, each equivalent model on the orbit can be kept training with a new training set by updating the weight matrices using back-propagation with the gradient descent algorithm. Then, in each epoch, the best model could be selected and instantaneously its $N$ equivalent models could be obtained using the hyperbolic-orbit algorithm.
