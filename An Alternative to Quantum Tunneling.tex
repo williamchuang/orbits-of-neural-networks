@@ -333,11 +333,18 @@ To derive an equivalent model, take any $M\in \text{PSL}(2,\mathbb{R})\setminus\
 \begin{definition}[Hyperbolic-Orbit]
 Define the hyperbolic-orbit algorithm to be the following new operation:
 $$
-\left( T_M(A) \odot_{\mathbb{H}^2} T_M(B)\right)_{kl} := \sum\limits_{i=1}^m d_{\mathbb{H}^2} \left(T_M \left( a_{ki} \right) ,T_M\left( b_{il}\right) \right) =  \sum\limits_{i=1}^m d_{\mathbb{H}^2} \left( a_{ki}  , b_{il} \right)  =\left( A\odot_{\mathbb{H}^2} B\right)_{kl}.
+\left( T_M(A) \odot_{\mathbb{H}^2} T_M(B)\right)_{kl} := \sum\limits_{i=1}^m d_{\mathbb{H}^2} \left(T_M \left( a_{ki} \right) ,T_M\left( b_{il}\right) \right).
 $$
-
 \end{definition}
-
+\begin{proposition}
+With the above notations, then the newly defined product is an invariant:
+$$
+\left( T_M(A) \odot_{\mathbb{H}^2} T_M(B)\right)_{kl} = \sum\limits_{i=1}^m d_{\mathbb{H}^2} \left(T_M \left( a_{ki} \right) ,T_M\left( b_{il}\right) \right)
+=  \sum\limits_{i=1}^m d_{\mathbb{H}^2} \left( a_{ki}  , b_{il} \right)  =\left( A\odot_{\mathbb{H}^2} B\right)_{kl}.$$
+\end{proposition}
+\begin{proof}
+This results follows immediately from the property of the M\"{o}bius mapping $T_M$ when it is corresponding to a matrix $M$ in the projective special linear group $\text{PSL}(2,\mathbb{R})$, then $T_M$ is an isometry under the hyperbolic metric.
+\end{proof}
 
 \section{Example}
 All layers of a given neural network model can be implemented with the above hyperbolic-orbit algorithm. The following is an example when the hyperbolic-orbit algorithm is applied to the self-attention mechanism, i.e. transformer-based models.
