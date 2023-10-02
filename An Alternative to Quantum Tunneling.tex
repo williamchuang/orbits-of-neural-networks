@@ -383,7 +383,23 @@ $$
 =  \sum\limits_{i=1}^m d_{\mathbb{H}^n} \left( a_{ki}  , b_{il} \right)  =\left( A\odot_{\mathbb{H}^n} B^t\right)_{kl}.$$
 \end{proposition}
 
+The question that aimed to solve by using this algorithm was mentioned in the first section. The goal is to replace matrix multiplication with a caveat that the situation mostly does not include finding inverses.
 
+In summary, there are two cases to apply hyperbolic-orbit algorithm. Let a model $W$ and a training set $X$ be given.
+\begin{itemize}
+\item[Case 1] $W$ was not trained.
+\begin{itemize}
+\item[Step 1] The selected matrices $A$ and $B$ can be embedded freely to hyperbolic space as long as the hyperbolic-length product can work properly in the usual training process.
+\item[Step 2] The dimension of hyperbolic space could start with two dimension to optimize the memory usage. If there is no restriction on the use of memory, then the easiest way is starting with dimension $n\times d$, where $\times$ is the scalar product in $\mathbb{N}$.
+\end{itemize}
+ 
+\item[Case 2] $W$ was trained. 
+\begin{itemize}
+\item[Step 1] Start with dimension $n\times d$ for embedding $A$ and $B$.
+\item[Step 2] Without loss of generality, for each $i$, choose the entry $b_i1$ in the matrix $B$ to be embedded to $\mathbb{H}^{nd}$. Embedded all $a_{ki}$ for $i$ from 1 to $n$ that are related to $b_i1$ in the matrix multiplication $AB$ to $\mathbb{H}^{nd}$ in a way that each hyperbolic length $d_{\mathbb{H}^{nd}}(a_{ki},b_{i1})=a_{ki}b_{i1}$. Then, embed $b_{i2}$ by updating the coordinates of each $a_{ki}$ to satisfy the condition $d_{\mathbb{H}^{nd}}(a_{ki},b_{i1})=a_{ki}b_{i1}$ for all $k$. To update the coordinates of each $a_{ki}$, all $b_{i1}, b_{i2},...,b_{i(l-1)}$ are fixed, since there is no restriction on hyperbolic length between $b_{il}$ and $b_{il'}$ for all $l\neq l'$. However, after each change on the coordinates of each $a_{ki}$, the hyperbolic length $d_{\mathbb{H}^{nd}}(a_{ki},b_{i1})=a_{ki}b_{i1}, d_{\mathbb{H}^{nd}}(a_{ki},b_{i2})=a_{ki}b_{i2},...,d_{\mathbb{H}^{nd}}(a_{ki},b_{i(l-1)})=a_{ki}b_{i(l-1)}$ must be maintained.
+\item[Step 3] Repeat the same procedure for $l$ from 1 to $d$ for each $b_{il}$. After each iteration, increase $i$ by one.
+\end{itemize}
+\end{itemize} 
  
 \section{Examples}
 \subsection{Self-attention mechanism in any transformer-based models with the hyperbolic-length product implemented before training}
@@ -399,9 +415,7 @@ In matrix $A$, the $i$-th column which has $n$ entries, and in matrix $B$, the $
 
 Denote the images of $a_{ki}$ and $b_{il}$ in $\mathbb{H}^2$ using $a_{ki}'$ and $b_{il}'$. 
 The following embedding algorithm can test if the hyperbolic-orbit algorithm is applicable.
-For each i in 1,...,m,\\
-For each l in 1,...,d\\
-Consider hyperbolic circles center at $b_{il}'$ with radii $d_{\mathbb{H}^2}(a_{ki}', b_{il}' )=a_{ki}b_{il} $, and k from 1 to n. 
+For each i in 1,...,m, and for each l in 1,...,d: Consider hyperbolic circles center at $b_{il}'$ with radii $d_{\mathbb{H}^2}(a_{ki}', b_{il}' )=a_{ki}b_{il} $, and k from 1 to n. 
 Consider hyperbolic circles center at $b_{ij}'$ for each $j\neq l$  with radii $d_{\mathbb{H}^2}(a_{ki}', b_{ij}' )=a_{ki}b_{ij} $, and k from 1 to n. 
 If for each $k$, each pair of hyperbolic circles that are corresponding to the same k, one has radius $d_{\mathbb{H}^2}(a_{ki}', b_{il}' )$ and the other has radius $d_{\mathbb{H}^2}(a_{ki}', b_{ij}') $ has an interception, then do the next $j$ of $b_{ij}'$.
 Finally, if there exist interceptions in the above process for all i, then $A$ and $B$ can be embedded into $\mathbb{H}^2$ and use the hyperbolic-orbit algorithm to replace matrix multiplication.
