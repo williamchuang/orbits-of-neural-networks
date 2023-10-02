@@ -5,7 +5,12 @@
   \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
 }
 \providecommand{\href}[2]{#2}
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{MR725161}
+Lars~V. Ahlfors, \emph{M\"{o}bius transformations in several dimensions},
+  Ordway Professorship Lectures in Mathematics, University of Minnesota, School
+  of Mathematics, Minneapolis, Minn., 1981. \MR{725161}
 
 \bibitem{beardon2012geometry}
 Alan~F. Beardon, \emph{The geometry of discrete groups}, Graduate Texts in
@@ -20,6 +25,27 @@ Avrim Blum and Ronald Rivest, \emph{Training a 3-node neural network is
 \bibitem{judd1990neural}
 J~Stephen Judd, \emph{Neural network design and the complexity of learning},
   MIT press, 1990.
+
+\bibitem{MR1138441}
+M.~\`E. Kapovich and L.~D. Potyaga\u{\i}lo, \emph{On the absence of finiteness
+  theorems of {A}hlfors and {S}ullivan for {K}leinian groups in higher
+  dimensions}, Sibirsk. Mat. Zh. \textbf{32} (1991), no.~2, 61--73, 212.
+  \MR{1138441}
+
+\bibitem{MR2402415}
+Michael Kapovich, \emph{Kleinian groups in higher dimensions}, Geometry and
+  dynamics of groups and spaces, Progr. Math., vol. 265, Birkh\"{a}user, Basel,
+  2008, pp.~487--564. \MR{2402415}
+
+\bibitem{MR4221225}
+John~G. Ratcliffe, \emph{Foundations of hyperbolic manifolds}, Graduate Texts
+  in Mathematics, vol. 149, Springer, Cham, [2019] \copyright 2019, Third
+  edition [of 1299730]. \MR{4221225}
+
+\bibitem{MR1893917}
+Jos\'{e} Seade and Alberto Verjovsky, \emph{Higher dimensional complex
+  {K}leinian groups}, Math. Ann. \textbf{322} (2002), no.~2, 279--300.
+  \MR{1893917}
 
 \bibitem{vaswani2017attention}
 Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
