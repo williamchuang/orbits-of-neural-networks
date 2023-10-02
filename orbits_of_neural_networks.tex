@@ -367,6 +367,24 @@ $$
 Since for each $z_1,z_2\in\mathbb{H}^2$, $d_{\mathbb{H}^2}(z_1,z_2)=\rho_{\mathbb{B}^2}(\Psi(z_1),\Psi(z_2)).$
 \end{proof}
 
+The 2-dimensional hyperbolic-length product can be generalized to $n$-dimension\cite{MR1138441, MR725161, beardon2012geometry, MR2402415, MR4221225, MR1893917}, for $n\geq 3$. Let $A, B$ be embedded into $\mathbb{H}^n, n\geq 3.$
+\begin{definition}[Hyperbolic-length product]
+Define \textit{n-dime the hyperbolic-length product} is the following new operation: 
+$$
+\left( T_M(A) \odot_{\mathbb{H}^n} T_M(B^t)\right)_{kl} := \sum\limits_{i=1}^m d_{\mathbb{H}^n} \left(T_M \left( a_{ki} \right) ,T_M\left( b_{il}\right) \right).
+$$
+\end{definition} 
+This $n$-dimension result could be useful for applying the hyperbolic-orbit algorithm to any trained models that were trained without implementing the hyperbolic-length product during the training.
+Likewise, for higher dimensions, the hyperbolic-length product is also an invariant:
+\begin{proposition}
+With the above notations, then the newly defined product is an invariant:
+$$
+\left( T_M(A) \odot_{\mathbb{H}^n} T_M(B^t)\right)_{kl} = \sum\limits_{i=1}^m d_{\mathbb{H}^2} \left(T_M \left( a_{ki} \right) ,T_M\left( b_{il}\right) \right)
+=  \sum\limits_{i=1}^m d_{\mathbb{H}^n} \left( a_{ki}  , b_{il} \right)  =\left( A\odot_{\mathbb{H}^n} B^t\right)_{kl}.$$
+\end{proposition}
+
+
+ 
 \section{Examples}
 \subsection{Self-attention mechanism in any transformer-based models with the hyperbolic-length product implemented before training}
 All layers of a given neural network model can be implemented with the above hyperbolic-orbit algorithm. The following is an example when the hyperbolic-orbit algorithm is applied to the self-attention mechanism, i.e. transformer-based models.
@@ -389,8 +407,12 @@ If for each $k$, each pair of hyperbolic circles that are corresponding to the s
 Finally, if there exist interceptions in the above process for all i, then $A$ and $B$ can be embedded into $\mathbb{H}^2$ and use the hyperbolic-orbit algorithm to replace matrix multiplication.
 
 After implemented the hyperbolic-length product and hyperbolic-orbit algorithm to the trained model, with the same training set the trained the model, the new modified model will give exactly the same output. The only distinction will happen only when the old and new model were fed in samples that were out of the training set. 
+
+The above two examples show that implement the hyperbolic-orbit algorithm before training is way easier than the other way around. To solve this problem, instead of embedding $A$ and $B$ into 2-dimensional hyperbolic space, hyperbolic spaces in higher dimensions could be the solution, since for each $n\geq 3$, $\mathbb{H}^n$ has an isometry group. This is the sufficient condition for generalizing 2-dimensional hyperbolic-length product to n-dimension.
+
+
 \section{Discussion}
-The above two examples show that implement the hyperbolic-orbit algorithm before training is way easier than the other way around.
+
 
 Furthermore, with the hyperbolic-orbit algorithm, it is possible to find an appropriate M\"{o}bius mapping that is corresponding to $M\in\text{PSL}(2,\mathbb{R})$ such that training a 3-node neural network become not necessarily NP-hard in \cite{blum1988training}. Further, if every layer of a given neural network is implemented with the hyperbolic-orbit algorithm introduced in this paper, by combining with perturbations and parallel computing, the steepest descent path toward the global minimum could be designed. The algorithm introduced by the paper can help to save training time for parallel computing in the ensemble method, that is, instead of starting over from the beginning to train $N'$ models in parallel, $N'\in\mathbb{N}$, the training can start with $N'$ models that are equivalent to a trained model that already has an error that cannot be reduced by using the old training set--but on the orbits of the trained model, each equivalent model on the orbit can be kept training with a new training set by updating the weight matrices using back-propagation with the gradient descent algorithm. Then, in each epoch, the best model could be selected and instantaneously its $N'$ equivalent models could be obtained using the hyperbolic-orbit algorithm.
 
