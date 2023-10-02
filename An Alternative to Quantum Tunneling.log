@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  2 OCT 2023 09:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  2 OCT 2023 09:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1205,26 +1205,26 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
  [4] [5]
-[6] (./An Alternative to Quantum Tunneling.bbl [7]
+(./An Alternative to Quantum Tunneling.bbl [6]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
 2.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [8]
+)) [7]
 (./An Alternative to Quantum Tunneling.aux)
 Package rerunfilecheck Info: File `"An Alternative to Quantum Tunneling".out' h
 as not changed.
-(rerunfilecheck)             Checksum: 556B76305F1DDB6F6C935BFB0A164107;1708.
+(rerunfilecheck)             Checksum: 864730A8C834BDDE251243513D0DDBBD;1236.
  ) 
 Here is how much of TeX's memory you used:
- 32644 strings out of 478542
- 661205 string characters out of 5850401
+ 32641 strings out of 478542
+ 661169 string characters out of 5850401
  1106642 words of memory out of 5000000
- 49938 multiletter control sequences out of 15000+600000
+ 49937 multiletter control sequences out of 15000+600000
  469251 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,6n,122p,1331b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 116i,6n,122p,1331b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local
 /texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2
 021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-
@@ -1246,11 +1246,11 @@ blic/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lms
 y7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symb
 ols/msbm7.pfb>
-Output written on "An Alternative to Quantum Tunneling.pdf" (8 pages, 280083 by
+Output written on "An Alternative to Quantum Tunneling.pdf" (7 pages, 275811 by
 tes).
 PDF statistics:
- 246 PDF objects out of 1000 (max. 8388607)
- 174 compressed objects within 2 object streams
- 35 named destinations out of 1000 (max. 500000)
- 213 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 238 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 500000)
+ 205 words of extra memory for PDF output out of 10000 (max. 10000000)
 

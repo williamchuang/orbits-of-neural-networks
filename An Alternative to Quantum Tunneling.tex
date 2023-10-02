@@ -393,7 +393,7 @@ In summary, there are two cases to apply hyperbolic-orbit algorithm. Let a model
 \item[Step 2] The dimension of hyperbolic space could start with two dimension to optimize the memory usage. If there is no restriction on the use of memory, then the easiest way is starting with dimension $n\times d$, where $\times$ is the scalar product in $\mathbb{N}$.
 \end{itemize}
  
-\item[Case 2] $W$ was trained. 
+\item[Case 2] $W$ was trained and $AB$ is positive. 
 \begin{itemize}
 \item[Step 1] Start with dimension $n\times d$ for embedding $A$ and $B$.
 \item[Step 2] Without loss of generality, for each $i$, choose the entry $b_i1$ in the matrix $B$ to be embedded to $\mathbb{H}^{nd}$. Embedded all $a_{ki}$ for $i$ from 1 to $n$ that are related to $b_i1$ in the matrix multiplication $AB$ to $\mathbb{H}^{nd}$ in a way that each hyperbolic length $d_{\mathbb{H}^{nd}}(a_{ki},b_{i1})=a_{ki}b_{i1}$. Then, embed $b_{i2}$ by updating the coordinates of each $a_{ki}$ to satisfy the condition $d_{\mathbb{H}^{nd}}(a_{ki},b_{i1})=a_{ki}b_{i1}$ for all $k$. To update the coordinates of each $a_{ki}$, all $b_{i1}, b_{i2},...,b_{i(l-1)}$ are fixed, since there is no restriction on hyperbolic length between $b_{il}$ and $b_{il'}$ for all $l\neq l'$. However, after each change on the coordinates of each $a_{ki}$, the hyperbolic length $d_{\mathbb{H}^{nd}}(a_{ki},b_{i1})=a_{ki}b_{i1}, d_{\mathbb{H}^{nd}}(a_{ki},b_{i2})=a_{ki}b_{i2},...,d_{\mathbb{H}^{nd}}(a_{ki},b_{i(l-1)})=a_{ki}b_{i(l-1)}$ must be maintained.
@@ -409,23 +409,22 @@ Let $A=Q\in \mathbb{C}^{n\times d_q}$ and $B=K^t\in \mathbb{C}^{d_k\times n}$ in
 
 
 
-\subsection{Apply to models that were trained without using the hyperbolic-length product}
-Hyperbolic-orbit Algorithm can be implemented into any models that is trained in a traditional method immediately. Let $\Omega$ be a model that is trained without using hyperbolic-length product. Once the matrix multiplication between two matrices called $A$ and $B$ within $\Omega$ is chosen to be replaced with hyperbolic-length product, the matrices $A\in\mathbb{R}^{n\times m}$ and $B \in\mathbb{R}^{m\times d}$ can be easily embedded into $\mathbb{H}^2$. 
+%\subsection{Apply to models that were trained without using the hyperbolic-length product}
+%Hyperbolic-orbit Algorithm can be implemented into any models that is trained in a traditional method immediately. Let $\Omega$ be a model that is trained without using hyperbolic-length product. Once the matrix multiplication between two matrices called $A$ and $B$ within $\Omega$ is chosen to be replaced with hyperbolic-length product, the matrices $A\in\mathbb{R}^{n\times m}$ and $B \in\mathbb{R}^{m\times d}$ can be easily embedded into $\mathbb{H}^2$. 
 
-In matrix $A$, the $i$-th column which has $n$ entries, and in matrix $B$, the $i$-th row which has $d$ entries will have $n\times d$ products and this gives $n\times d$ equations to determine where to embedded $a_{ki}$ and $b_{il}$. 
+%In matrix $A$, the $i$-th column which has $n$ entries, and in matrix $B$, the $i$-th row which has $d$ entries will have $n\times d$ products and this gives $n\times d$ equations to determine where to embedded $a_{ki}$ and $b_{il}$. 
 
-Denote the images of $a_{ki}$ and $b_{il}$ in $\mathbb{H}^2$ using $a_{ki}'$ and $b_{il}'$. 
-The following embedding algorithm can test if the hyperbolic-orbit algorithm is applicable.
-For each i in 1,...,m, and for each l in 1,...,d: Consider hyperbolic circles center at $b_{il}'$ with radii $d_{\mathbb{H}^2}(a_{ki}', b_{il}' )=a_{ki}b_{il} $, and k from 1 to n. 
-Consider hyperbolic circles center at $b_{ij}'$ for each $j\neq l$  with radii $d_{\mathbb{H}^2}(a_{ki}', b_{ij}' )=a_{ki}b_{ij} $, and k from 1 to n. 
-If for each $k$, each pair of hyperbolic circles that are corresponding to the same k, one has radius $d_{\mathbb{H}^2}(a_{ki}', b_{il}' )$ and the other has radius $d_{\mathbb{H}^2}(a_{ki}', b_{ij}') $ has an interception, then do the next $j$ of $b_{ij}'$.
-Finally, if there exist interceptions in the above process for all i, then $A$ and $B$ can be embedded into $\mathbb{H}^2$ and use the hyperbolic-orbit algorithm to replace matrix multiplication.
+%Denote the images of $a_{ki}$ and $b_{il}$ in $\mathbb{H}^2$ using $a_{ki}'$ and $b_{il}'$. 
+%The following embedding algorithm can test if the hyperbolic-orbit algorithm is applicable.
+%For each i in 1,...,m, and for each l in 1,...,d: Consider hyperbolic circles center at $b_{il}'$ with radii $d_{\mathbb{H}^2}(a_{ki}', b_{il}' )=a_{ki}b_{il} $, and k from 1 to n. 
+%Consider hyperbolic circles center at $b_{ij}'$ for each $j\neq l$  with radii $d_{\mathbb{H}^2}(a_{ki}', b_{ij}' )=a_{ki}b_{ij} $, and k from 1 to n. 
+%If for each $k$, each pair of hyperbolic circles that are corresponding to the same k, one has radius $d_{\mathbb{H}^2}(a_{ki}', b_{il}' )$ and the other has radius $d_{\mathbb{H}^2}(a_{ki}', b_{ij}') $ has an interception, then do the next $j$ of $b_{ij}'$.
+%Finally, if there exist interceptions in the above process for all i, then $A$ and $B$ can be embedded into $\mathbb{H}^2$ and use the hyperbolic-orbit algorithm to replace matrix multiplication.
 
-After implemented the hyperbolic-length product and hyperbolic-orbit algorithm to the trained model, with the same training set the trained the model, the new modified model will give exactly the same output. The only distinction will happen only when the old and new model were fed in samples that were out of the training set. 
+%After implemented the hyperbolic-length product and hyperbolic-orbit algorithm to the trained model, with the same training set the trained the model, the new modified model will give exactly the same output. The only distinction will happen only when the old and new model were fed in samples that were out of the training set. 
 
-The above two examples show that implement the hyperbolic-orbit algorithm before training is way easier than the other way around. To solve this problem, instead of embedding $A$ and $B$ into 2-dimensional hyperbolic space, hyperbolic spaces in higher dimensions could be the solution, since for each $n\geq 3$, $\mathbb{H}^n$ has an isometry group. This is the sufficient condition for generalizing 2-dimensional hyperbolic-length product to n-dimension. 
+%The above two examples show that implement the hyperbolic-orbit algorithm before training is way easier than the other way around. To solve this problem, instead of embedding $A$ and $B$ into 2-dimensional hyperbolic space, hyperbolic spaces in higher dimensions could be the solution, since for each $n\geq 3$, $\mathbb{H}^n$ has an isometry group. This is the sufficient condition for generalizing 2-dimensional hyperbolic-length product to n-dimension. 
 
-The hyperbolic-orbit algorithm can be implemented to all trained models that were trained while without implementing the hyperbolic-length product. The reason is in the worst case, matrices $A$ and $B$ can be implemented into $(n\times d)$-dimension, since there is always a solution in $\mathbb{H}^{n\times d}$.
 
 
 \section{Discussion}
@@ -435,7 +434,7 @@ Furthermore, with the hyperbolic-orbit algorithm, it is possible to find an appr
 
 
 \section{Limitation}
-The hyperbolic-orbit algorithm has a limitation when it is applied to case 2 that the model was trained. To show the limitation, consider an example where there are two points $a_1$, and $a_3$ from $A$, and three points $b_1, b_2$ and $b_3$ in $B$. $a_1$ and $a_2$ have been connected to $b_1$ in $\mathbb{H}^n, n\geq 3$. Suppose the hyperbolic length between $b_2$ and $a_1$ is zero, and the hyperbolic length between $b_2$ and $a_2$ is $L$. But, for $b_3$, the hyperbolic length between $b_3$ and $a_1$ is also zero, and the hyperbolic length between $b_3$ and $a_2$ is $2L$.
+The hyperbolic-orbit algorithm has a limitation when it is applied to case 2 that the model was trained. To show the limitation, consider an example where there are two points $a_1$, and $a_2$ from $A$, and two points $b_1$ and $b_2$ in $B$. In $\mathbb{H}^n, n\geq 3$, suppose the hyperbolic length between $b_1$ to $a_1$ and $b_2$ to $a_1$ are both zero, and the hyperbolic length between $b_1$ and $a_2$ is $L$. But, for $b_2$, the hyperbolic length between $b_2$ and $a_2$ is $2L$. %If this case happen, then it might be able to solve by randomly embedding $A$ and $B$ to $\mathbb{H}^n$, then applying isometries of $\mathbb{H}^n$ to rotate those zeros to other points such that none of the entries in $A$ and $B$ are zeros before applying the hyperbolic-orbit algorithm.
 
 
 %\begin{lstlisting}[language=iPython]
