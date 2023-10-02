@@ -400,6 +400,7 @@ In summary, there are two cases to apply hyperbolic-orbit algorithm. Let a model
 \item[Step 3] Repeat the same procedure for $l$ from 1 to $d$ for each $b_{il}$. After each iteration, increase $i$ by one.
 \end{itemize}
 \end{itemize} 
+
  
 \section{Examples}
 \subsection{Self-attention mechanism in any transformer-based models with the hyperbolic-length product implemented before training}
@@ -433,8 +434,8 @@ The hyperbolic-orbit algorithm can be implemented to all trained models that wer
 Furthermore, with the hyperbolic-orbit algorithm, it is possible to find an appropriate M\"{o}bius mapping that is corresponding to $M\in\text{PSL}(2,\mathbb{R})$ such that training a 3-node neural network become not necessarily NP-hard in \cite{blum1988training}. Further, if every layer of a given neural network is implemented with the hyperbolic-orbit algorithm introduced in this paper, by combining with perturbations and parallel computing, the steepest descent path toward the global minimum could be designed. The algorithm introduced by the paper can help to save training time for parallel computing in the ensemble method, that is, instead of starting over from the beginning to train $N'$ models in parallel, $N'\in\mathbb{N}$, the training can start with $N'$ models that are equivalent to a trained model that already has an error that cannot be reduced by using the old training set--but on the orbits of the trained model, each equivalent model on the orbit can be kept training with a new training set by updating the weight matrices using back-propagation with the gradient descent algorithm. Then, in each epoch, the best model could be selected and instantaneously its $N'$ equivalent models could be obtained using the hyperbolic-orbit algorithm.
 
 
-%\section{Limitation}
-
+\section{Limitation}
+The hyperbolic-orbit algorithm has a limitation when it is applied to case 2 that the model was trained. To show the limitation, consider an example where there are two points $a_1$, and $a_3$ from $A$, and three points $b_1, b_2$ and $b_3$ in $B$. $a_1$ and $a_2$ have been connected to $b_1$ in $\mathbb{H}^n, n\geq 3$. Suppose the hyperbolic length between $b_2$ and $a_1$ is zero, and the hyperbolic length between $b_2$ and $a_2$ is $L$. But, for $b_3$, the hyperbolic length between $b_3$ and $a_1$ is also zero, and the hyperbolic length between $b_3$ and $a_2$ is $2L$.
 
 
 %\begin{lstlisting}[language=iPython]
