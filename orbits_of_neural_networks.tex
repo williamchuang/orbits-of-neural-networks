@@ -393,13 +393,60 @@ In summary, there are two cases to apply hyperbolic-orbit algorithm. Let a model
 \item[Step 2] The dimension of hyperbolic space could start with two dimension to optimize the memory usage. If there is no restriction on the use of memory, then the easiest way is starting with dimension $n\times d$, where $\times$ is the scalar product in $\mathbb{N}$.
 \end{itemize}
  
-\item[Case 2] $W$ was trained and $AB$ is positive. 
+\item[Case 2] $W$ was trained. A special case when $d=2$ for the matrix $B$: 
 \begin{itemize}
-\item[Step 1] Start with dimension $n\times d$ for embedding $A$ and $B$.
-\item[Step 2] Without loss of generality, for each $i$, choose the entry $b_i1$ in the matrix $B$ to be embedded to $\mathbb{H}^{nd}$. Embedded all $a_{ki}$ for $i$ from 1 to $n$ that are related to $b_i1$ in the matrix multiplication $AB$ to $\mathbb{H}^{nd}$ in a way that each hyperbolic length $d_{\mathbb{H}^{nd}}(a_{ki},b_{i1})=a_{ki}b_{i1}$. Then, embed $b_{i2}$ by updating the coordinates of each $a_{ki}$ to satisfy the condition $d_{\mathbb{H}^{nd}}(a_{ki},b_{i1})=a_{ki}b_{i1}$ for all $k$. To update the coordinates of each $a_{ki}$, all $b_{i1}, b_{i2},...,b_{i(l-1)}$ are fixed, since there is no restriction on hyperbolic length between $b_{il}$ and $b_{il'}$ for all $l\neq l'$. However, after each change on the coordinates of each $a_{ki}$, the hyperbolic length $d_{\mathbb{H}^{nd}}(a_{ki},b_{i1})=a_{ki}b_{i1}, d_{\mathbb{H}^{nd}}(a_{ki},b_{i2})=a_{ki}b_{i2},...,d_{\mathbb{H}^{nd}}(a_{ki},b_{i(l-1)})=a_{ki}b_{i(l-1)}$ must be maintained.
-\item[Step 3] Repeat the same procedure for $l$ from 1 to $d$ for each $b_{il}$. After each iteration, increase $i$ by one.
+\item[Step 1] Start with dimension $3\times d$ for embedding $A$ and $B$: each $l$-th column vector in the matrix $B$ is embedded in parallel to the third axis of $\mathbb{H}^3$, denoted by $y_3$ in the following example. 
+
+ 
+\item[Step 2] 
+\begin{itemize}
+\item For $k=1$ to $k=n$ and fix $l$ at $l=1$.
+\begin{itemize}
+\item[(i)] If $a_{ki}b_{il}=0$, then map the edge $(a_{ki},b_{il})$ to a plane that is orthogonal to $y_3$-axis and has a zero projection to $b_{il}$.  
+\item[(ii)] If $a_{ki}b_{il}>$, then map the edge $(a_{ki},b_{il})$ to a plane that is parallel to $y_3$-axis and has a positive projection to $b_{il}$.  
+\item[(iii)] If $a_{ki}b_{il}=<$, then map the edge $(a_{ki},b_{il})$ to a plane that is parallel to $y_3$-axis and has a negative projection to $b_{il}$.  
+\end{itemize}
+
+\item For $k=1$ to $k=n$ and fix $l$ at $l=2$.
+\begin{itemize}
+\item[(i)] If $a_{ki}b_{i2}=0$, then move $b_{i2}$ along $y_3$-axis such that it has a zero projection to $b_{il}$.  
+\item[(ii)] If $a_{ki}b_{i2}>0$, then move $b_{i2}$ along $y_3$-axis such that it has a positive projection to $b_{il}$.  
+\item[(iii)] If $a_{ki}b_{i2}<0$, then move $b_{i2}$ along $y_3$-axis such that it has a negative projection to $b_{il}$.  
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\item[Case 3]$W$ was trained. All the other cases other than case 2.~\\
+The goal is to find an auxiliary matrix $C$ and instead of applying hyperbolic-orbit algorithm on $A$ times $B$, applying it to $M$ times $C$, $M$ is defined in step 1, i.e. make $AB$ become invertible and find an auxiliary matrix $C$ such that the solution of the embedding coordinates of entries $(M)_{ki})$ and $(C)_{il}$ exists. That is, entries of matrix $M$ and $C$ can be mapped to $\mathbb{H}^3$ such that the hyperbolic length between $(M)_{ki})$ and $(C)_{il}$ is preserved by the hyperbolic-length product. Then, all the remaining cases can be reduced to case 2.
+\begin{itemize}
+\item[Step 1] If $AB$ is not invertible, then extend it to a $2n\times 2n$ matrix which is invertible:
+$\begin{pmatrix}
+ AB & I\\
+ I & 0
+\end{pmatrix}$. If $AB$ is invertible, then denote it by $M:=AB$, if not then denote $M:=\begin{pmatrix}
+ AB & I\\
+ I & 0
+\end{pmatrix}.$
+\item[Step 2] 
+To design a solution, the method introduced in Case 2 can be applied here. That is, to embed each $k$-th column of $C$ parallel to $y_3$-axis in $\mathbb{H}^3$. So, design each hyperbolic length between $(M)_{ki}$ and $(C)_{il}$ in a matrix called $M'$, e.g. let each $(M)_{ki}$ to be linked with $(C)_{il}$ symmetrically, although at this step $(C)_{il}$ is still unknown. But, just because of this reason, all hyperbolic lengths can be designed symmetrically such that the solution exists.
+
+\item[Step 3] Now, what remains is to find the matrix $C$. Since $M$ is invertible, and $M'$ is known, it suffices to solve the matrix equation $MC=M'$. Thus, $C=M^{-1}M'$. 
+\begin{itemize}
+\item[(i)] If $C$ is not invertible, then extend $C$ to $C':=\begin{pmatrix}
+ C & I\\
+ I & 0
+\end{pmatrix}$, $M$ to $M_I:=\begin{pmatrix}
+ M & I\\
+ I & 0
+\end{pmatrix}$, $M'$ to $M'_I:=\begin{pmatrix}
+ M' & I\\
+ I & 0
+\end{pmatrix}$.
+\item[(ii)] If $C$ is invertible, rename $C$ to $C'$, $M$ to $M_I$, and $M'$ to $M'_I$.
+\end{itemize}
 \end{itemize}
 \end{itemize} 
+In Case 1 and 2, the hyperbolic-length product is applied to $A$ and $B$ and the output is unchanged. In Case 3, since each step from step 1 to step 3 is invertible, after these operations, hyperbolic-length product can be applied to $M_I'$ and $C'$, then apply all the inverses and restrictions to back to $AB$, so the output is also unchanged, but the orbit of the neural network can be found using the above hyperbolic-orbit algorithm
 
  
 \section{Examples}
@@ -434,10 +481,14 @@ Furthermore, with the hyperbolic-orbit algorithm, it is possible to find an appr
 
 
 \section{Limitation}
-The hyperbolic-orbit algorithm has a limitation when it is applied to case 2 that the model was trained. To show the limitation, consider an example where there are two points $a_1$, and $a_2$ from $A$, and two points $b_1$ and $b_2$ in $B$. In $\mathbb{H}^n, n\geq 3$, suppose the hyperbolic length between $b_1$ to $a_1$ and $b_2$ to $a_1$ are both zero, and the hyperbolic length between $b_1$ and $a_2$ is $L$. But, for $b_2$, the hyperbolic length between $b_2$ and $a_2$ is $2L$. If this happens, it might be possible to find an auxiliary invertible matrix $C$ and instead of applying hyperbolic-orbit algorithm on $A$ times $B$, applying it to $AB$ times $C$ and multiply the final result with $C$ inverse such that the matrix product $ABC$ is positive and does not have any case like the one mentioned in this section.
+The hyperbolic-orbit algorithm has a limitation when it is applied to case 2 if the model was trained. To show the limitation, consider an example where there are two points $a_1$, and $a_2$ from $A$, and two points $b_1$ and $b_2$ in $B$. In $\mathbb{H}^n, n\geq 3$, suppose the hyperbolic length between $b_1$ to $a_1$ and $b_2$ to $a_1$ are both zero, and the hyperbolic length between $b_1$ and $a_2$ is $L$. But, for $b_2$, the hyperbolic length between $b_2$ and $a_2$ is $2L$. If this happens, it might be possible to find an auxiliary invertible matrix $C$ and instead of applying hyperbolic-orbit algorithm on $A$ times $B$, applying it to $AB$ times $C$ and multiply the final result with $C$ inverse such that the matrix product $ABC$ is positive and does not have any case like the one mentioned in this section. This is the starting point of designing case 3 in the algorithm
 
 %If this case happen, then it might be able to solve by randomly embedding $A$ and $B$ to $\mathbb{H}^n$, then applying isometries of $\mathbb{H}^n$ to rotate those zeros to other points such that none of the entries in $A$ and $B$ are zeros before applying the hyperbolic-orbit algorithm.
 
+
+%\item[Step 1] Start with dimension $n\times d$ for embedding $A$ and $B$.
+%\item[Step 2] Without loss of generality, for each $i$, choose the entry $b_i1$ in the matrix $B$ to be embedded to $\mathbb{H}^{nd}$. Embedded all $a_{ki}$ for $i$ from 1 to $n$ that are related to $b_i1$ in the matrix multiplication $AB$ to $\mathbb{H}^{nd}$ in a way that each hyperbolic length $d_{\mathbb{H}^{nd}}(a_{ki},b_{i1})=a_{ki}b_{i1}$. Then, embed $b_{i2}$ by updating the coordinates of each $a_{ki}$ to satisfy the condition $d_{\mathbb{H}^{nd}}(a_{ki},b_{i1})=a_{ki}b_{i1}$ for all $k$. To update the coordinates of each $a_{ki}$, all $b_{i1}, b_{i2},...,b_{i(l-1)}$ are fixed, since there is no restriction on hyperbolic length between $b_{il}$ and $b_{il'}$ for all $l\neq l'$. However, after each change on the coordinates of each $a_{ki}$, the hyperbolic length $d_{\mathbb{H}^{nd}}(a_{ki},b_{i1})=a_{ki}b_{i1}, d_{\mathbb{H}^{nd}}(a_{ki},b_{i2})=a_{ki}b_{i2},...,d_{\mathbb{H}^{nd}}(a_{ki},b_{i(l-1)})=a_{ki}b_{i(l-1)}$ must be maintained.
+%\item[Step 3] Repeat the same procedure for $l$ from 1 to $d$ for each $b_{il}$. After each iteration, increase $i$ by one.
 
 %\begin{lstlisting}[language=iPython]
 %<- #there shouldn't be quotation marks
