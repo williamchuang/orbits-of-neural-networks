@@ -403,15 +403,15 @@ In summary, there are two cases to apply hyperbolic-orbit algorithm. Let a model
 \item For $k=1$ to $k=n$ and fix $l$ at $l=1$.
 \begin{itemize}
 \item[(i)] If $a_{ki}b_{il}=0$, then map the edge $(a_{ki},b_{il})$ to a plane that is orthogonal to $y_3$-axis and has a zero projection to $y_3$-axis.  
-\item[(ii)] If $a_{ki}b_{il}>$, then map the edge $(a_{ki},b_{il})$ to a plane that is parallel to $y_3$-axis and has a positive projection to $y_3$-axis.  
-\item[(iii)] If $a_{ki}b_{il}=<$, then map the edge $(a_{ki},b_{il})$ to a plane that is parallel to $y_3$-axis and has a negative projection to $y_3$-axis.  
+\item[(ii)] If $a_{ki}b_{il}>0$, then map the edge $(a_{ki},b_{il})$ to a plane that is parallel to $y_3$-axis and has a positive projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y_3$-axis.  
+\item[(iii)] If $a_{ki}b_{il}<0$, then map the edge $(a_{ki},b_{il})$ to a plane that is parallel to $y_3$-axis and has a negative projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y_3$-axis.  
 \end{itemize}
 
 \item For $k=1$ to $k=n$ and fix $l$ at $l=2$.
 \begin{itemize}
 \item[(i)] If $a_{ki}b_{i2}=0$, then move $b_{i2}$ along $y_3$-axis such that it has a zero projection to $y_3$-axis.  
-\item[(ii)] If $a_{ki}b_{i2}>0$, then move $b_{i2}$ along $y_3$-axis such that it has a positive projection to $y_3$-axis.  
-\item[(iii)] If $a_{ki}b_{i2}<0$, then move $b_{i2}$ along $y_3$-axis such that it has a negative projection to $y_3$-axis.  
+\item[(ii)] If $a_{ki}b_{i2}>0$, then move $b_{i2}$ along $y_3$-axis such that it has a positive projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y_3$-axis.  
+\item[(iii)] If $a_{ki}b_{i2}<0$, then move $b_{i2}$ along $y_3$-axis such that it has a negative projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y_3$-axis.  
 \end{itemize}
 \end{itemize}
 \end{itemize}
@@ -446,7 +446,9 @@ To design a solution, the method introduced in Case 2 can be applied here. That 
 \end{itemize}
 \end{itemize}
 \end{itemize} 
-In Case 1 and 2, the hyperbolic-length product is applied to $A$ and $B$ and the output is unchanged. In Case 3, since each step from step 1 to step 3 is invertible, after these operations, hyperbolic-length product can be applied to $M_I'$ and $C'$, then apply all the inverses and restrictions to back to $AB$, so the output is also unchanged, but the orbit of the neural network can be found using the above hyperbolic-orbit algorithm
+In Case 1 and 2, the hyperbolic-length product is applied to $A$ and $B$ and the output is unchanged. In Case 3, since each step from step 1 to step 3 is invertible, after these operations, hyperbolic-length product can be applied to $M_I'$ and $C'$, then apply all the inverses and restrictions to back to $AB$, so the output is also unchanged, but the orbit of the neural network can be found using the above hyperbolic-orbit algorithm. 
+
+Furthermore, the isometry group of $\mathbb{H}^n$ is a group of M\"{o}bius mapping, hence its group elements preserve not only hyperbolic length but angles, thus the information of the sign of each $a_{ki}b_{il}$ could be preserved.
 
  
 \section{Examples}
