@@ -396,24 +396,24 @@ In summary, there are two cases to apply hyperbolic-orbit algorithm. Let a model
  
 \item[Case 1] $W$ was trained. A special case when $d=2$ for the matrix $B$: 
 \begin{itemize}
-\item[Step 1] Start with dimension $3\times d$ for embedding $A$ and $B$: each $l$-th column vector in the matrix $B$ is embedded in parallel to the third axis of $\mathbb{H}^3$, denoted by $y_3$ in the following example. 
+\item[Step 1] Start with dimension $3\times d$ for embedding $A$ and $B$: each $l$-th column vector in the matrix $B$ is embedded in parallel to the third axis of $\mathbb{H}^3$, denoted by $y^3$ in the following example. 
 
  
 \item[Step 2] 
 \begin{itemize}
 \item For $k=1$ to $k=n$ and fix $l$ at $l=1$.
 \begin{itemize}
-\item[(i)] If $a_{ki}b_{il}=0$, then map the edge $(a_{ki},b_{il})$ to a plane that is orthogonal to $y_3$-axis and has a zero projection to $y_3$-axis.  
-\item[(ii)] If $a_{ki}b_{il}>0$, then map the edge $(a_{ki},b_{il})$ to a plane that is parallel to $y_3$-axis and has a positive projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y_3$-axis.  
-\item[(iii)] If $a_{ki}b_{il}<0$, then map the edge $(a_{ki},b_{il})$ to a plane that is parallel to $y_3$-axis and has a negative projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y_3$-axis.  
+\item[(i)] If $a_{ki}b_{il}=0$, then map the edge $(a_{ki},b_{il})$ to a plane that is orthogonal to $y^3$-axis and has a zero projection to $y^3$-axis.  
+\item[(ii)] If $a_{ki}b_{il}>0$, then map the edge $(a_{ki},b_{il})$ to a plane that is parallel to $y^3$-axis and has a positive projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y^3$-axis.  
+\item[(iii)] If $a_{ki}b_{il}<0$, then map the edge $(a_{ki},b_{il})$ to a plane that is parallel to $y^3$-axis and has a negative projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y^3$-axis.  
 \end{itemize}
 
 \item For $k=1$ to $k=n$ and fix $l$ at $l=2$.
 \begin{itemize}
 \item[(i)] Let $b_{i2}$ has the same $y^1$ and $y^2$ coordinates as $b_{i2}$.
-\item[(ii)] If $a_{ki}b_{i2}=0$, then move $b_{i2}$ along its $y^3$ coordinate such that the edge $(a_{ki},b_{il})$ has a zero projection to $y_3$-axis.  
-\item[(iii)] If $a_{ki}b_{i2}>0$, then move $b_{i2}$ along $y_3$-axis such that the edge $(a_{ki},b_{il})$ has a positive projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y_3$-axis.  
-\item[(iv)] If $a_{ki}b_{i2}<0$, then move $b_{i2}$ along $y_3$-axis such that the edge $(a_{ki},b_{il})$ has a negative projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y_3$-axis.  
+\item[(ii)] If $a_{ki}b_{i2}=0$, then move $b_{i2}$ along its $y^3$ coordinate such that the edge $(a_{ki},b_{il})$ has a zero projection to $y^3$-axis.  
+\item[(iii)] If $a_{ki}b_{i2}>0$, then move $b_{i2}$ along $y_3$-axis such that the edge $(a_{ki},b_{il})$ has a positive projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y^3$-axis.  
+\item[(iv)] If $a_{ki}b_{i2}<0$, then move $b_{i2}$ along $y_3$-axis such that the edge $(a_{ki},b_{il})$ has a negative projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y^3$-axis.  
 \end{itemize}
 \end{itemize}
 \end{itemize}
