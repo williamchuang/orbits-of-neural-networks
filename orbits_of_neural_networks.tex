@@ -402,22 +402,22 @@ In summary, there are two cases to apply hyperbolic-orbit algorithm. Let a model
 \begin{itemize}
 \item For $k=1$ to $k=n$ and fix $l$ at $l=1$.
 \begin{itemize}
-\item[(i)] If $a_{ki}b_{il}=0$, then map the edge $(a_{ki},b_{il})$ to a plane that is orthogonal to $y_3$-axis and has a zero projection to $b_{il}$.  
-\item[(ii)] If $a_{ki}b_{il}>$, then map the edge $(a_{ki},b_{il})$ to a plane that is parallel to $y_3$-axis and has a positive projection to $b_{il}$.  
-\item[(iii)] If $a_{ki}b_{il}=<$, then map the edge $(a_{ki},b_{il})$ to a plane that is parallel to $y_3$-axis and has a negative projection to $b_{il}$.  
+\item[(i)] If $a_{ki}b_{il}=0$, then map the edge $(a_{ki},b_{il})$ to a plane that is orthogonal to $y_3$-axis and has a zero projection to $y_3$-axis.  
+\item[(ii)] If $a_{ki}b_{il}>$, then map the edge $(a_{ki},b_{il})$ to a plane that is parallel to $y_3$-axis and has a positive projection to $y_3$-axis.  
+\item[(iii)] If $a_{ki}b_{il}=<$, then map the edge $(a_{ki},b_{il})$ to a plane that is parallel to $y_3$-axis and has a negative projection to $y_3$-axis.  
 \end{itemize}
 
 \item For $k=1$ to $k=n$ and fix $l$ at $l=2$.
 \begin{itemize}
-\item[(i)] If $a_{ki}b_{i2}=0$, then move $b_{i2}$ along $y_3$-axis such that it has a zero projection to $b_{il}$.  
-\item[(ii)] If $a_{ki}b_{i2}>0$, then move $b_{i2}$ along $y_3$-axis such that it has a positive projection to $b_{il}$.  
-\item[(iii)] If $a_{ki}b_{i2}<0$, then move $b_{i2}$ along $y_3$-axis such that it has a negative projection to $b_{il}$.  
+\item[(i)] If $a_{ki}b_{i2}=0$, then move $b_{i2}$ along $y_3$-axis such that it has a zero projection to $y_3$-axis.  
+\item[(ii)] If $a_{ki}b_{i2}>0$, then move $b_{i2}$ along $y_3$-axis such that it has a positive projection to $y_3$-axis.  
+\item[(iii)] If $a_{ki}b_{i2}<0$, then move $b_{i2}$ along $y_3$-axis such that it has a negative projection to $y_3$-axis.  
 \end{itemize}
 \end{itemize}
 \end{itemize}
 
 \item[Case 3]$W$ was trained. All the other cases other than case 2.~\\
-The goal is to find an auxiliary matrix $C$ and instead of applying hyperbolic-orbit algorithm on $A$ times $B$, applying it to $M$ times $C$, $M$ is defined in step 1, i.e. make $AB$ become invertible and find an auxiliary matrix $C$ such that the solution of the embedding coordinates of entries $(M)_{ki})$ and $(C)_{il}$ exists. That is, entries of matrix $M$ and $C$ can be mapped to $\mathbb{H}^3$ such that the hyperbolic length between $(M)_{ki})$ and $(C)_{il}$ is preserved by the hyperbolic-length product. Then, all the remaining cases can be reduced to case 2.
+The goal is to find an auxiliary matrix $C$ and instead of applying hyperbolic-orbit algorithm on $A$ times $B$, applying it to $M$ times $C$, $M$ is defined in step 1, i.e. make $AB$ become invertible and find an auxiliary matrix $C$ such that the solution of the embedding coordinates of entries $(M)_{ki}$ and $(C)_{il}$ exists. That is, entries of matrix $M$ and $C$ can be mapped to $\mathbb{H}^3$ such that the hyperbolic length between $(M)_{ki}$ and $(C)_{il}$ is preserved by the hyperbolic-length product. Then, all the remaining cases can be reduced to case 2.
 \begin{itemize}
 \item[Step 1] If $AB$ is not invertible, then extend it to a $2n\times 2n$ matrix which is invertible:
 $\begin{pmatrix}
