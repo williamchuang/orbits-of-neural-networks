@@ -392,13 +392,9 @@ The question that aimed to solve by using this algorithm was mentioned in the fi
 
 In summary, there are two cases to apply hyperbolic-orbit algorithm. Let a model $W$ and a training set $X$ be given.
 \begin{itemize}
-\item[Case 1] $W$ was not trained.
-\begin{itemize}
-\item[Step 1] The selected matrices $A$ and $B$ can be embedded freely to hyperbolic space as long as the hyperbolic-length product can work properly in the usual training process.
-\item[Step 2] The dimension of hyperbolic space could start with two dimension to optimize the memory usage. If there is no restriction on the use of memory, then the easiest way is starting with dimension $n\times d$, where $\times$ is the scalar product in $\mathbb{N}$.
-\end{itemize}
+
  
-\item[Case 2] $W$ was trained. A special case when $d=2$ for the matrix $B$: 
+\item[Case 1] $W$ was trained. A special case when $d=2$ for the matrix $B$: 
 \begin{itemize}
 \item[Step 1] Start with dimension $3\times d$ for embedding $A$ and $B$: each $l$-th column vector in the matrix $B$ is embedded in parallel to the third axis of $\mathbb{H}^3$, denoted by $y_3$ in the following example. 
 
@@ -414,14 +410,15 @@ In summary, there are two cases to apply hyperbolic-orbit algorithm. Let a model
 
 \item For $k=1$ to $k=n$ and fix $l$ at $l=2$.
 \begin{itemize}
-\item[(i)] If $a_{ki}b_{i2}=0$, then move $b_{i2}$ along $y_3$-axis such that it has a zero projection to $y_3$-axis.  
-\item[(ii)] If $a_{ki}b_{i2}>0$, then move $b_{i2}$ along $y_3$-axis such that it has a positive projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y_3$-axis.  
-\item[(iii)] If $a_{ki}b_{i2}<0$, then move $b_{i2}$ along $y_3$-axis such that it has a negative projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y_3$-axis.  
+\item[(i)] Let $b_{i2}$ has the same $y^1$ and $y^2$ coordinates as $b_{i2}$.
+\item[(ii)] If $a_{ki}b_{i2}=0$, then move $b_{i2}$ along its $y^3$ coordinate such that the edge $(a_{ki},b_{il})$ has a zero projection to $y_3$-axis.  
+\item[(iii)] If $a_{ki}b_{i2}>0$, then move $b_{i2}$ along $y_3$-axis such that the edge $(a_{ki},b_{il})$ has a positive projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y_3$-axis.  
+\item[(iv)] If $a_{ki}b_{i2}<0$, then move $b_{i2}$ along $y_3$-axis such that the edge $(a_{ki},b_{il})$ has a negative projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y_3$-axis.  
 \end{itemize}
 \end{itemize}
 \end{itemize}
 
-\item[Case 3]$W$ was trained. All the other cases other than case 2.~\\
+\item[Case 2]$W$ was trained. All the other cases other than case 2.~\\
 The goal is to find an auxiliary matrix $C$ and instead of applying hyperbolic-orbit algorithm on $A$ times $B$, applying it to $M$ times $C$, $M$ is defined in step 1, i.e. make $AB$ become invertible and find an auxiliary matrix $C$ such that the solution of the embedding coordinates of entries $(M)_{ki}$ and $(C)_{il}$ exists. That is, entries of matrix $M$ and $C$ can be mapped to $\mathbb{H}^3$ such that the hyperbolic length between $(M)_{ki}$ and $(C)_{il}$ is preserved by the hyperbolic-length product. Then, all the remaining cases can be reduced to case 2.
 \begin{itemize}
 \item[Step 1] If $AB$ is not invertible, then extend it to a $2n\times 2n$ matrix which is invertible:
@@ -449,9 +446,21 @@ To design a solution, the method introduced in Case 2 can be applied here. That 
 \end{pmatrix}$.
 \item[(ii)] If $C$ is invertible, rename $C$ to $C'$, $M$ to $M_I$, and $M'$ to $M'_I$.
 \end{itemize}
+
+
+\item[Case 3] $W$ was not trained.
+\begin{itemize}
+\item[Method 1] Treat $W$ as trained and reduce it to either case 1 or 2, i.e. use methods of case 1 or 2.
+\item[Method 2] Train $W$ without using hyperbolic-length product till it converges, then treat it as trained, i.e. again, apply methods of case 1 or 2.
+\item[Method 3] Implement the hyperbolic-length product into $W$ directly.
+\begin{itemize}
+\item[Step 1] The selected matrices $A$ and $B$ can be embedded freely to hyperbolic space as long as the hyperbolic-length product can work properly in the usual training process.
+\item[Step 2] The dimension of hyperbolic space could start with two dimension to optimize the memory usage. If there is no restriction on the use of memory, then the easiest way is starting with dimension $n\times d$, where $\times$ is the scalar product in $\mathbb{N}$.
+\end{itemize}
+\end{itemize}
 \end{itemize}
 \end{itemize} 
-In Case 1 and 2, the hyperbolic-length product is applied to $A$ and $B$ and the output is unchanged. In Case 3, since each step from step 1 to step 3 is invertible, after these operations, hyperbolic-length product can be applied to $M_I'$ and $C'$, then apply all the inverses and restrictions to back to $AB$, so the output is also unchanged, but the orbit of the neural network can be found using the above hyperbolic-orbit algorithm. 
+In Case 2 and 3, the hyperbolic-length product is applied to $A$ and $B$ and the output is unchanged. In Case 2, since each step from step 1 to step 3 is invertible, after these operations, hyperbolic-length product can be applied to $M_I'$ and $C'$, then apply all the inverses and restrictions to back to $AB$, so the output is also unchanged, but the orbit of the neural network can be found using the above hyperbolic-orbit algorithm. 
 
 Furthermore, the isometry group of $\mathbb{H}^n$ is a group of M\"{o}bius mapping, hence its group elements preserve not only hyperbolic length but angles, thus the information of the sign of each $a_{ki}b_{il}$ could be preserved.
 
@@ -488,7 +497,7 @@ Furthermore, with the hyperbolic-orbit algorithm, it is possible to find an appr
 
 
 \section{Limitation}
-The hyperbolic-orbit algorithm has a limitation when it is applied to case 2 if the model was trained. To show the limitation, consider an example where there are two points $a_1$, and $a_2$ from $A$, and two points $b_1$ and $b_2$ in $B$. In $\mathbb{H}^n, n\geq 3$, suppose the hyperbolic length between $b_1$ to $a_1$ and $b_2$ to $a_1$ are both zero, and the hyperbolic length between $b_1$ and $a_2$ is $L$. But, for $b_2$, the hyperbolic length between $b_2$ and $a_2$ is $2L$. If this happens, it might be possible to find an auxiliary invertible matrix $C$ and instead of applying hyperbolic-orbit algorithm on $A$ times $B$, applying it to $AB$ times $C$ and multiply the final result with $C$ inverse such that the matrix product $ABC$ is positive and does not have any case like the one mentioned in this section. This is the starting point of designing case 3 in the algorithm
+The hyperbolic-orbit algorithm has a limitation when it is applied to case 1 if the model was trained. To show the limitation, consider an example where there are two points $a_1$, and $a_2$ from $A$, and two points $b_1$ and $b_2$ in $B$. In $\mathbb{H}^n, n\geq 3$, suppose the hyperbolic length between $b_1$ to $a_1$ and $b_2$ to $a_1$ are both zero, and the hyperbolic length between $b_1$ and $a_2$ is $L$. But, for $b_2$, the hyperbolic length between $b_2$ and $a_2$ is $2L$. If this happens, it might be possible to find an auxiliary invertible matrix $C$ and instead of applying hyperbolic-orbit algorithm on $A$ times $B$, applying it to $AB$ times $C$ and multiply the final result with $C$ inverse such that the matrix product $ABC$ is positive and does not have any case like the one mentioned in this section. This is the starting point of designing case 2 in the algorithm
 
 %If this case happen, then it might be able to solve by randomly embedding $A$ and $B$ to $\mathbb{H}^n$, then applying isometries of $\mathbb{H}^n$ to rotate those zeros to other points such that none of the entries in $A$ and $B$ are zeros before applying the hyperbolic-orbit algorithm.
 
