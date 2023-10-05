@@ -444,8 +444,8 @@ $\begin{pmatrix}
 \item[Step 2] 
 Find the embedding functions of each entry to map entries of $M$ into a set of preset points in $\mathbb{H}^2$ and denote the result by $M'$. 
 
-\item[Step 3] Design an $M''$ such that each of its entry is in $\mathbb{H}^2$.
-Now, what remains is to find the matrix $C$. Since $M'$ is invertible, and $M''$ is known, it suffices to solve the matrix equation $M'C=M''$ for $C$. That gives $C=M'^{-1}M''$. 
+\item[Step 3] Design an $M''$ and $C$ using the embedding helper algorithm (illustrate in Figure 1).
+The helper algorithm guarantees that $M'C=M'\odot_{\mathbb{H}^2}C$.
 \begin{itemize}
 \item[(i)] If $C$ is not invertible, then extend $C$ to $C':=\begin{pmatrix}
  C & I\\
@@ -474,6 +474,11 @@ Now, what remains is to find the matrix $C$. Since $M'$ is invertible, and $M''$
 \end{itemize}
 \end{itemize} 
 
+\begin{figure}[H]
+\caption{The illustration of embedding helper algorithm.}
+\centering
+\includegraphics[width=0.8\textwidth]{6.png}
+\end{figure}
 
 \begin{figure}[H]
 \caption{The computational graph of Case 2 when both $AB$ and $C$ are invertible.}
