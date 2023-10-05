@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  5 OCT 2023 10:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  5 OCT 2023 10:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1209,11 +1209,11 @@ File: 2.png Graphic file (type png)
 <use 2.png>
 Package pdftex.def Info: 2.png  used on input line 481.
 (pdftex.def)             Requested size: 341.11533pt x 148.03622pt.
-<3.png, id=135, 853.1875pt x 394.47375pt>
-File: 3.png Graphic file (type png)
-<use 3.png>
-Package pdftex.def Info: 3.png  used on input line 487.
-(pdftex.def)             Requested size: 341.11533pt x 157.72049pt.
+<5.png, id=135, 1250.6725pt x 560.0925pt>
+File: 5.png Graphic file (type png)
+<use 5.png>
+Package pdftex.def Info: 5.png  used on input line 487.
+(pdftex.def)             Requested size: 341.11533pt x 152.75677pt.
 
 [6pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
 has been already used, duplicate ignored
@@ -1226,11 +1226,11 @@ File: 4.png Graphic file (type png)
 <use 4.png>
 Package pdftex.def Info: 4.png  used on input line 493.
 (pdftex.def)             Requested size: 341.11533pt x 110.6919pt.
-<5.png, id=143, 1250.6725pt x 560.0925pt>
-File: 5.png Graphic file (type png)
-<use 5.png>
-Package pdftex.def Info: 5.png  used on input line 499.
-(pdftex.def)             Requested size: 341.11533pt x 152.75677pt.
+<3.png, id=143, 853.1875pt x 394.47375pt>
+File: 3.png Graphic file (type png)
+<use 3.png>
+Package pdftex.def Info: 3.png  used on input line 499.
+(pdftex.def)             Requested size: 341.11533pt x 157.72049pt.
  [7pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -1246,7 +1246,7 @@ l.512
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.512 
-       <./3.png> <./4.png> <./5.png>] [8]
+       <./5.png> <./4.png> <./3.png>] [8]
 (./An Alternative to Quantum Tunneling.bbl [9]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
 2.
@@ -1288,7 +1288,7 @@ blic/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lms
 y7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symb
 ols/msbm7.pfb>
-Output written on "An Alternative to Quantum Tunneling.pdf" (10 pages, 925627 b
+Output written on "An Alternative to Quantum Tunneling.pdf" (10 pages, 925626 b
 ytes).
 PDF statistics:
  266 PDF objects out of 1000 (max. 8388607)
