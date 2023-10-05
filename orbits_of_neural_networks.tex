@@ -444,8 +444,9 @@ $\begin{pmatrix}
 \item[Step 2] 
 Find the embedding functions of each entry to map entries of $M$ into a set of preset points in $\mathbb{H}^2$ and denote the result by $M'$. 
 
-\item[Step 3] Design an $M''$ and $C$ using the embedding helper algorithm (illustrate in Figure 1).
-The helper algorithm guarantees that $M'C=M'\odot_{\mathbb{H}^2}C$.
+\item[Step 3] Randomly generate an invertible real matrix $M''$. Define $C:=M'^{-1}M''$.
+
+\item[Step 4]
 \begin{itemize}
 \item[(i)] If $C$ is not invertible, then extend $C$ to $C':=\begin{pmatrix}
  C & I\\
@@ -475,7 +476,7 @@ The helper algorithm guarantees that $M'C=M'\odot_{\mathbb{H}^2}C$.
 \end{itemize} 
 
 \begin{figure}[H]
-\caption{The illustration of embedding helper algorithm.}
+\caption{Gradients of the hyperbolic-length product.}
 \centering
 \includegraphics[width=0.8\textwidth]{6.png}
 \end{figure}
@@ -542,7 +543,7 @@ Furthermore, the isometry group of $\mathbb{H}^n$ is a group of M\"{o}bius mappi
 
 With the hyperbolic-orbit algorithm, it is possible to find an appropriate M\"{o}bius mapping that is corresponding to $M\in\text{PSL}(2,\mathbb{R})$ such that training a 3-node neural network become not necessarily NP-hard in \cite{blum1988training}. Further, if every layer of a given neural network is implemented with the hyperbolic-orbit algorithm introduced in this paper, by combining with perturbations and parallel computing, the steepest descent path toward the global minimum could be designed. The algorithm introduced by the paper can help to save training time for parallel computing in the ensemble method, that is, instead of starting over from the beginning to train $N'$ models in parallel, $N'\in\mathbb{N}$, the training can start with $N'$ models that are equivalent to a trained model that already has an error that cannot be reduced by using the old training set--but on the orbits of the trained model, each equivalent model on the orbit can be kept training with a new training set by updating the weight matrices using back-propagation with the gradient descent algorithm. Then, in each epoch, the best model could be selected and instantaneously its $N'$ equivalent models could be obtained using the hyperbolic-orbit algorithm.
 
-Furthermore, this algorithm could also be applied for non-linear encryption. For instance, the cardinality of the orbit of $A$ and $B$ is infinite, thus there are infinitely many ways to encrypt messages in $A$ and $B$ without losing the information contains in the $A$ and $B$, and the messages can only be deciphered if the receiver knows the two correct inverses in $\text{PSL}(2,\mathbb{R})$ and an integer $N$ as keys to decode two encrypted matrices $A$ and $B$ to get the message $(A\odot_{\mathbb{H}^n} B)^N$.
+Furthermore, this algorithm could also be applied for non-linear encryption. For instance, the cardinality of the orbit of $A$ and $B$ is infinite, thus there are infinitely many ways to encrypt messages in $A$ or $B$. Without loss of generality, let message be written in the matrix $A$. Then the message can only be deciphered if the receiver knows the two correct inverses of isometries in $\text{PSL}(2,\mathbb{R})$ and an integer $N$ as keys to decode two encrypted matrices $(A\odot_{\mathbb{H}^n} B)^N$ and to reconstruct message recorded in the matrix $A$.
 
 \section{Limitation}
 The hyperbolic-orbit algorithm has a limitation when it is applied to case 2 if the model was trained. To show the limitation, consider an example where there are two points $a_1$, and $a_2$ from $A$, and two points $b_1$ and $b_2$ in $B$. In $\mathbb{H}^n, n\geq 3$, suppose the hyperbolic length between $b_1$ to $a_1$ and $b_2$ to $a_1$ are both zero, and the hyperbolic length between $b_1$ and $a_2$ is $L$. But, for $b_2$, the hyperbolic length between $b_2$ and $a_2$ is $2L$. If this happens, it might be possible to find an auxiliary invertible matrix $C$ and instead of applying hyperbolic-orbit algorithm on $A$ times $B$, applying it to $AB$ times $C$ and multiply the final result with $C$ inverse such that the matrix product $ABC$ is positive and does not have any case like the one mentioned in this section. This is the starting point of designing case 1 in the algorithm
