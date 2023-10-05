@@ -476,10 +476,30 @@ To embed each $k$-th column of $C$ parallel to $y_3$-axis in $\mathbb{H}^3$. So,
 
 
 \begin{figure}[H]
-\caption{The computational graphs for the two cases in hyperbolic-orbit algorithm which show how gradients are feedback using back-propagation algorithm.}
+\caption{The computational graph of Case 2 when both $AB$ and $C$ are invertible.}
 \centering
-\includegraphics[width=0.5\textwidth]{2.png}
+\includegraphics[width=0.8\textwidth]{2.png}
 \end{figure}
+
+\begin{figure}[H]
+\caption{The computational graph of Case 2 when $C$ is invertible, and $AB$ is not invertible.}
+\centering
+\includegraphics[width=0.8\textwidth]{3.png}
+\end{figure}
+
+\begin{figure}[H]
+\caption{The computational graph of Case 2 when both $AB$ and $C$ are not invertible.}
+\centering
+\includegraphics[width=0.8\textwidth]{4.png}
+\end{figure}
+
+\begin{figure}[H]
+\caption{The computational graph of Case 2 when hyperbolic-length product is implemented to the model directly before training.}
+\centering
+\includegraphics[width=0.3\textwidth]{5.png}
+\end{figure}
+
+
 
 
 
@@ -517,7 +537,7 @@ Furthermore, the isometry group of $\mathbb{H}^n$ is a group of M\"{o}bius mappi
 
 With the hyperbolic-orbit algorithm, it is possible to find an appropriate M\"{o}bius mapping that is corresponding to $M\in\text{PSL}(2,\mathbb{R})$ such that training a 3-node neural network become not necessarily NP-hard in \cite{blum1988training}. Further, if every layer of a given neural network is implemented with the hyperbolic-orbit algorithm introduced in this paper, by combining with perturbations and parallel computing, the steepest descent path toward the global minimum could be designed. The algorithm introduced by the paper can help to save training time for parallel computing in the ensemble method, that is, instead of starting over from the beginning to train $N'$ models in parallel, $N'\in\mathbb{N}$, the training can start with $N'$ models that are equivalent to a trained model that already has an error that cannot be reduced by using the old training set--but on the orbits of the trained model, each equivalent model on the orbit can be kept training with a new training set by updating the weight matrices using back-propagation with the gradient descent algorithm. Then, in each epoch, the best model could be selected and instantaneously its $N'$ equivalent models could be obtained using the hyperbolic-orbit algorithm.
 
-Furthermore, this algorithm could also be applied for non-linear encryption. For instance, the cardinality of the orbit of $A$ and $B$ is infinite, thus there are infinitely many ways to encrypt messages in $A$ and $B$ without losing the information contains in the $A$ and $B$, and the messages can only be deciphered if the receiver knows the two correct inverses as keys in $\text{PSL}(2,\mathbb{R})$ to decode two encrypted matrices $A$ and $B$ to get the message $AB^n$.
+Furthermore, this algorithm could also be applied for non-linear encryption. For instance, the cardinality of the orbit of $A$ and $B$ is infinite, thus there are infinitely many ways to encrypt messages in $A$ and $B$ without losing the information contains in the $A$ and $B$, and the messages can only be deciphered if the receiver knows the two correct inverses as keys in $\text{PSL}(2,\mathbb{R})$ to decode two encrypted matrices $A$ and $B$ and an integer $N$ to get the message $(A\odot_{\mathbb{H}^n} B)^N$.
 
 \section{Limitation}
 The hyperbolic-orbit algorithm has a limitation when it is applied to case 2 if the model was trained. To show the limitation, consider an example where there are two points $a_1$, and $a_2$ from $A$, and two points $b_1$ and $b_2$ in $B$. In $\mathbb{H}^n, n\geq 3$, suppose the hyperbolic length between $b_1$ to $a_1$ and $b_2$ to $a_1$ are both zero, and the hyperbolic length between $b_1$ and $a_2$ is $L$. But, for $b_2$, the hyperbolic length between $b_2$ and $a_2$ is $2L$. If this happens, it might be possible to find an auxiliary invertible matrix $C$ and instead of applying hyperbolic-orbit algorithm on $A$ times $B$, applying it to $AB$ times $C$ and multiply the final result with $C$ inverse such that the matrix product $ABC$ is positive and does not have any case like the one mentioned in this section. This is the starting point of designing case 1 in the algorithm
