@@ -473,9 +473,16 @@ To embed each $k$-th column of $C$ parallel to $y_3$-axis in $\mathbb{H}^3$. So,
 \end{itemize}
 \end{itemize}
 \end{itemize} 
-In Case 1, since each step from step 1 to step 3 is invertible, after these operations, hyperbolic-length product can be applied to $M_I'$ and $C'$, then apply all the inverses and restrictions to back to $AB$, so the output is also unchanged, but the orbit of the neural network can be found using the above hyperbolic-orbit algorithm. 
 
-Furthermore, the isometry group of $\mathbb{H}^n$ is a group of M\"{o}bius mapping, hence its group elements preserve not only hyperbolic length but angles, thus the information of the sign of each $a_{ki}b_{il}$ could be preserved.
+
+\begin{figure}[H]
+\caption{The computational graphs for the two cases in hyperbolic-orbit algorithm which show how gradients are feedback using back-propagation algorithm.}
+\centering
+\includegraphics[width=0.5\textwidth]{2.png}
+\end{figure}
+
+
+
 
  
 \section{Examples}
@@ -504,7 +511,9 @@ Let $A=Q\in \mathbb{C}^{n\times d_q}$ and $B=K^t\in \mathbb{C}^{d_k\times n}$ in
 
 
 \section{Discussion}
+In Case 1, since each step from step 1 to step 3 is invertible, after these operations, hyperbolic-length product can be applied to $M_I'$ and $C'$, then apply all the inverses and restrictions to back to $AB$, so the output is also unchanged, but the orbit of the neural network can be found using the above hyperbolic-orbit algorithm. 
 
+Furthermore, the isometry group of $\mathbb{H}^n$ is a group of M\"{o}bius mapping, hence its group elements preserve not only hyperbolic length but angles, thus the information of the sign of each $a_{ki}b_{il}$ could be preserved.
 
 With the hyperbolic-orbit algorithm, it is possible to find an appropriate M\"{o}bius mapping that is corresponding to $M\in\text{PSL}(2,\mathbb{R})$ such that training a 3-node neural network become not necessarily NP-hard in \cite{blum1988training}. Further, if every layer of a given neural network is implemented with the hyperbolic-orbit algorithm introduced in this paper, by combining with perturbations and parallel computing, the steepest descent path toward the global minimum could be designed. The algorithm introduced by the paper can help to save training time for parallel computing in the ensemble method, that is, instead of starting over from the beginning to train $N'$ models in parallel, $N'\in\mathbb{N}$, the training can start with $N'$ models that are equivalent to a trained model that already has an error that cannot be reduced by using the old training set--but on the orbits of the trained model, each equivalent model on the orbit can be kept training with a new training set by updating the weight matrices using back-propagation with the gradient descent algorithm. Then, in each epoch, the best model could be selected and instantaneously its $N'$ equivalent models could be obtained using the hyperbolic-orbit algorithm.
 
