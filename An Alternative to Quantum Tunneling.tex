@@ -432,7 +432,6 @@ In summary, there are two cases to apply the hyperbolic-orbit algorithm. Let a m
 %\end{itemize}
 
 \item[Case 1]$W$ was trained. 
-The goal is to find an auxiliary matrix $C$ and instead of applying hyperbolic-orbit algorithm on $A$ times $B$, applying it to $M$ times $C$, $M$ is defined in step 1, i.e. make $AB$ become invertible and find an auxiliary matrix $C$ such that the solution of the embedding coordinates of entries $(M)_{ki}$ and $(C)_{il}$ exists. That is, entries of matrix $M$ and $C$ can be mapped to $\mathbb{H}^3$ such that the hyperbolic length between $(M)_{ki}$ and $(C)_{il}$ is preserved by the hyperbolic-length product. 
 \begin{itemize}
 \item[Step 1] If $AB$ is not invertible, then extend it to a $2n\times 2n$ matrix which is invertible:
 $\begin{pmatrix}
@@ -443,21 +442,22 @@ $\begin{pmatrix}
  I & 0
 \end{pmatrix}.$
 \item[Step 2] 
-To embed each $k$-th column of $C$ parallel to $y_3$-axis in $\mathbb{H}^3$. So, design each hyperbolic length between $(M)_{ki}$ and $(C)_{il}$ in a matrix called $M'$, e.g. let each $(M)_{ki}$ to be linked with $(C)_{il}$ symmetrically, although at this step $(C)_{il}$ is still unknown. But, just because of this reason, all hyperbolic lengths can be designed symmetrically such that the solution exists.
+Find the embedding functions of each entry to map entries of $M$ into a set of preset points in $\mathbb{H}^2$ and denote the result by $M'$. 
 
-\item[Step 3] Now, what remains is to find the matrix $C$. Since $M$ is invertible, and $M'$ is known, it suffices to solve the matrix equation $MC=M'$. Thus, $C=M^{-1}M'$. 
+\item[Step 3] Generate an $M''$ such that each entry is in $\mathbb{H}^2$.
+Now, what remains is to find the matrix $C$. Since $M'$ is invertible, and $M''$ is known, it suffices to solve the matrix equation $M'C=M''$ for $C$. That gives $C=M'^{-1}M''$. 
 \begin{itemize}
 \item[(i)] If $C$ is not invertible, then extend $C$ to $C':=\begin{pmatrix}
  C & I\\
  I & 0
-\end{pmatrix}$, $M$ to $M_I:=\begin{pmatrix}
- M & I\\
- I & 0
 \end{pmatrix}$, $M'$ to $M'_I:=\begin{pmatrix}
- M' & I\\
+ M '& I\\
+ I & 0
+\end{pmatrix}$, $M''$ to $M''_I:=\begin{pmatrix}
+ M'' & I\\
  I & 0
 \end{pmatrix}$.
-\item[(ii)] If $C$ is invertible, rename $C$ to $C'$, $M$ to $M_I$, and $M'$ to $M'_I$.
+\item[(ii)] If $C$ is invertible, rename $C$ to $C'$, $M'$ to $M'_I$, and $M''$ to $M''_I$.
 \end{itemize}
 
 

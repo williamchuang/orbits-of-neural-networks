@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  5 OCT 2023 08:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  5 OCT 2023 10:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1204,69 +1204,69 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 325.
  [2] [3] [4] [5]
-<2.png, id=133, 1225.57875pt x 582.175pt>
+<2.png, id=133, 1033.8625pt x 448.67625pt>
 File: 2.png Graphic file (type png)
 <use 2.png>
 Package pdftex.def Info: 2.png  used on input line 481.
-(pdftex.def)             Requested size: 341.11533pt x 162.03073pt.
-
-[6]
-<3.png, id=139, 1223.57124pt x 588.1975pt>
+(pdftex.def)             Requested size: 341.11533pt x 148.03622pt.
+<3.png, id=135, 853.1875pt x 394.47375pt>
 File: 3.png Graphic file (type png)
 <use 3.png>
 Package pdftex.def Info: 3.png  used on input line 487.
-(pdftex.def)             Requested size: 341.11533pt x 163.97617pt.
-<4.png, id=140, 1223.57124pt x 468.75125pt>
+(pdftex.def)             Requested size: 341.11533pt x 157.72049pt.
+
+[6pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.489 
+       <./2.png>]
+<4.png, id=142, 1175.39125pt x 381.425pt>
 File: 4.png Graphic file (type png)
 <use 4.png>
 Package pdftex.def Info: 4.png  used on input line 493.
-(pdftex.def)             Requested size: 341.11533pt x 130.67725pt.
-<5.png, id=141, 742.775pt x 462.72874pt>
+(pdftex.def)             Requested size: 341.11533pt x 110.6919pt.
+<5.png, id=143, 1250.6725pt x 560.0925pt>
 File: 5.png Graphic file (type png)
 <use 5.png>
 Package pdftex.def Info: 5.png  used on input line 499.
-(pdftex.def)             Requested size: 341.11533pt x 212.51183pt.
- [7pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
+(pdftex.def)             Requested size: 341.11533pt x 152.75677pt.
+ [7pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.501 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.501 
+l.512 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.501 
-       <./2.png> <./3.png> <./4.png>] [8pdfTeX warning (ext4): destination with
- the same identifier (name{figure.4}) has been already used, duplicate ignored
+l.512 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.536 F
-       urthermore, the isometry group of $\mathbb{H}^n$ is a group of M\"{o}...
- <./5.png>] [9] (./An Alternative to Quantum Tunneling.bbl
+l.512 
+       <./3.png> <./4.png> <./5.png>] [8]
+(./An Alternative to Quantum Tunneling.bbl [9]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
 2.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [10]) [11]
+)) [10]
 (./An Alternative to Quantum Tunneling.aux)
 Package rerunfilecheck Info: File `"An Alternative to Quantum Tunneling".out' h
 as not changed.
 (rerunfilecheck)             Checksum: 864730A8C834BDDE251243513D0DDBBD;1236.
  ) 
 Here is how much of TeX's memory you used:
- 32681 strings out of 478542
- 661531 string characters out of 5850401
+ 32680 strings out of 478542
+ 661524 string characters out of 5850401
  1108644 words of memory out of 5000000
  49964 multiletter control sequences out of 15000+600000
  469251 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,8n,122p,1323b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 116i,8n,122p,1323b,529s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local
 /texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2
 021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-
@@ -1288,11 +1288,11 @@ blic/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lms
 y7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symb
 ols/msbm7.pfb>
-Output written on "An Alternative to Quantum Tunneling.pdf" (11 pages, 986703 b
+Output written on "An Alternative to Quantum Tunneling.pdf" (10 pages, 925627 b
 ytes).
 PDF statistics:
- 270 PDF objects out of 1000 (max. 8388607)
- 187 compressed objects within 2 object streams
- 41 named destinations out of 1000 (max. 500000)
+ 266 PDF objects out of 1000 (max. 8388607)
+ 184 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
  225 words of extra memory for PDF output out of 10000 (max. 10000000)
 
