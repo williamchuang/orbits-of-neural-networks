@@ -308,7 +308,7 @@ Furthermore, today, a large language model (LLM) could have trillions of paramet
 \textit{Two models are equivalent} if they both give identical outputs on a fixed training set as the input.
 \end{definition}
 
-Moreover, to use random matrix theory to study the eigenvalue distribution of the model, or to study the dynamics between the distributions of input and the distributions of the model, it takes time to generate samples of trained models. Not only that, if models are trained parallel, then they could be not equivalent. Hence, is it correct to collect models as samples to find their distribution or their eigenvalue distribution if they are not equivalent? 
+Moreover, to use random matrix theory to study the eigenvalue distribution of the model, or to study the dynamics between the distributions of input and the distributions of the model, it takes time to generate samples of trained models. Not only that, if models are trained parallel, then they could not be equivalent. Hence, is it correct to collect models as samples to find their distribution or their eigenvalue distribution if they are not equivalent? 
 
 Hence, here is the \textbf{the essential question} that answered by this paper: is there a way to generate (infinitely many) equivalent models of a given (trained) model? 
 
@@ -320,7 +320,7 @@ If a model can be replaced by another equivalent model, then the other model mig
 
 \section{Hyperbolic-orbit Algorithm}
 \begin{definition}
-Hyperbolic-orbit Algorithm is an algorithm that implements hyperbolic distance to replace matrix product.
+Hyperbolic-orbit Algorithm is an algorithm that implements hyperbolic distance to replace matrix products.
 \end{definition}
 To introduce the algorithm, it is natural to start to build up the concept and tools from the Euclidean space. In Euclidean space, equivalent models of a trained model can be obtained by redefining matrix multiplication using Euclidean distance $d_E(x,y)=\vert x-y\vert$ for all $x, y\in\mathbb{R}$. For instance, let $A$ be in $\mathbb{R}^{n\times m}$, $B$ be in $\mathbb{R}^{d\times m}$, and their entries are denoted by $a_{ki}$ and $b_{li}$ where $k\in\left\lbrace 1,...,n\right\rbrace$, $l\in\left\lbrace 1,...,d\right\rbrace$, and $i\in\left\lbrace 1,...,m\right\rbrace$. Then, $\left( A B^t\right)_{kl}=\sum\limits_{i=1}^m a_{ki}b_{il}$.
 
@@ -339,7 +339,7 @@ Alternatively, every entry of the matrices $A\in\mathbb{R}^{n\times m}$ and $B \
 
 The necessary condition to use hyperbolic geometry and Kleinian groups is that since that hyperbolic geometry can also reach the goal that to generate infinitely many equivalent models, and Kleinian groups are isometry group that preserved not only hyperbolic lengths, but angles which can work as the symmetric group of the space, and to act on geometric objects in the space to do rigid transformation.
 
-Furthermore, the sufficient condition to apply hyperbolic geometry and Kleinian groups is that instead of linear transformations, linear fractional transformations (which is determined by elements in the Kleinian group) can provide non-linear and hence non-trivial feedback in back-propagation. Though it is possible to develop a similar algorithm on other Riemannian manifold that has an automrophism group and if the group elements can also preserve angles and distance, hyperbolic geometry with Kleinian groups might be the easiest example that can be computable, but give non-trivial feedback in back-propagation.
+Furthermore, the sufficient condition to apply hyperbolic geometry and Kleinian groups is that instead of linear transformations, linear fractional transformations (which is determined by elements in the Kleinian group) can provide non-linear and hence non-trivial feedback in back-propagation. Though it is possible to develop a similar algorithm on other Riemannian manifold that has an automorphism group and if the group elements can also preserve angles and distance, hyperbolic geometry with Kleinian groups might be the easiest example that can be computable, but give non-trivial feedback in back-propagation.
 
 
 Define a new binary operation between $A$ and $B$ using hyperbolic length on the upper-half plane $\mathbb{H}^2$\cite{beardon2012geometry}:
@@ -403,7 +403,7 @@ $$
 
 The question that aimed to solve by using this algorithm was mentioned in the first section. The goal is to replace matrix multiplication with a caveat that the situation mostly does not include finding inverses.
 
-In summary, there are two cases to apply hyperbolic-orbit algorithm. Let a model $W$ and a training set $X$ be given.
+In summary, there are two cases to apply the hyperbolic-orbit algorithm. Let a model $W$ and a training set $X$ be given.
 \begin{itemize}
 
  
@@ -423,7 +423,7 @@ In summary, there are two cases to apply hyperbolic-orbit algorithm. Let a model
 
 %\item For $k=1$ to $k=n$ and fix $l$ at $l=2$.
 %\begin{itemize}
-%\item[(i)] Let $b_{i2}$ has the same $y^1$ and $y^2$ coordinates as $b_{i2}$.
+%\item[(i)] Let $b_{i2}$ have the same $y^1$ and $y^2$ coordinates as $b_{i2}$.
 %\item[(ii)] If $a_{ki}b_{i2}=0$, then move $b_{i2}$ along its $y^3$ coordinate such that the edge $(a_{ki},b_{il})$ has a zero projection to $y^3$-axis.  
 %\item[(iii)] If $a_{ki}b_{i2}>0$, then move $b_{i2}$ along $y_3$-axis such that the edge $(a_{ki},b_{il})$ has a positive projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y^3$-axis.  
 %\item[(iv)] If $a_{ki}b_{i2}<0$, then move $b_{i2}$ along $y_3$-axis such that the edge $(a_{ki},b_{il})$ has a negative projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y^3$-axis.  
@@ -497,9 +497,9 @@ Let $A=Q\in \mathbb{C}^{n\times d_q}$ and $B=K^t\in \mathbb{C}^{d_k\times n}$ in
 %If for each $k$, each pair of hyperbolic circles that are corresponding to the same k, one has radius $d_{\mathbb{H}^2}(a_{ki}', b_{il}' )$ and the other has radius $d_{\mathbb{H}^2}(a_{ki}', b_{ij}') $ has an interception, then do the next $j$ of $b_{ij}'$.
 %Finally, if there exist interceptions in the above process for all i, then $A$ and $B$ can be embedded into $\mathbb{H}^2$ and use the hyperbolic-orbit algorithm to replace matrix multiplication.
 
-%After implemented the hyperbolic-length product and hyperbolic-orbit algorithm to the trained model, with the same training set the trained the model, the new modified model will give exactly the same output. The only distinction will happen only when the old and new model were fed in samples that were out of the training set. 
+%After implementing the hyperbolic-length product and hyperbolic-orbit algorithm to the trained model, with the same training set that trained the model, the new modified model will give exactly the same output. The only distinction will happen only when the old and new model were fed in samples that were out of the training set. 
 
-%The above two examples show that implement the hyperbolic-orbit algorithm before training is way easier than the other way around. To solve this problem, instead of embedding $A$ and $B$ into 2-dimensional hyperbolic space, hyperbolic spaces in higher dimensions could be the solution, since for each $n\geq 3$, $\mathbb{H}^n$ has an isometry group. This is the sufficient condition for generalizing 2-dimensional hyperbolic-length product to n-dimension. 
+%The above two examples show that implementing the hyperbolic-orbit algorithm before training is way easier than the other way around. To solve this problem, instead of embedding $A$ and $B$ into 2-dimensional hyperbolic space, hyperbolic spaces in higher dimensions could be the solution, since for each $n\geq 3$, $\mathbb{H}^n$ has an isometry group. This is the sufficient condition for generalizing 2-dimensional hyperbolic-length products to n-dimension. 
 
 
 
@@ -508,7 +508,7 @@ Let $A=Q\in \mathbb{C}^{n\times d_q}$ and $B=K^t\in \mathbb{C}^{d_k\times n}$ in
 
 With the hyperbolic-orbit algorithm, it is possible to find an appropriate M\"{o}bius mapping that is corresponding to $M\in\text{PSL}(2,\mathbb{R})$ such that training a 3-node neural network become not necessarily NP-hard in \cite{blum1988training}. Further, if every layer of a given neural network is implemented with the hyperbolic-orbit algorithm introduced in this paper, by combining with perturbations and parallel computing, the steepest descent path toward the global minimum could be designed. The algorithm introduced by the paper can help to save training time for parallel computing in the ensemble method, that is, instead of starting over from the beginning to train $N'$ models in parallel, $N'\in\mathbb{N}$, the training can start with $N'$ models that are equivalent to a trained model that already has an error that cannot be reduced by using the old training set--but on the orbits of the trained model, each equivalent model on the orbit can be kept training with a new training set by updating the weight matrices using back-propagation with the gradient descent algorithm. Then, in each epoch, the best model could be selected and instantaneously its $N'$ equivalent models could be obtained using the hyperbolic-orbit algorithm.
 
-Furthermore, this algorithm could also be applied for non-linear encryption. For instance, the cardinality of the orbit of $A$ and $B$ is infinite, there are infinite many ways to encrypt messages in $A$ and $B$ without losing the information contains in the $A$ and $B$, and the messages can only be deciphered if the receiver knows the correct inverse.
+Furthermore, this algorithm could also be applied for non-linear encryption. For instance, the cardinality of the orbit of $A$ and $B$ is infinite, thus there are infinitely many ways to encrypt messages in $A$ and $B$ without losing the information contains in the $A$ and $B$, and the messages can only be deciphered if the receiver knows the two correct inverses as keys in $\text{PSL}(2,\mathbb{R})$ to decode two encrypted matrices $A$ and $B$ to get the message $AB^n$.
 
 \section{Limitation}
 The hyperbolic-orbit algorithm has a limitation when it is applied to case 2 if the model was trained. To show the limitation, consider an example where there are two points $a_1$, and $a_2$ from $A$, and two points $b_1$ and $b_2$ in $B$. In $\mathbb{H}^n, n\geq 3$, suppose the hyperbolic length between $b_1$ to $a_1$ and $b_2$ to $a_1$ are both zero, and the hyperbolic length between $b_1$ and $a_2$ is $L$. But, for $b_2$, the hyperbolic length between $b_2$ and $a_2$ is $2L$. If this happens, it might be possible to find an auxiliary invertible matrix $C$ and instead of applying hyperbolic-orbit algorithm on $A$ times $B$, applying it to $AB$ times $C$ and multiply the final result with $C$ inverse such that the matrix product $ABC$ is positive and does not have any case like the one mentioned in this section. This is the starting point of designing case 1 in the algorithm
@@ -535,6 +535,7 @@ The hyperbolic-orbit algorithm has a limitation when it is applied to case 2 if 
 \bibliographystyle{amsplain} % We choose the "plain" reference style
 \bibliography{refs} % Entries are in the refs.bib file
 \end{document}
+
 
 
 
