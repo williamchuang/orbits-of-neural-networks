@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  5 OCT 2023 16:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  5 OCT 2023 19:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1198,73 +1198,72 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 325.
+(Font)              <10> on input line 336.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 325.
+(Font)              <7> on input line 336.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 325.
+(Font)              <5> on input line 336.
  [2] [3] [4] [5]
 <6.png, id=133, 729.72626pt x 741.77126pt>
 File: 6.png Graphic file (type png)
 <use 6.png>
-Package pdftex.def Info: 6.png  used on input line 482.
+Package pdftex.def Info: 6.png  used on input line 486.
 (pdftex.def)             Requested size: 341.11533pt x 346.74236pt.
-
-[6]
-<2.png, id=139, 1033.8625pt x 448.67625pt>
+<2.png, id=135, 1033.8625pt x 448.67625pt>
 File: 2.png Graphic file (type png)
 <use 2.png>
-Package pdftex.def Info: 2.png  used on input line 488.
+Package pdftex.def Info: 2.png  used on input line 492.
 (pdftex.def)             Requested size: 341.11533pt x 148.03622pt.
-<5.png, id=140, 1250.6725pt x 560.0925pt>
+
+[6pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.494 
+       <./6.png>]
+<5.png, id=142, 1250.6725pt x 560.0925pt>
 File: 5.png Graphic file (type png)
 <use 5.png>
-Package pdftex.def Info: 5.png  used on input line 494.
+Package pdftex.def Info: 5.png  used on input line 498.
 (pdftex.def)             Requested size: 341.11533pt x 152.75677pt.
- [7pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.496 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.496 
-       <./6.png> <./2.png>]
-<4.png, id=150, 1175.39125pt x 381.425pt>
+<4.png, id=143, 1175.39125pt x 381.425pt>
 File: 4.png Graphic file (type png)
 <use 4.png>
-Package pdftex.def Info: 4.png  used on input line 500.
+Package pdftex.def Info: 4.png  used on input line 504.
 (pdftex.def)             Requested size: 341.11533pt x 110.6919pt.
-<3.png, id=151, 853.1875pt x 394.47375pt>
+<3.png, id=144, 853.1875pt x 394.47375pt>
 File: 3.png Graphic file (type png)
 <use 3.png>
-Package pdftex.def Info: 3.png  used on input line 506.
+Package pdftex.def Info: 3.png  used on input line 510.
 (pdftex.def)             Requested size: 341.11533pt x 157.72049pt.
- [8pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
+ [7pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.519 
+l.512 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.512 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.519 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-5}) has been already used, duplicate ignored
+l.512 
+       <./2.png> <./5.png> <./4.png>] [8pdfTeX warning (ext4): destination with
+ the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.519 
-       <./5.png> <./4.png> <./3.png>] [9]
-(./An Alternative to Quantum Tunneling.bbl [10]
+l.549 W
+       ith the hyperbolic-orbit algorithm, it is possible to find an appropr...
+ <./3.png>] [9] (./An Alternative to Quantum Tunneling.bbl
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
 2.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [11]
+) [10]) [11]
 (./An Alternative to Quantum Tunneling.aux)
 Package rerunfilecheck Info: File `"An Alternative to Quantum Tunneling".out' h
 as not changed.
@@ -1277,7 +1276,7 @@ Here is how much of TeX's memory you used:
  49970 multiletter control sequences out of 15000+600000
  469251 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,8n,122p,1318b,531s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 116i,8n,122p,1336b,573s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local
 /texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2
 021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-
@@ -1299,7 +1298,7 @@ blic/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lms
 y7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symb
 ols/msbm7.pfb>
-Output written on "An Alternative to Quantum Tunneling.pdf" (11 pages, 1145233 
+Output written on "An Alternative to Quantum Tunneling.pdf" (11 pages, 1142168 
 bytes).
 PDF statistics:
  273 PDF objects out of 1000 (max. 8388607)
