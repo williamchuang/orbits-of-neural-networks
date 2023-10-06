@@ -1,4 +1,4 @@
-%CUT AND PASTE THIS ENTIRE DOCUMENT INTO A BLANK DOCUMENT ON CloudSageMath. Then replace the content (title, name, and so on), with your stuff. If you have problems or errors, let me know! 
+%CUT AND PASTE THIS ENTIRE DOCUMENT INTO A BLANK DOCUMENT ON CloudSageMath. Then replace the content (title, name, and so on), with your stuff. If you have problems or errors, let me know!
 
 %\documentclass[12pt]{amsart}
 \documentclass{article}
@@ -24,21 +24,21 @@
 
 \usepackage{listings}
 \lstset{
-    breaklines=true,
-    %
-    extendedchars=true,
-    literate=
-    {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
-    {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
-    {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
-    {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
-    {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
-    {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
-    {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
-    { }{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
-    {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
-    {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
-    {€}{{\EUR}}1 {£}{{\pounds}}1
+   breaklines=true,
+   %
+   extendedchars=true,
+   literate=
+   {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+   {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+   {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+   {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+   {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+   {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+   {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+   { }{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+   {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+   {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+   {€}{{\EUR}}1 {£}{{\pounds}}1
 }
 
 %%
@@ -47,77 +47,77 @@
 %% modified by me (should not have empty lines)
 %%
 \lstdefinelanguage{iPython}{
-    morekeywords={access,and,break,class,continue,def,del,elif,else,except,exec,finally,for,from,global,if,import,in,is,lambda,not,or,pass,print,raise,return,try,while},%
-    %
-    % Built-ins
-    morekeywords=[2]{abs,all,any,basestring,bin,bool,bytearray,callable,chr,classmethod,cmp,compile,complex,delattr,dict,dir,divmod,enumerate,eval,execfile,file,filter,float,format,frozenset,getattr,globals,hasattr,hash,help,hex,id,input,int,isinstance,issubclass,iter,len,list,locals,long,map,max,memoryview,min,next,object,oct,open,ord,pow,property,range,raw_input,reduce,reload,repr,reversed,round,set,setattr,slice,sorted,staticmethod,str,sum,super,tuple,type,unichr,unicode,vars,xrange,zip,apply,buffer,coerce,intern},%
-    %
-    sensitive=true,%
-    morecomment=[l]\#,%
-    morestring=[b]',%
-    morestring=[b]",%
-    %
-    morestring=[s]{'''}{'''},% used for documentation text (mulitiline strings)
-    morestring=[s]{"""}{"""},% added by Philipp Matthias Hahn
-    %
-    morestring=[s]{r'}{'},% `raw' strings
-    morestring=[s]{r"}{"},%
-    morestring=[s]{r'''}{'''},%
-    morestring=[s]{r"""}{"""},%
-    morestring=[s]{u'}{'},% unicode strings
-    morestring=[s]{u"}{"},%
-    morestring=[s]{u'''}{'''},%
-    morestring=[s]{u"""}{"""},%
-    %
-    % {replace}{replacement}{lenght of replace}
-    % *{-}{-}{1} will not replace in comments and so on
-    literate=
-    {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
-    {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
-    {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
-    {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
-    {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
-    {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
-    {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
-    { }{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
-    {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
-    {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
-    {€}{{\EUR}}1 {£}{{\pounds}}1
-    %
-    {^}{{{\color{ipython_purple}\^{}}}}1
-    {=}{{{\color{ipython_purple}=}}}1
-    %
-    {+}{{{\color{ipython_purple}+}}}1
-    {*}{{{\color{ipython_purple}$^\ast$}}}1
-    {/}{{{\color{ipython_purple}/}}}1
-    %
-    {+=}{{{+=}}}1
-    {-=}{{{-=}}}1
-    {*=}{{{$^\ast$=}}}1
-    {/=}{{{/=}}}1,
-    literate=
-    *{-}{{{\color{ipython_purple}-}}}1
-     {?}{{{\color{ipython_purple}?}}}1,
-    %
-    identifierstyle=\color{black}\ttfamily,
-    commentstyle=\color{ipython_cyan}\ttfamily,
-    stringstyle=\color{ipython_red}\ttfamily,
-    keepspaces=true,
-    showspaces=false,
-    showstringspaces=false,
-    %
-    rulecolor=\color{ipython_frame},
-    frame=single,
-    frameround={t}{t}{t}{t},
-    framexleftmargin=6mm,
-    numbers=left,
-    numberstyle=\tiny\color{halfgray},
-    %
-    %
-    backgroundcolor=\color{ipython_bg},
-    %   extendedchars=true,
-    basicstyle=\scriptsize,
-    keywordstyle=\color{ipython_green}\ttfamily,
+   morekeywords={access,and,break,class,continue,def,del,elif,else,except,exec,finally,for,from,global,if,import,in,is,lambda,not,or,pass,print,raise,return,try,while},%
+   %
+   % Built-ins
+   morekeywords=[2]{abs,all,any,basestring,bin,bool,bytearray,callable,chr,classmethod,cmp,compile,complex,delattr,dict,dir,divmod,enumerate,eval,execfile,file,filter,float,format,frozenset,getattr,globals,hasattr,hash,help,hex,id,input,int,isinstance,issubclass,iter,len,list,locals,long,map,max,memoryview,min,next,object,oct,open,ord,pow,property,range,raw_input,reduce,reload,repr,reversed,round,set,setattr,slice,sorted,staticmethod,str,sum,super,tuple,type,unichr,unicode,vars,xrange,zip,apply,buffer,coerce,intern},%
+   %
+   sensitive=true,%
+   morecomment=[l]\#,%
+   morestring=[b]',%
+   morestring=[b]",%
+   %
+   morestring=[s]{'''}{'''},% used for documentation text (mulitiline strings)
+   morestring=[s]{"""}{"""},% added by Philipp Matthias Hahn
+   %
+   morestring=[s]{r'}{'},% `raw' strings
+   morestring=[s]{r"}{"},%
+   morestring=[s]{r'''}{'''},%
+   morestring=[s]{r"""}{"""},%
+   morestring=[s]{u'}{'},% unicode strings
+   morestring=[s]{u"}{"},%
+   morestring=[s]{u'''}{'''},%
+   morestring=[s]{u"""}{"""},%
+   %
+   % {replace}{replacement}{lenght of replace}
+   % *{-}{-}{1} will not replace in comments and so on
+   literate=
+   {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+   {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+   {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+   {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+   {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+   {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+   {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+   { }{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+   {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+   {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+   {€}{{\EUR}}1 {£}{{\pounds}}1
+   %
+   {^}{{{\color{ipython_purple}\^{}}}}1
+   {=}{{{\color{ipython_purple}=}}}1
+   %
+   {+}{{{\color{ipython_purple}+}}}1
+   {*}{{{\color{ipython_purple}$^\ast$}}}1
+   {/}{{{\color{ipython_purple}/}}}1
+   %
+   {+=}{{{+=}}}1
+   {-=}{{{-=}}}1
+   {*=}{{{$^\ast$=}}}1
+   {/=}{{{/=}}}1,
+   literate=
+   *{-}{{{\color{ipython_purple}-}}}1
+    {?}{{{\color{ipython_purple}?}}}1,
+   %
+   identifierstyle=\color{black}\ttfamily,
+   commentstyle=\color{ipython_cyan}\ttfamily,
+   stringstyle=\color{ipython_red}\ttfamily,
+   keepspaces=true,
+   showspaces=false,
+   showstringspaces=false,
+   %
+   rulecolor=\color{ipython_frame},
+   frame=single,
+   frameround={t}{t}{t}{t},
+   framexleftmargin=6mm,
+   numbers=left,
+   numberstyle=\tiny\color{halfgray},
+   %
+   %
+   backgroundcolor=\color{ipython_bg},
+   %   extendedchars=true,
+   basicstyle=\scriptsize,
+   keywordstyle=\color{ipython_green}\ttfamily,
 }
 
 %%%%flowchart
@@ -128,13 +128,13 @@
 %\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
-\tikzstyle{decision} = [rectangle, rounded corners, draw, fill=blue!20, 
-    text width=15em, text badly centered, node distance=2.2cm, inner sep=0pt]
-\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
-    text width=5em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{decision} = [rectangle, rounded corners, draw, fill=blue!20,
+   text width=15em, text badly centered, node distance=2.2cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=blue!20,
+   text width=5em, text centered, rounded corners, minimum height=4em]
 \tikzstyle{line} = [draw, -latex']
 \tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
-    minimum height=2em]
+   minimum height=2em]
 %\usepackage[english]{babel}
 %\usepackage[utf8]{inputenc}
 %\usepackage[margin=1in]{geometry}
@@ -195,7 +195,7 @@ graphicx,enumerate,setspace,verbatim,tocloft,rotating}
 %     some numbers for \textheight and \footskip right here, and then change them below, right after
 %     generating the Title Page.
 
-\hoffset=.5in 
+\hoffset=.5in
 \oddsidemargin=0in   % = 1in because LaTeX adds 1in
 \evensidemargin=0in  % = 1in because LaTeX adds 1in
 \topmargin=0in       % = 1in because LaTeX adds 1in
@@ -250,13 +250,13 @@ graphicx,enumerate,setspace,verbatim,tocloft,rotating}
 %\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
-\tikzstyle{decision} = [rectangle, rounded corners, draw, fill=blue!20, 
-    text width=15em, text badly centered, node distance=2.2cm, inner sep=0pt]
-\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
-    text width=5em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{decision} = [rectangle, rounded corners, draw, fill=blue!20,
+   text width=15em, text badly centered, node distance=2.2cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=blue!20,
+   text width=5em, text centered, rounded corners, minimum height=4em]
 \tikzstyle{line} = [draw, -latex']
 \tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
-    minimum height=2em]
+   minimum height=2em]
 %\usepackage[english]{babel}
 %\usepackage[utf8]{inputenc}
 %\usepackage[margin=1in]{geometry}
@@ -294,11 +294,11 @@ graphicx,enumerate,setspace,verbatim,tocloft,rotating}
 %\end{tcolorbox}
 
 \section{Introduction}
-Inspired by \cite{yun2017global, blum1988training, judd1990neural}, consider the following question: 
-let a training set and a trained neural network be given, can the neural network be trained to reach a global minimum on its loss surface? 
+Inspired by \cite{yun2017global, blum1988training, judd1990neural}, consider the following question:
+let a training set and a trained neural network be given, can the neural network be trained to reach a global minimum on its loss surface?
 
-%where the trained neural network already converged to a local minimum, then can the model be 
-%let a training set and a trained neural network be given where the trained neural network already converged to a local minimum, meaning given a positive real number $\epsilon>0$, then each sample $X_i$ in the given training set, there is $N\in\mathbb{N}$ such that for the number of epoch greater than $N$, the model is in the epsilon ball around the local minimum of the loss surface (i.e. its parameter space or moduli space). 
+%where the trained neural network already converged to a local minimum, then can the model be
+%let a training set and a trained neural network be given where the trained neural network already converged to a local minimum, meaning given a positive real number $\epsilon>0$, then each sample $X_i$ in the given training set, there is $N\in\mathbb{N}$ such that for the number of epoch greater than $N$, the model is in the epsilon ball around the local minimum of the loss surface (i.e. its parameter space or moduli space).
 
 
 
@@ -308,12 +308,12 @@ Furthermore, today, a large language model (LLM) could have trillions of paramet
 \textit{Two models are equivalent} if they both give identical outputs on a fixed training set as the input.
 \end{definition}
 
-Moreover, to use random matrix theory to study the eigenvalue distribution of the model, or to study the dynamics between the distributions of input and the distributions of the model, it takes time to generate samples of trained models. Not only that, if models are trained parallel, then they could not always be equivalent given there are multiple local minima. Hence, is it correct to collect models as samples to find their distribution or their eigenvalue distribution if they are not equivalent? 
+Moreover, to use random matrix theory to study the eigenvalue distribution of the model, or to study the dynamics between the distributions of input and the distributions of the model, it takes time to generate samples of trained models. Not only that, if models are trained parallel, then they could not always be equivalent given there are multiple local minima. Hence, is it correct to collect models as samples to find their distribution or their eigenvalue distribution if they are not equivalent?
 
-Hence, here is the \textbf{the essential question} that answered by this paper: is there a way to generate (infinitely many) equivalent models of a given (trained) model and each generated equivalent model can have non-trivial feedback gradients during the training mode using back-propagation? 
+Hence, here is the \textbf{the essential question} that answered by this paper: is there a way to generate (infinitely many) equivalent models of a given (trained) model and each generated equivalent model can have non-trivial feedback gradients during the training mode using back-propagation?
 
 
-It is necessary to ask this question so that the trained model can be understood better to a point that the distribution of its weights can be studied using random matrix theory, and if all the other equivalent models can be derived instantaneously, then this can be considered an alternative to apply quantum computing to find all those equivalent solutions in parallel. 
+It is necessary to ask this question so that the trained model can be understood better to a point that the distribution of its weights can be studied using random matrix theory, and if all the other equivalent models can be derived instantaneously, then this can be considered an alternative to apply quantum computing to find all those equivalent solutions in parallel.
 
 If a model can be replaced by another equivalent model, then the other model might be at the different point on the loss surface, then the barrier between the local minimum to the nearest lower local minimum might have a lower height or in some better case with a negative height, meaning the model can be trained to a better model with a smaller error by using a new set of training data to descent to that lower local minimum. Hence, it is also sufficient to ask the question: how to find equivalent models of a given trained model? If the answer to this question is unknown, suppose a trained model cannot distinguish the fake data generated by an adversary model from the true data, or if a model needs to go through a debugging process for some false classified input, then the model not only has to be retrained, but it cannot be justified it is the best solution due to the process to reach the solution is random. Thus, on the contrary, if all of its equivalent models can be found immediately, then chances are, within the set of equivalent models, there might exist a model that will not take the fake input or falsely classified a corner case, meaning a model can be replaced instantly without going through a new training process.
 
@@ -331,7 +331,7 @@ If a model can be replaced by another equivalent model, then the other model mig
 %$$
 %\left( \left( \alpha + A \right) \odot_{E}\left( \alpha+ B^t \right)\right)_{kl} := \sum\limits_{i=1}^m d_{E} \left(\alpha + a_{ki} ,\alpha + b_{il} \right) = \sum\limits_{i=1}^m d_{E} \left( a_{ki} ,  b_{il} \right) = \left( A\odot_{E} B^t\right)_{kl}.
 %$$
-%In other words, the original given model is unchanged. This operation results in a translation of the loss surface. 
+%In other words, the original given model is unchanged. This operation results in a translation of the loss surface.
 
 Every entry of the matrices $A\in\mathbb{R}^{n\times m}$ and $B \in\mathbb{R}^{d\times m}$ can be embedded into the upper half-plane $\mathbb{H}^2$. That is, the entries of $A$ and $B$ become complex numbers with positive imaginary part: $a_{ki}\in\mathbb{H}^2$ and $b_{il}\in\mathbb{H}^2$.
 
@@ -350,7 +350,7 @@ Then on the upper-half plane, the projective special linear group $\text{PSL}(2,
 
 To derive an equivalent model, take any $M\in \text{PSL}(2,\mathbb{R})\setminus\left\lbrace \text{id}\right\rbrace$, then there exists an isomorphism to map $M$ to a linear fractional (M\"{o}bius) map $T_M(z)=\frac{az+b}{cz+d}, a,b,c,d\in\mathbb{R},z\in\mathbb{C}$.
 \begin{definition}[Hyperbolic-length product]
-Define \textit{the hyperbolic-length product} is the following new operation: 
+Define \textit{the hyperbolic-length product} is the following new operation:
 $$
 \left( T_M(A) \odot_{\mathbb{H}^2} T_M(B^t)\right)_{kl} := \sum\limits_{i=1}^m d_{\mathbb{H}^2} \left(T_M \left( a_{ki} \right) ,T_M\left( b_{il}\right) \right).
 $$
@@ -385,11 +385,11 @@ Since for each $z_1,z_2\in\mathbb{H}^2$, $d_{\mathbb{H}^2}(z_1,z_2)=\rho_{\mathb
 
 The 2-dimensional hyperbolic-length product can be generalized to $n$-dimension\cite{MR1138441, MR725161, beardon2012geometry, MR2402415, MR4221225, MR1893917}, for $n\geq 3$. Let $A, B$ be embedded into $\mathbb{H}^n, n\geq 3.$
 \begin{definition}[Hyperbolic-length product]
-Define \textit{n-dime the hyperbolic-length product} is the following new operation: 
+Define \textit{n-dime the hyperbolic-length product} is the following new operation:
 $$
 \left( T_M(A) \odot_{\mathbb{H}^n} T_M(B^t)\right)_{kl} := \sum\limits_{i=1}^m d_{\mathbb{H}^n} \left(T_M \left( a_{ki} \right) ,T_M\left( b_{il}\right) \right).
 $$
-\end{definition} 
+\end{definition}
 This $n$-dimension result could be useful for applying the hyperbolic-orbit algorithm to any trained models that were trained without implementing the hyperbolic-length product during the training.
 Likewise, for higher dimensions, the hyperbolic-length product is also an invariant:
 \begin{proposition}
@@ -404,64 +404,62 @@ The question that aimed to solve by using this algorithm was mentioned in the fi
 In summary, there are two cases to apply the hyperbolic-orbit algorithm. Let a model $W$ and a training set $X$ be given.
 
 \begin{definition}
-Hyperbolic-orbit Algorithm is an algorithm that implements hyperbolic-length product to replace matrix products.
+Hyperbolic-orbit Algorithm is an algorithm that implements hyperbolic-length products to replace matrix products.
 \end{definition}
-The following is the hyperbolic-orbit algorithm introduced by the paper. There could be more than one way to implement hyperbolic-length product.
+The following is the hyperbolic-orbit algorithm introduced by the paper. There could be more than one way to implement hyperbolic-length products.
 \begin{itemize}
 
- 
-%\item[Case 1] $W$ was trained. A special case when $d=2$ for the matrix $B$: 
+%\item[Case 1] $W$ was trained. A special case when $d=2$ for the matrix $B$:
 %\begin{itemize}
-%\item[Step 1] Start with dimension $3\times d$ for embedding $A$ and $B$: each $l$-th column vector in the matrix $B$ is embedded in parallel to the third axis of $\mathbb{H}^3$, denoted by $y^3$ in the following example. 
+%\item[Step 1] Start with dimension $3\times d$ for embedding $A$ and $B$: each $l$-th column vector in the matrix $B$ is embedded in parallel to the third axis of $\mathbb{H}^3$, denoted by $y^3$ in the following example.
 
- 
-%\item[Step 2] 
+%\item[Step 2]
 %\begin{itemize}
 %\item For $k=1$ to $k=n$ and fix $l$ at $l=1$.
 %\begin{itemize}
-%\item[(i)] If $a_{ki}b_{il}=0$, then map the edge $(a_{ki},b_{il})$ to a plane that is orthogonal to $y^3$-axis and has a zero projection to $y^3$-axis.  
-%\item[(ii)] If $a_{ki}b_{il}>0$, then map the edge $(a_{ki},b_{il})$ to a plane that is parallel to $y^3$-axis and has a positive projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y^3$-axis.  
-%\item[(iii)] If $a_{ki}b_{il}<0$, then map the edge $(a_{ki},b_{il})$ to a plane that is parallel to $y^3$-axis and has a negative projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y^3$-axis.  
+%\item[(i)] If $a_{ki}b_{il}=0$, then map the edge $(a_{ki},b_{il})$ to a plane that is orthogonal to $y^3$-axis and has a zero projection to $y^3$-axis. 
+%\item[(ii)] If $a_{ki}b_{il}>0$, then map the edge $(a_{ki},b_{il})$ to a plane that is parallel to $y^3$-axis and has a positive projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y^3$-axis. 
+%\item[(iii)] If $a_{ki}b_{il}<0$, then map the edge $(a_{ki},b_{il})$ to a plane that is parallel to $y^3$-axis and has a negative projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y^3$-axis. 
 %\end{itemize}
 
 %\item For $k=1$ to $k=n$ and fix $l$ at $l=2$.
 %\begin{itemize}
 %\item[(i)] Let $b_{i2}$ have the same $y^1$ and $y^2$ coordinates as $b_{i2}$.
-%\item[(ii)] If $a_{ki}b_{i2}=0$, then move $b_{i2}$ along its $y^3$ coordinate such that the edge $(a_{ki},b_{il})$ has a zero projection to $y^3$-axis.  
-%\item[(iii)] If $a_{ki}b_{i2}>0$, then move $b_{i2}$ along $y_3$-axis such that the edge $(a_{ki},b_{il})$ has a positive projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y^3$-axis.  
-%\item[(iv)] If $a_{ki}b_{i2}<0$, then move $b_{i2}$ along $y_3$-axis such that the edge $(a_{ki},b_{il})$ has a negative projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y^3$-axis.  
+%\item[(ii)] If $a_{ki}b_{i2}=0$, then move $b_{i2}$ along its $y^3$ coordinate such that the edge $(a_{ki},b_{il})$ has a zero projection to $y^3$-axis. 
+%\item[(iii)] If $a_{ki}b_{i2}>0$, then move $b_{i2}$ along $y_3$-axis such that the edge $(a_{ki},b_{il})$ has a positive projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y^3$-axis. 
+%\item[(iv)] If $a_{ki}b_{i2}<0$, then move $b_{i2}$ along $y_3$-axis such that the edge $(a_{ki},b_{il})$ has a negative projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y^3$-axis. 
 %\end{itemize}
 %\end{itemize}
 %\end{itemize}
 
 
-\item[Case 1]$W$ was trained. 
+\item[Case 1]$W$ was trained.
 \begin{itemize}
-\item[Step 2] 
-Embed entries of $AB$ to $\mathbb{H}^2$. Denote the embedding function by $\phi$. 
+\item[Step 2]
+Embed entries of $AB$ to $\mathbb{H}^2$. Denote the embedding function by $\phi$.
 \item[Step 2] If $AB$ is not invertible, then extend it to a $2n\times 2n$ matrix which is invertible:
 $\begin{pmatrix}
- AB & I\\
- I & 0
+AB & I\\
+I & 0
 \end{pmatrix}$. If $AB$ is invertible, then denote it by $M:=AB$, if not then denote $M:=\begin{pmatrix}
- AB & I\\
- I & 0
+AB & I\\
+I & 0
 \end{pmatrix}.$
 
 
-\item[Step 3] Randomly generate an invertible real positive matrix $M''$ such that $C:=M'^{-1}M''$ and entries of $C$ is in $\mathbb{H}^2$.
+\item[Step 3] Randomly generates an invertible real positive matrix $M''$ such that $C:=M'^{-1}M''$ and entries of $C$ are in $\mathbb{H}^2$.
 
 \item[Step 4]
 \begin{itemize}
 \item[(i)] If $C$ is not invertible, then extend $C$ to $C':=\begin{pmatrix}
- C & I\\
- I & 0
+C & I\\
+I & 0
 \end{pmatrix}$, $M'$ to $M'_I:=\begin{pmatrix}
- M '& I\\
- I & 0
+M '& I\\
+I & 0
 \end{pmatrix}$, $M''$ to $M''_I:=\begin{pmatrix}
- M'' & I\\
- I & 0
+M'' & I\\
+I & 0
 \end{pmatrix}$.
 \item[(ii)] If $C$ is invertible, rename $C$ to $C'$, $M'$ to $M'_I$, and $M''$ to $M''_I$.
 \end{itemize}
@@ -474,11 +472,11 @@ $\begin{pmatrix}
 \item[Method 3] Implement the hyperbolic-length product into $W$ directly.
 \begin{itemize}
 \item[Step 1] The selected matrices $A$ and $B$ can be embedded freely to hyperbolic space as long as the hyperbolic-length product can work properly in the usual training process.
-\item[Step 2] The dimension of hyperbolic space could start with two dimension to optimize the memory usage. If there is no restriction on the use of memory, then the easiest way is starting with dimension $n\times d$, where $\times$ is the scalar product in $\mathbb{N}$.
+\item[Step 2] The dimension of hyperbolic space could start with two dimensions to optimize the memory usage. If there is no restriction on the use of memory, then the easiest way is starting with dimension $n\times d$, where $\times$ is the scalar product in $\mathbb{N}$.
 \end{itemize}
 \end{itemize}
 \end{itemize}
-\end{itemize} 
+\end{itemize}
 
 \begin{figure}[H]
 \caption{Gradients of the hyperbolic-length product.}
@@ -505,7 +503,7 @@ $\begin{pmatrix}
 \end{figure}
 
 \begin{figure}[H]
-\caption{The computational graph of Case 2 when hyperbolic-length product is implemented to the model directly before training.}
+\caption{The computational graph of Case 2 when a hyperbolic-length product is implemented to the model directly before training.}
 \centering
 \includegraphics[width=0.8\textwidth]{3.png}
 \end{figure}
@@ -515,7 +513,6 @@ $\begin{pmatrix}
 
 
 
- 
 \section{Examples}
 \subsection{Self-attention mechanism in any transformer-based models with the hyperbolic-length product implemented before training}
 All layers of a given neural network model can be implemented with the above hyperbolic-orbit algorithm. The following is an example when the hyperbolic-orbit algorithm is applied to the self-attention mechanism, i.e. transformer-based models.
@@ -524,25 +521,25 @@ Let $A=Q\in \mathbb{C}^{n\times d_q}$ and $B=K^t\in \mathbb{C}^{d_k\times n}$ in
 
 
 %\subsection{Apply to models that were trained without using the hyperbolic-length product}
-%Hyperbolic-orbit Algorithm can be implemented into any models that is trained in a traditional method immediately. Let $\Omega$ be a model that is trained without using hyperbolic-length product. Once the matrix multiplication between two matrices called $A$ and $B$ within $\Omega$ is chosen to be replaced with hyperbolic-length product, the matrices $A\in\mathbb{R}^{n\times m}$ and $B \in\mathbb{R}^{m\times d}$ can be easily embedded into $\mathbb{H}^2$. 
+%Hyperbolic-orbit Algorithm can be implemented into any models that is trained in a traditional method immediately. Let $\Omega$ be a model that is trained without using hyperbolic-length products. Once the matrix multiplication between two matrices called $A$ and $B$ within $\Omega$ is chosen to be replaced with hyperbolic-length product, the matrices $A\in\mathbb{R}^{n\times m}$ and $B \in\mathbb{R}^{m\times d}$ can be easily embedded into $\mathbb{H}^2$.
 
-%In matrix $A$, the $i$-th column which has $n$ entries, and in matrix $B$, the $i$-th row which has $d$ entries will have $n\times d$ products and this gives $n\times d$ equations to determine where to embedded $a_{ki}$ and $b_{il}$. 
+%In matrix $A$, the $i$-th column which has $n$ entries, and in matrix $B$, the $i$-th row which has $d$ entries will have $n\times d$ products and this gives $n\times d$ equations to determine where to embedded $a_{ki}$ and $b_{il}$.
 
-%Denote the images of $a_{ki}$ and $b_{il}$ in $\mathbb{H}^2$ using $a_{ki}'$ and $b_{il}'$. 
+%Denote the images of $a_{ki}$ and $b_{il}$ in $\mathbb{H}^2$ using $a_{ki}'$ and $b_{il}'$.
 %The following embedding algorithm can test if the hyperbolic-orbit algorithm is applicable.
-%For each i in 1,...,m, and for each l in 1,...,d: Consider hyperbolic circles center at $b_{il}'$ with radii $d_{\mathbb{H}^2}(a_{ki}', b_{il}' )=a_{ki}b_{il} $, and k from 1 to n. 
-%Consider hyperbolic circles center at $b_{ij}'$ for each $j\neq l$  with radii $d_{\mathbb{H}^2}(a_{ki}', b_{ij}' )=a_{ki}b_{ij} $, and k from 1 to n. 
+%For each i in 1,...,m, and for each l in 1,...,d: Consider hyperbolic circles center at $b_{il}'$ with radii $d_{\mathbb{H}^2}(a_{ki}', b_{il}' )=a_{ki}b_{il} $, and k from 1 to n.
+%Consider hyperbolic circles center at $b_{ij}'$ for each $j\neq l$  with radii $d_{\mathbb{H}^2}(a_{ki}', b_{ij}' )=a_{ki}b_{ij} $, and k from 1 to n.
 %If for each $k$, each pair of hyperbolic circles that are corresponding to the same k, one has radius $d_{\mathbb{H}^2}(a_{ki}', b_{il}' )$ and the other has radius $d_{\mathbb{H}^2}(a_{ki}', b_{ij}') $ has an interception, then do the next $j$ of $b_{ij}'$.
 %Finally, if there exist interceptions in the above process for all i, then $A$ and $B$ can be embedded into $\mathbb{H}^2$ and use the hyperbolic-orbit algorithm to replace matrix multiplication.
 
-%After implementing the hyperbolic-length product and hyperbolic-orbit algorithm to the trained model, with the same training set that trained the model, the new modified model will give exactly the same output. The only distinction will happen only when the old and new model were fed in samples that were out of the training set. 
+%After implementing the hyperbolic-length product and hyperbolic-orbit algorithm to the trained model, with the same training set that trained the model, the new modified model will give exactly the same output. The only distinction will happen only when the old and new model were fed in samples that were out of the training set.
 
-%The above two examples show that implementing the hyperbolic-orbit algorithm before training is way easier than the other way around. To solve this problem, instead of embedding $A$ and $B$ into 2-dimensional hyperbolic space, hyperbolic spaces in higher dimensions could be the solution, since for each $n\geq 3$, $\mathbb{H}^n$ has an isometry group. This is the sufficient condition for generalizing 2-dimensional hyperbolic-length products to n-dimension. 
+%The above two examples show that implementing the hyperbolic-orbit algorithm before training is way easier than the other way around. To solve this problem, instead of embedding $A$ and $B$ into 2-dimensional hyperbolic space, hyperbolic spaces in higher dimensions could be the solution, since for each $n\geq 3$, $\mathbb{H}^n$ has an isometry group. This is the sufficient condition for generalizing 2-dimensional hyperbolic-length products to n-dimension.
 
 
 
 \section{Discussion}
-In Case 1, since each step from step 1 to step 3 is invertible, after these operations, hyperbolic-length product can be applied to $M_I'$ and $C'$, then apply all the inverses and restrictions to back to $AB$, so the output is also unchanged, but the orbit of the neural network can be found using the above hyperbolic-orbit algorithm. 
+In Case 1, since each step from step 1 to step 3 is invertible, after these operations, hyperbolic-length product can be applied to $M_I'$ and $C'$, then apply all the inverses and restrictions to back to $AB$, so the output is also unchanged, but the orbit of the neural network can be found using the above hyperbolic-orbit algorithm.
 
 Furthermore, the isometry group of $\mathbb{H}^n$ is a group of M\"{o}bius mapping, hence its group elements preserve not only hyperbolic length but angles, thus the information of the sign of each $a_{ki}b_{il}$ could be preserved.
 
@@ -575,6 +572,8 @@ The hyperbolic-orbit algorithm has a limitation when it is applied to case 2 if 
 \bibliographystyle{amsplain} % We choose the "plain" reference style
 \bibliography{refs} % Entries are in the refs.bib file
 \end{document}
+
+
 
 
 
