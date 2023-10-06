@@ -302,16 +302,33 @@ let a training set and a trained neural network be given, can the neural network
 
 
 
-Furthermore, today, a large language model (LLM) could have trillions of parameters. If an LLM has a bug, e.g. it may give a false output to a certain set of inputs, is there a way to generate infinitely many equivalent models so that a model that gives false output can be replaced immediately without a further cost to start over to train a new model?
+Furthermore, today, a large language model (LLM) could have trillions of parameters. If an LLM has a bug, e.g. it may give a false output to a certain set of inputs, is there a way to generate infinitely many equivalent models so that a model that gives false output can be replaced immediately without a further cost to start over to train a new model? To ask more accurate questions, the following definitions are useful.
 
 \begin{definition}
 \textit{Two models are equivalent} if they both give identical outputs on a fixed training set as the input.
 \end{definition}
 
-Moreover, to use random matrix theory to study the eigenvalue distribution of the model, or to study the dynamics between the distributions of input and the distributions of the model, it takes time to generate samples of trained models. Not only that, if models are trained parallel, then they could not always be equivalent given there are multiple local minima. Hence, is it correct to collect models as samples to find their distribution or their eigenvalue distribution if they are not equivalent?
+In other words, if the given model is denoted by $f_{\text{model}}$ which was trained by using samples in the training set $X$, since it is a function, consider a set of all $(f_{\text{model}},O)$, where $O$ is a neighborhood that contains $X$, then its equivalent model can be defined:
+\begin{definition}
+Two models (functions) $f$ and $g$ trained within $O_1$ and $O_2$ are denoted by pairs $(f,O_1)$ and $(g,O_2)$. Furthermore, $(f,O_1)$ and $(g,O_2)$ are equivalent, if there exists an open set $O\subset O_1 \cap O_2$ containing $x$ such that $f(x)=g(x)$ when $f$ and $g$ are restricted to the open set $O$.
+\end{definition}
+\begin{proposition}\cite{tu2011manifolds}
+The set of equivalent functions of $f$ is an equivalent class.
+\end{proposition}
 
-Hence, here is the \textbf{the essential question} that answered by this paper: is there a way to generate (infinitely many) equivalent models of a given (trained) model and each generated equivalent model can have non-trivial feedback gradients during the training mode using back-propagation?
 
+To use random matrix theory to study the eigenvalue distribution of the model, or to study the dynamics between the distributions of input and the distributions of the model, it takes time to generate samples of trained models. Not only that, if models are trained parallel, then they could not always be equivalent given there are multiple local minima. Hence, is it correct to collect models as samples to find their distribution or their eigenvalue distribution if they are not equivalent?
+
+Hence, here is the \textbf{the essential question} that answered by this paper: is there a way to generate (infinitely many) equivalent models of a given (trained) model and \textbf{each generated equivalent model can have non-trivial feedback gradients during the training mode using back-propagation, and the generated equivalent models can give different output compared the given model when the input is out-of-sample}?
+
+In other words, let $f$ be the given model that is trained using samples in the set $X$. Then, the goal is to find an equivalent $F$ in the equivalent class of $(f,O_1)$ such that
+\begin{itemize}
+\item[(i)] $F(x)=f(x), \forall x\in X$, 
+\item[(ii)] $\mathbb{E} \left[ F(x) \right] \neq \mathbb{E} \left[ f(x) \right], \text{ if }x\notin X$, and
+\item[(iii)] The weights of $F(x)$ are not an affine images of the weights of $f(x)$ so that $F(x)$ can have non-trivial gradients while running gradient descent and back-propagation algorithm on it.
+\end{itemize}
+
+With the condition $(ii)$, $F$ cannot be a trivial composition of functions: $g^{-1}\circ g\circ f$, and with the condition $(iii)$, $F$ cannot be a trivial affine transformation of $f$. 
 
 It is necessary to ask this question so that the trained model can be understood better to a point that the distribution of its weights can be studied using random matrix theory, and if all the other equivalent models can be derived instantaneously, then this can be considered an alternative to apply quantum computing to find all those equivalent solutions in parallel.
 
