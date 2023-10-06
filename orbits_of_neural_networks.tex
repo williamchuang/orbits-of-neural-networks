@@ -308,7 +308,7 @@ Furthermore, today, a large language model (LLM) could have trillions of paramet
 \textit{Two models are equivalent} if they both give identical outputs on a fixed training set as the input.
 \end{definition}
 
-Moreover, to use random matrix theory to study the eigenvalue distribution of the model, or to study the dynamics between the distributions of input and the distributions of the model, it takes time to generate samples of trained models. Not only that, if models are trained parallel, then they could not be equivalent. Hence, is it correct to collect models as samples to find their distribution or their eigenvalue distribution if they are not equivalent? 
+Moreover, to use random matrix theory to study the eigenvalue distribution of the model, or to study the dynamics between the distributions of input and the distributions of the model, it takes time to generate samples of trained models. Not only that, if models are trained parallel, then they could not always be equivalent given there are multiple local minima. Hence, is it correct to collect models as samples to find their distribution or their eigenvalue distribution if they are not equivalent? 
 
 Hence, here is the \textbf{the essential question} that answered by this paper: is there a way to generate (infinitely many) equivalent models of a given (trained) model and each generated equivalent model can have non-trivial feedback gradients during the training mode using back-propagation? 
 
@@ -319,23 +319,21 @@ If a model can be replaced by another equivalent model, then the other model mig
 
 
 \section{Hyperbolic-orbit Algorithm}
-\begin{definition}
-Hyperbolic-orbit Algorithm is an algorithm that implements hyperbolic distance to replace matrix products.
-\end{definition}
-To introduce the algorithm, it is natural to start to build up the concept and tools from the Euclidean space. In Euclidean space, equivalent models of a trained model can be obtained by redefining matrix multiplication using Euclidean distance $d_E(x,y)=\vert x-y\vert$ for all $x, y\in\mathbb{R}$. For instance, let $A$ be in $\mathbb{R}^{n\times m}$, $B$ be in $\mathbb{R}^{d\times m}$, and their entries are denoted by $a_{ki}$ and $b_{li}$ where $k\in\left\lbrace 1,...,n\right\rbrace$, $l\in\left\lbrace 1,...,d\right\rbrace$, and $i\in\left\lbrace 1,...,m\right\rbrace$. Then, $\left( A B^t\right)_{kl}=\sum\limits_{i=1}^m a_{ki}b_{il}$.
 
-Instead of using matrix multiplication, a new operation using Euclidean distance is defined in the following:
-$$
-\left( A\odot_{E} B^t \right)_{kl}:= \sum\limits_{i=1}^m d_{E} \left( a_{ki} , b_{il} \right).
-$$
+%To introduce the algorithm, it is natural to start to build up the concept and tools from the Euclidean space. In Euclidean space, equivalent models of a trained model can be obtained by redefining matrix multiplication using Euclidean distance $d_E(x,y)=\vert x-y\vert$ for all $x, y\in\mathbb{R}$. For instance, let $A$ be in $\mathbb{R}^{n\times m}$, $B$ be in $\mathbb{R}^{d\times m}$, and their entries are denoted by $a_{ki}$ and $b_{li}$ where $k\in\left\lbrace 1,...,n\right\rbrace$, $l\in\left\lbrace 1,...,d\right\rbrace$, and $i\in\left\lbrace 1,...,m\right\rbrace$. Then, $\left( A B^t\right)_{kl}=\sum\limits_{i=1}^m a_{ki}b_{il}$.
 
-Now, let the above $A$ and $B$ be any two matrices that need to be multiplied in a given model that already converges under the above new operation $\odot_{E}$ between matrices $A$ and $B$. Then by adding a real number $\alpha$ to $A$ and $B$, infinite many equivalent models can be derived, since
-$$
-\left( \left( \alpha + A \right) \odot_{E}\left( \alpha+ B^t \right)\right)_{kl} := \sum\limits_{i=1}^m d_{E} \left(\alpha + a_{ki} ,\alpha + b_{il} \right) = \sum\limits_{i=1}^m d_{E} \left( a_{ki} ,  b_{il} \right) = \left( A\odot_{E} B^t\right)_{kl}.
-$$
-In other words, the original given model is unchanged. This operation results in a translation of the loss surface. 
+%Instead of using matrix multiplication, a new operation using Euclidean distance is defined in the following:
+%$$
+%\left( A\odot_{E} B^t \right)_{kl}:= \sum\limits_{i=1}^m d_{E} \left( a_{ki} , b_{il} \right).
+%$$
 
-Alternatively, every entry of the matrices $A\in\mathbb{R}^{n\times m}$ and $B \in\mathbb{R}^{d\times m}$ can be embedded into the upper half-plane $\mathbb{H}^2$. That is, the entries of $A$ and $B$ become complex numbers with positive imaginary part: $a_{ki}\in\mathbb{H}^2$ and $b_{il}\in\mathbb{H}^2$.
+%Now, let the above $A$ and $B$ be any two matrices that need to be multiplied in a given model that already converges under the above new operation $\odot_{E}$ between matrices $A$ and $B$. Then by adding a real number $\alpha$ to $A$ and $B$, infinite many equivalent models can be derived, since
+%$$
+%\left( \left( \alpha + A \right) \odot_{E}\left( \alpha+ B^t \right)\right)_{kl} := \sum\limits_{i=1}^m d_{E} \left(\alpha + a_{ki} ,\alpha + b_{il} \right) = \sum\limits_{i=1}^m d_{E} \left( a_{ki} ,  b_{il} \right) = \left( A\odot_{E} B^t\right)_{kl}.
+%$$
+%In other words, the original given model is unchanged. This operation results in a translation of the loss surface. 
+
+Every entry of the matrices $A\in\mathbb{R}^{n\times m}$ and $B \in\mathbb{R}^{d\times m}$ can be embedded into the upper half-plane $\mathbb{H}^2$. That is, the entries of $A$ and $B$ become complex numbers with positive imaginary part: $a_{ki}\in\mathbb{H}^2$ and $b_{il}\in\mathbb{H}^2$.
 
 The necessary condition to use hyperbolic geometry and Kleinian groups is that since that hyperbolic geometry can also reach the goal that to generate infinitely many equivalent models, and Kleinian groups are isometry group that preserved not only hyperbolic lengths, but angles which can work as the symmetric group of the space, and to act on geometric objects in the space to do rigid transformation.
 
@@ -404,6 +402,11 @@ $$
 The question that aimed to solve by using this algorithm was mentioned in the first section. The goal is to replace matrix multiplication with a caveat that the situation mostly does not include finding inverses.
 
 In summary, there are two cases to apply the hyperbolic-orbit algorithm. Let a model $W$ and a training set $X$ be given.
+
+\begin{definition}
+Hyperbolic-orbit Algorithm is an algorithm that implements hyperbolic-length product to replace matrix products.
+\end{definition}
+The following is the hyperbolic-orbit algorithm introduced by the paper. There could be more than one way to implement hyperbolic-length product.
 \begin{itemize}
 
  
@@ -430,6 +433,7 @@ In summary, there are two cases to apply the hyperbolic-orbit algorithm. Let a m
 %\end{itemize}
 %\end{itemize}
 %\end{itemize}
+
 
 \item[Case 1]$W$ was trained. 
 \begin{itemize}
