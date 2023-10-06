@@ -328,7 +328,7 @@ In other words, let $f$ be the given model that is trained using samples in the 
 \item[(iii)] The weights of $F(x)$ are not an affine images of the weights of $f(x)$ so that $F(x)$ can have non-trivial gradients while running gradient descent and back-propagation algorithm on it.
 \end{itemize}
 
-With the condition $(ii)$, $F$ cannot be a trivial composition of functions: $g^{-1}\circ g\circ f$, and with the condition $(iii)$, $F$ cannot be a trivial affine transformation of $f$. 
+With the condition $(ii)$, the weights of $F$ cannot be a trivial composition of functions, e.g. $g^{-1}\circ g\circ f$, and with the condition $(iii)$, the weights of $F$ cannot be an affine transformation of $f$. 
 
 It is necessary to ask this question so that the trained model can be understood better to a point that the distribution of its weights can be studied using random matrix theory, and if all the other equivalent models can be derived instantaneously, then this can be considered an alternative to apply quantum computing to find all those equivalent solutions in parallel.
 
