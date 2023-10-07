@@ -8,43 +8,43 @@ Warning--missing pages in vaswani2017attention
 Warning--missing pages in yun2017global
 You've used 11 entries,
             2213 wiz_defined-function locations,
-            583 strings with 5678 characters,
-and the built_in function-call counts, 3344 in all, are:
-= -- 283
+            582 strings with 5672 characters,
+and the built_in function-call counts, 3209 in all, are:
+= -- 264
 > -- 142
 < -- 3
 + -- 58
 - -- 46
-* -- 279
-:= -- 540
+* -- 271
+:= -- 527
 add.period$ -- 11
 call.type$ -- 11
 change.case$ -- 56
 chr.to.int$ -- 0
 cite$ -- 14
-duplicate$ -- 150
-empty$ -- 295
+duplicate$ -- 144
+empty$ -- 285
 format.name$ -- 46
-if$ -- 693
+if$ -- 657
 int.to.chr$ -- 0
 int.to.str$ -- 11
 missing$ -- 26
 newline$ -- 43
 num.names$ -- 22
-pop$ -- 67
+pop$ -- 68
 preamble$ -- 1
 purify$ -- 45
 quote$ -- 0
-skip$ -- 92
+skip$ -- 82
 stack$ -- 0
-substring$ -- 171
-swap$ -- 40
+substring$ -- 147
+swap$ -- 34
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 36
 warning$ -- 3
-while$ -- 32
+while$ -- 29
 width$ -- 13
-write$ -- 112
+write$ -- 111
 (There were 3 warnings)
