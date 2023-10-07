@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  6 OCT 2023 18:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  6 OCT 2023 18:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1222,49 +1222,49 @@ Package pdftex.def Info: 2.png  used on input line 513.
                                                   \__shipout_drop_firstpage_...
 l.515 
        <./6.png>]
-<5.png, id=152, 776.9025pt x 475.7775pt>
-File: 5.png Graphic file (type png)
-<use 5.png>
-Package pdftex.def Info: 5.png  used on input line 519.
-(pdftex.def)             Requested size: 341.11533pt x 208.89989pt.
+<3.png, id=152, 1049.9225pt x 502.87875pt>
+File: 3.png Graphic file (type png)
+<use 3.png>
+Package pdftex.def Info: 3.png  used on input line 519.
+(pdftex.def)             Requested size: 341.11533pt x 163.37994pt.
 <4.png, id=153, 1178.4025pt x 420.57124pt>
 File: 4.png Graphic file (type png)
 <use 4.png>
 Package pdftex.def Info: 4.png  used on input line 525.
 (pdftex.def)             Requested size: 341.11533pt x 121.74434pt.
+<5.png, id=154, 776.9025pt x 475.7775pt>
+File: 5.png Graphic file (type png)
+<use 5.png>
+Package pdftex.def Info: 5.png  used on input line 531.
+(pdftex.def)             Requested size: 341.11533pt x 208.89989pt.
  [8pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.527 
+l.533 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.527 
-       <./2.png> <./5.png>]
-<3.png, id=162, 1049.9225pt x 502.87875pt>
-File: 3.png Graphic file (type png)
-<use 3.png>
-Package pdftex.def Info: 3.png  used on input line 531.
-(pdftex.def)             Requested size: 341.11533pt x 163.37994pt.
- [9pdfTeX warning (ext4): destination with the same identifier (name{figure.4})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.566 
+l.533 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
-5}) has been already used, duplicate ignored
+4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.566 
-       <./4.png> <./3.png>] [10] (./An Alternative to Quantum Tunneling.bbl
-[11]
+l.533 
+       <./2.png> <./3.png> <./4.png>] [9pdfTeX warning (ext4): destination with
+ the same identifier (name{figure.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.567 F
+       urthermore, the isometry group of $\mathbb{H}^n$ is a group of M\"{o}...
+ <./5.png>] [10] (./An Alternative to Quantum Tunneling.bbl
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
 2.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ts1lmr.fd
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [12]
+) [11]) [12]
 (./An Alternative to Quantum Tunneling.aux)
 Package rerunfilecheck Info: File `"An Alternative to Quantum Tunneling".out' h
 as not changed.
@@ -1299,7 +1299,7 @@ blic/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lms
 y7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symb
 ols/msbm7.pfb>
-Output written on "An Alternative to Quantum Tunneling.pdf" (12 pages, 1093848 
+Output written on "An Alternative to Quantum Tunneling.pdf" (12 pages, 1093719 
 bytes).
 PDF statistics:
  285 PDF objects out of 1000 (max. 8388607)
