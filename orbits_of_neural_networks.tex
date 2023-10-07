@@ -454,10 +454,10 @@ The following is the hyperbolic-orbit algorithm introduced by the paper. There c
 \item[Case 1]$W$ was trained.
 \begin{itemize}
 \item[Step 1]
-Embed entries of $AB$ to $\mathbb{H}^2$ by mapping each column vector of $AB$ to a hyperbolic circle, each pare circles does not have any overlap to each other. Denote the embedding function by $\phi$.
+Embed entries of $AB$ to $\mathbb{H}^2$ by mapping each column vector of $AB$ to a line parallel to $y^2$-axis without any overlapping on coordinates so that each pare circles does not have any overlap to each other. Denote the embedding function by $\phi$.
 
-\item[Step 2] Constructing an invertible matrix $C$ by taking points on a line that is parallel to $y^2$-axis without any overlapping in their coordinates and passes through each center of its corresponding hyperbolic circle--the correspondence is determined by matrix multiplication $(AB)C$. (See the following figure for an example when $\phi(AB)$ and $C$ are 4 by 4.)
-\item[Step 3] Measuring all the hyperbolic length of edges in each $K$-graph (composed by vertices on the hyperbolic circle and the line that passes through its center), and sum all the lengths in each $K$-graph to make an entry of matrix $M$.
+\item[Step 2] Constructing an invertible matrix $C$ by taking points on a line that is parallel to $y^2$-axis without any overlapping in their coordinates and forming edges to its corresponding set of embedded entries from the column vector in $AB$--the correspondence is determined by matrix multiplication $(AB)C$. (See the following figure for an example when $\phi(AB)$ and $C$ are 4 by 4.)
+\item[Step 3] Measuring all the hyperbolic length of edges in each $K_{n,d}$-graph (composed by vertices on the hyperbolic circle and the line that passes through its center), and sum all the lengths in each $K_{n,d}$-graph to make an entry of matrix $M$.
 
 \item[Step 4] Pick an element $g\in\text{PSL}(2,\mathbb{R})$, derive a linear fractional mapping from $g$, and denote it by $T_g(z)=\frac{az+b}{cz+d}, z\in\mathbb{H}^2$. 
 \item[Step 5] Apply $T_g$ to every entry $z$ of $\phi(AB)$ and $C$ to map every entry (could be trillions) of both matrices to their images $T_g(z)$ to derive the new weights of the given model, i.e. to derive an equivalent model.
@@ -490,7 +490,7 @@ Embed entries of $AB$ to $\mathbb{H}^2$ by mapping each column vector of $AB$ to
 \begin{figure}[H]
 \caption{An example of embedding $AB$ to $\phi(AB)$, constructing matrix $C$, and deriving $\phi(AB)C=\phi(AB)\odot C$.}
 \centering
-\includegraphics[width=0.8\textwidth]{7.png}
+\includegraphics[width=0.3\textwidth]{9.png}
 \end{figure}
 
 \begin{figure}[H]
@@ -502,7 +502,7 @@ Embed entries of $AB$ to $\mathbb{H}^2$ by mapping each column vector of $AB$ to
 \begin{figure}[H]
 \caption{The computational graph of Case 2 when a hyperbolic-length product is implemented to the model directly before training.}
 \centering
-\includegraphics[width=0.8\textwidth]{5.png}
+\includegraphics[width=0.5\textwidth]{5.png}
 \end{figure}
 
 
