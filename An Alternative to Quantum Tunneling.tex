@@ -480,6 +480,9 @@ M'' & I\\
 I & 0
 \end{pmatrix}$.
 \item[(ii)] If $C$ is invertible, rename $C$ to $C'$, $M'$ to $M'_I$, and $M''$ to $M''_I$.
+
+\item[Step 5] Pick an element $g\in\text{PSL}(2,\mathbb{R})$, derive a linear fractional mapping from $g$, and denote it by $T_g(z)=\frac{az+b}{cz+d}, z\in\mathbb{H}^2$. 
+\item[Step 6] Apply $T_g$ to every entry $z$ of $M_I'$ and $C'$ to map every entry (could be trillions) of both matrices to their images $T_g(z)$ to derive the new weights of the given model, i.e. to derive an equivalent model.
 \end{itemize}
 
 
@@ -489,8 +492,10 @@ I & 0
 \item[Method 2] Train $W$ without using hyperbolic-length product till it converges, then treat it as trained, i.e. again, apply methods of case 1.
 \item[Method 3] Implement the hyperbolic-length product into $W$ directly.
 \begin{itemize}
-\item[Step 1] The selected matrices $A$ and $B$ can be embedded freely to hyperbolic space as long as the hyperbolic-length product can work properly in the usual training process.
+\item[Step 1] The selected matrices $A$ and $B$ can be embedded freely to hyperbolic space as long as the hyperbolic-length product can work properly in the usual training process. Denote the embedding images by $\phi(A)$ and $\phi(B)$.
 \item[Step 2] The dimension of hyperbolic space could start with two dimensions to optimize the memory usage. If there is no restriction on the use of memory, then the easiest way is starting with dimension $n\times d$, where $\times$ is the scalar product in $\mathbb{N}$.
+\item[Step 3] Pick an element $g\in\text{PSL}(2,\mathbb{R})$, derive a linear fractional mapping from $g$, and denote it by $T_g(z)=\frac{az+b}{cz+d}, z\in\mathbb{H}^2$. 
+\item[Step 4] Apply $T_g$ to every entry $z$ of $\phi(A)$ and $\phi(B)$ to map every entry (could be trillions) of both matrices to their images $T_g(z)$ to derive the new weights of the given model, i.e. to derive an equivalent model.
 \end{itemize}
 \end{itemize}
 \end{itemize}
