@@ -453,14 +453,14 @@ The following is the hyperbolic-orbit algorithm introduced by the paper. There c
 
 \item[Case 1]$W$ was trained.
 \begin{itemize}
-\item[Step 2]
+\item[Step 1]
 Embed entries of $AB$ to $\mathbb{H}^2$. Denote the embedding function by $\phi$.
-\item[Step 2] If $AB$ is not invertible, then extend it to a $2n\times 2n$ matrix which is invertible:
+\item[Step 2] If $\phi(AB)$ is not invertible, then extend it to a $2n\times 2n$ matrix which is invertible:
 $\begin{pmatrix}
-AB & I\\
+\phi(AB) & I\\
 I & 0
-\end{pmatrix}$. If $AB$ is invertible, then denote it by $M:=AB$, if not then denote $M:=\begin{pmatrix}
-AB & I\\
+\end{pmatrix}$. If $\phi(AB)$ is invertible, then denote it by $M:=\phi(AB)$, if not then denote $M:=\begin{pmatrix}
+\phi(AB) & I\\
 I & 0
 \end{pmatrix}.$
 
