@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  6 OCT 2023 17:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  6 OCT 2023 17:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1201,27 +1201,23 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 311.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 311.
+ [1
 
-
-LaTeX Warning: Citation `tu2011manifolds' on page 1 undefined on input line 315
-.
-
-[1
-
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2] [3] [4] [5]
-<6.png, id=136, 729.72626pt x 741.77126pt>
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+ [4] [5]
+<6.png, id=138, 729.72626pt x 741.77126pt>
 File: 6.png Graphic file (type png)
 <use 6.png>
 Package pdftex.def Info: 6.png  used on input line 501.
 (pdftex.def)             Requested size: 341.11533pt x 346.74236pt.
- [6]
-<2.png, id=142, 1033.8625pt x 448.67625pt>
+
+[6]
+<2.png, id=144, 1033.8625pt x 448.67625pt>
 File: 2.png Graphic file (type png)
 <use 2.png>
 Package pdftex.def Info: 2.png  used on input line 507.
 (pdftex.def)             Requested size: 341.11533pt x 148.03622pt.
-<5.png, id=143, 1250.6725pt x 560.0925pt>
+<5.png, id=145, 1250.6725pt x 560.0925pt>
 File: 5.png Graphic file (type png)
 <use 5.png>
 Package pdftex.def Info: 5.png  used on input line 513.
@@ -1237,12 +1233,12 @@ l.515
                                                   \__shipout_drop_firstpage_...
 l.515 
        <./6.png> <./2.png>]
-<4.png, id=153, 1175.39125pt x 381.425pt>
+<4.png, id=155, 1175.39125pt x 381.425pt>
 File: 4.png Graphic file (type png)
 <use 4.png>
 Package pdftex.def Info: 4.png  used on input line 519.
 (pdftex.def)             Requested size: 341.11533pt x 110.6919pt.
-<3.png, id=154, 853.1875pt x 394.47375pt>
+<3.png, id=156, 853.1875pt x 394.47375pt>
 File: 3.png Graphic file (type png)
 <use 3.png>
 Package pdftex.def Info: 3.png  used on input line 525.
@@ -1271,18 +1267,15 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )) [11]
 (./An Alternative to Quantum Tunneling.aux)
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `"An Alternative to Quantum Tunneling".out' h
 as not changed.
 (rerunfilecheck)             Checksum: 864730A8C834BDDE251243513D0DDBBD;1236.
  ) 
 Here is how much of TeX's memory you used:
- 32691 strings out of 478542
- 661627 string characters out of 5850401
- 1108644 words of memory out of 5000000
- 49970 multiletter control sequences out of 15000+600000
+ 32693 strings out of 478542
+ 661664 string characters out of 5850401
+ 1108682 words of memory out of 5000000
+ 49971 multiletter control sequences out of 15000+600000
  469251 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,8n,122p,1318b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1307,11 +1300,11 @@ blic/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lms
 y7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symb
 ols/msbm7.pfb>
-Output written on "An Alternative to Quantum Tunneling.pdf" (11 pages, 1153812 
+Output written on "An Alternative to Quantum Tunneling.pdf" (11 pages, 1153976 
 bytes).
 PDF statistics:
- 279 PDF objects out of 1000 (max. 8388607)
- 193 compressed objects within 2 object streams
- 44 named destinations out of 1000 (max. 500000)
+ 281 PDF objects out of 1000 (max. 8388607)
+ 195 compressed objects within 2 object streams
+ 45 named destinations out of 1000 (max. 500000)
  230 words of extra memory for PDF output out of 10000 (max. 10000000)
 
