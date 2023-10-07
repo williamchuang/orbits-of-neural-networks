@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  6 OCT 2023 17:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  6 OCT 2023 17:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1281,7 +1281,7 @@ as not changed.
 Here is how much of TeX's memory you used:
  32691 strings out of 478542
  661627 string characters out of 5850401
- 1107644 words of memory out of 5000000
+ 1108644 words of memory out of 5000000
  49970 multiletter control sequences out of 15000+600000
  469251 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1307,7 +1307,7 @@ blic/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lms
 y7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symb
 ols/msbm7.pfb>
-Output written on "An Alternative to Quantum Tunneling.pdf" (11 pages, 1153729 
+Output written on "An Alternative to Quantum Tunneling.pdf" (11 pages, 1153812 
 bytes).
 PDF statistics:
  279 PDF objects out of 1000 (max. 8388607)

@@ -324,7 +324,7 @@ Hence, here is the \textbf{the essential question} that answered by this paper: 
 In other words, let $f$ be the given model that is trained using samples in the set $X$. Then, the goal is to find an equivalent $F$ in the equivalent class of $(f,O_1)$ such that
 \begin{itemize}
 \item[(i)] $F(x)=f(x), \forall x\in X$, 
-\item[(ii)] $\mathbb{E} \left[ F(X') \right] \neq \mathbb{E} \left[ f(X) \right], X'\neq X$, where $X'$ is a new training set, and
+\item[(ii)] $\mathbb{E} \left[ F(x') \right] \neq \mathbb{E} \left[ f(x') \right], x'\notin X$, where $x'$ is in a new training set, and
 \item[(iii)] The weights of $F(x)$ are not an affine images of the weights of $f(x)$ so that $F(x)$ can have non-trivial gradients while running gradient descent and back-propagation algorithm on it.
 \end{itemize}
 
