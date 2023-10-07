@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  6 OCT 2023 20:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  6 OCT 2023 20:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1211,11 +1211,11 @@ File: 8.png Graphic file (type png)
 <use 8.png>
 Package pdftex.def Info: 8.png  used on input line 487.
 (pdftex.def)             Requested size: 341.11533pt x 134.03029pt.
-<7.png, id=144, 687.56876pt x 364.36125pt>
+<7.png, id=144, 1204.5pt x 663.47874pt>
 File: 7.png Graphic file (type png)
 <use 7.png>
 Package pdftex.def Info: 7.png  used on input line 493.
-(pdftex.def)             Requested size: 341.11533pt x 180.76245pt.
+(pdftex.def)             Requested size: 341.11533pt x 187.89879pt.
 <6.png, id=145, 729.72626pt x 741.77126pt>
 File: 6.png Graphic file (type png)
 <use 6.png>
@@ -1289,8 +1289,8 @@ blic/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lms
 y7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symb
 ols/msbm7.pfb>
-Output written on "An Alternative to Quantum Tunneling.pdf" (12 pages, 921589 b
-ytes).
+Output written on "An Alternative to Quantum Tunneling.pdf" (12 pages, 1084089 
+bytes).
 PDF statistics:
  282 PDF objects out of 1000 (max. 8388607)
  197 compressed objects within 2 object streams
