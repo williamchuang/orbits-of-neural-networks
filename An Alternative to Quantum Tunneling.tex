@@ -465,21 +465,21 @@ I & 0
 \end{pmatrix}.$
 
 
-\item[Step 3] Randomly generates an invertible real positive matrix $M''$ such that $C:=M'^{-1}M''$ and entries of $C$ are in $\mathbb{H}^2$.
+\item[Step 3] Randomly generates an invertible real positive matrix $M'$ such that $C:=M^{-1}M'$ and entries of $C$ are in $\mathbb{H}^2$.
 
 \item[Step 4]
 \begin{itemize}
 \item[(i)] If $C$ is not invertible, then extend $C$ to $C':=\begin{pmatrix}
 C & I\\
 I & 0
-\end{pmatrix}$, $M'$ to $M'_I:=\begin{pmatrix}
-M '& I\\
+\end{pmatrix}$, $M$ to $M_I:=\begin{pmatrix}
+M & I\\
 I & 0
-\end{pmatrix}$, $M''$ to $M''_I:=\begin{pmatrix}
-M'' & I\\
+\end{pmatrix}$, $M'$ to $M'_I:=\begin{pmatrix}
+M' & I\\
 I & 0
 \end{pmatrix}$.
-\item[(ii)] If $C$ is invertible, rename $C$ to $C'$, $M'$ to $M'_I$, and $M''$ to $M''_I$.
+\item[(ii)] If $C$ is invertible, rename $C$ to $C'$, $M$ to $M_I$, and $M'$ to $M'_I$.
 
 \item[Step 5] Pick an element $g\in\text{PSL}(2,\mathbb{R})$, derive a linear fractional mapping from $g$, and denote it by $T_g(z)=\frac{az+b}{cz+d}, z\in\mathbb{H}^2$. 
 \item[Step 6] Apply $T_g$ to every entry $z$ of $M_I'$ and $C'$ to map every entry (could be trillions) of both matrices to their images $T_g(z)$ to derive the new weights of the given model, i.e. to derive an equivalent model.
