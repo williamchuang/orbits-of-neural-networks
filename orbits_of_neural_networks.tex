@@ -461,6 +461,7 @@ Embed entries of $AB$ to $\mathbb{H}^2$ by mapping each column vector of $AB$ to
 
 \item[Step 4] Pick an element $g\in\text{PSL}(2,\mathbb{R})$, derive a linear fractional mapping from $g$, and denote it by $T_g(z)=\frac{az+b}{cz+d}, z\in\mathbb{H}^2$. 
 \item[Step 5] Apply $T_g$ to every entry $z$ of $\phi(AB)$ and $C$ to map every entry (could be trillions) of both matrices to their images $T_g(z)$ to derive the new weights of the given model, i.e. to derive an equivalent model.
+
 \end{itemize}
 
 
@@ -471,13 +472,14 @@ Embed entries of $AB$ to $\mathbb{H}^2$ by mapping each column vector of $AB$ to
 \item[Method 3] Implement the hyperbolic-length product into $W$ directly.
 \begin{itemize}
 \item[Step 1] The selected matrices $A$ and $B$ can be embedded freely to hyperbolic space as long as the hyperbolic-length product can work properly in the usual training process. Denote the embedding images by $\phi(A)$ and $\phi(B)$.
-\item[Step 2] The dimension of hyperbolic space could start with two dimensions to optimize the memory usage. If there is no restriction on the use of memory, then the easiest way is starting with dimension $n\times d$, where $\times$ is the scalar product in $\mathbb{N}$.
+\item[Step 2] The dimension of hyperbolic space could start with two dimensions to optimize the memory usage. 
 \item[Step 3] Pick an element $g\in\text{PSL}(2,\mathbb{R})$, derive a linear fractional mapping from $g$, and denote it by $T_g(z)=\frac{az+b}{cz+d}, z\in\mathbb{H}^2$. 
 \item[Step 4] Apply $T_g$ to every entry $z$ of $\phi(A)$ and $\phi(B)$ to map every entry (could be trillions) of both matrices to their images $T_g(z)$ to derive the new weights of the given model, i.e. to derive an equivalent model.
-\end{itemize}
-\end{itemize}
-\end{itemize}
 
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\textbf{Remark:} The algorithm not only preserves the hyperbolic lengths, but the angle between its angle to the $y^2$ axis--this is the reason to use conformal mapping to be $T_g$. Hence, in Case 1 and Case 2, the hyperbolic-product could actually preserve the information of negative values, and one more layer of operation, i.e. subtraction, could be easily implement with the algorithm using the projection of the hyperbolic length to the $y^2$-axis. That is, it can have a zero, positive, or negative projection. Furthermore, the amount and sign of each of these projections (could be trillions) are preserved when $T_g\in\text{PSL}(2,\mathbb{R})$ is applied to these (trillions) of weights, and the choice of $T_g$ is infinitely many--images of all of the choices of $T_g$ form the orbit of the model, and each image on the orbit gives an equivalent model.
 
 
 
