@@ -22,6 +22,21 @@ Avrim Blum and Ronald Rivest, \emph{Training a 3-node neural network is
   np-complete}, Advances in neural information processing systems \textbf{1}
   (1988).
 
+\bibitem{cheng1980existence}
+Shiu-Yuen Cheng and Shing-Tung Yau, \emph{On the existence of a complete
+  k{\"a}hler metric on non-compact complex manifolds and the regularity of
+  fefferman's equation}, Communications on Pure and Applied Mathematics
+  \textbf{33} (1980), no.~4, 507--544.
+
+\bibitem{chuang2022hausdorff}
+William~Huanshan Chuang, \emph{The hausdorff dimension of limit sets of
+  well-distributed schottky groups}, Ph.D. thesis, San Francisco State
+  University, 2022.
+
+\bibitem{chuang2015implications}
+\bysame, \emph{An invariant between hyperbolic surfaces and lattice spin
+  models}, arXiv preprint arXiv:1511.02291 (2023).
+
 \bibitem{judd1990neural}
 J~Stephen Judd, \emph{Neural network design and the complexity of learning},
   MIT press, 1990.
