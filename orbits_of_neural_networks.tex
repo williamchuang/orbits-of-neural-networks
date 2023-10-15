@@ -483,10 +483,13 @@ Embed entries of $AB$ to $\mathbb{H}^2$ by mapping each column vector of $AB$ to
 \end{itemize}
 \end{itemize}
 \end{itemize}
-\textbf{Remark:} The algorithm not only preserves the hyperbolic lengths, but the angle between its angle to the $y^2$ axis--this is the reason to use conformal mapping $T_g$. Hence, in Case 1 and Case 2, the hyperbolic-product could actually preserve the information of negative values, and one more layer of operation, i.e. subtraction, could be easily implement with the algorithm using the projection of the hyperbolic length to the $y^2$-axis. That is, it can have a zero, positive, or negative projection. Furthermore, the amount and sign of each of these projections (could be trillions) are preserved when $T_g\in\text{PSL}(2,\mathbb{R})$ is applied to these (trillions) of weights, and the choice of $T_g$ is infinitely many--images of all of the choices of $T_g$ form the orbit of the model, and each image on the orbit gives an equivalent model.
+\textbf{Remark 1:} The algorithm not only preserves the hyperbolic lengths, but the angle between its angle to the $y^2$ axis--this is the reason to use conformal mapping $T_g$. Hence, in Case 1 and Case 2, the hyperbolic-product could actually preserve the information of negative values, and one more layer of operation, i.e. subtraction, could be easily implement with the algorithm using the projection of the hyperbolic length to the $y^2$-axis. That is, it can have a zero, positive, or negative projection. Furthermore, the amount and sign of each of these projections (could be trillions) are preserved when $T_g\in\text{PSL}(2,\mathbb{R})$ is applied to these (trillions) of weights, and the choice of $T_g$ is infinitely many--images of all of the choices of $T_g$ form the orbit of the model, and each image on the orbit gives an equivalent model.
 
-
-
+\textbf{Remark 1:} Since it is possible that two entries in the matrix $AB$ have same values. To design an invertible embedding, the following is an example of the embedding function $\phi: \mathbb{R}\to \mathbb{R\times \mathbb{R}\times \mathbb{H}^2}$:
+$$
+\phi(x_{ij})=(i,j,(ax+b)+ci)
+$$
+where $x_{ij}$ is the $i$-th row and $j$-th column from $AB$, and $a,b,c$ are some real numbers such that $(ax+b)+ci\in\mathbb{H}^2$.
 \begin{figure}[H]
 \caption{The computational graph of case 1.}
 \centering
@@ -539,7 +542,8 @@ Let $A=Q\in \mathbb{C}^{n\times d_q}$ and $B=K^t\in \mathbb{C}^{d_k\times n}$ in
 
 %The above two examples show that implementing the hyperbolic-orbit algorithm before training is way easier than the other way around. To solve this problem, instead of embedding $A$ and $B$ into 2-dimensional hyperbolic space, hyperbolic spaces in higher dimensions could be the solution, since for each $n\geq 3$, $\mathbb{H}^n$ has an isometry group. This is the sufficient condition for generalizing 2-dimensional hyperbolic-length products to n-dimension.
 
-
+\section{Empirical Results}
+Work in progress. The off-line code could be finished after the quals.
 
 \section{Discussion}
 In Case 1, since each step from step 1 to step 3 is invertible, after these operations, hyperbolic-length product can be applied to $M_I'$ and $C'$, then apply all the inverses and restrictions to back to $AB$, so the output is also unchanged, but the orbit of the neural network can be found using the above hyperbolic-orbit algorithm.
@@ -557,6 +561,7 @@ Since each $T_g$ is a continuous open mapping, there exists an open set $O$ to c
 
 
 Furthermore, this algorithm could also be applied for non-linear encryption. For instance, the cardinality of the orbit of $A$ and $B$ is infinite, thus there are infinitely many ways to encrypt messages in A or $B$. Let message be embedded in $(T_1(A)\odot_{\mathbb{H}^n}T_1(B))^N$ by using $T_1$. Then the message can only be deciphered if the receiver knows the two correct isometries $T_3$ and $T_2$ and a large integer $N$ as keys to decode two encrypted matrices: $T_2(B)$ and $T_3(A)$ to reconstruct the message in $(T_1(A)\odot_{\mathbb{H}^n}T_1(B))^N$ using $(T_1(A)\odot_{\mathbb{H}^n}T_1(B))^N = (A\odot_{\mathbb{H}^n}B)^N$. The meaning of the matrix $B$ is not only a lock, but it can obfuscate the frequency of characters used in the message in a random method. Since $T_2$ and $T_3$ are linear fractional, i.e. they have the form $\frac{az+b}{cz+d}$, thus the keys only need eight real numbers plus a large integer.
+
 
 \section{Limitation}
 The hyperbolic-orbit algorithm has a limitation when it is applied to case 2 if the model was trained. To show the limitation, consider an example where there are two points $a_1$, and $a_2$ from $A$, and two points $b_1$ and $b_2$ in $B$. In $\mathbb{H}^n, n\geq 3$, suppose the hyperbolic length between $b_1$ to $a_1$ and $b_2$ to $a_1$ are both zero, and the hyperbolic length between $b_1$ and $a_2$ is $L$. But, for $b_2$, the hyperbolic length between $b_2$ and $a_2$ is $2L$. If this happens, it might be possible to find an auxiliary invertible matrix $C$ and instead of applying hyperbolic-orbit algorithm on $A$ times $B$, applying it to $AB$ times $C$ and multiply the final result with $C$ inverse such that the matrix product $ABC$ is positive and does not have any case like the one mentioned in this section. %This is the starting point of designing case 1 in the algorithm
