@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  15 OCT 2023 10:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  15 OCT 2023 10:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1196,11 +1196,11 @@ LaTeX Font Info:    Trying to load font information for U+lasy on input line 28
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 311.
+(Font)              <10> on input line 309.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 311.
+(Font)              <7> on input line 309.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 311.
+(Font)              <5> on input line 309.
  [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
@@ -1209,19 +1209,19 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 <8.png, id=150, 1162.3425pt x 456.70625pt>
 File: 8.png Graphic file (type png)
 <use 8.png>
-Package pdftex.def Info: 8.png  used on input line 496.
+Package pdftex.def Info: 8.png  used on input line 494.
 (pdftex.def)             Requested size: 341.11533pt x 134.03029pt.
  [7]
 <9.png, id=157, 442.65375pt x 758.835pt>
 File: 9.png Graphic file (type png)
 <use 9.png>
-Package pdftex.def Info: 9.png  used on input line 502.
+Package pdftex.def Info: 9.png  used on input line 500.
 (pdftex.def)             Requested size: 341.11533pt x 584.80266pt.
  [8pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.504 
+l.502 
        <./8.png>]
 Overfull \vbox (38.57758pt too high) has occurred while \output is active []
 
@@ -1230,28 +1230,28 @@ Overfull \vbox (38.57758pt too high) has occurred while \output is active []
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.504 
+l.502 
        <./9.png>]
 <6.png, id=170, 729.72626pt x 741.77126pt>
 File: 6.png Graphic file (type png)
 <use 6.png>
-Package pdftex.def Info: 6.png  used on input line 508.
+Package pdftex.def Info: 6.png  used on input line 506.
 (pdftex.def)             Requested size: 341.11533pt x 346.74236pt.
 <5.png, id=171, 776.9025pt x 475.7775pt>
 File: 5.png Graphic file (type png)
 <use 5.png>
-Package pdftex.def Info: 5.png  used on input line 514.
+Package pdftex.def Info: 5.png  used on input line 512.
 (pdftex.def)             Requested size: 341.11533pt x 208.89989pt.
  [10pdfTeX warning (ext4): destination with the same identifier (name{figure.3}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.516 
+l.514 
        <./6.png>] [11pdfTeX warning (ext4): destination with the same identifie
 r (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.550 
+l.548 
        <./5.png>] [12] [13] (./An Alternative to Quantum Tunneling.bbl
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 5
 7.
@@ -1271,7 +1271,7 @@ Here is how much of TeX's memory you used:
  49970 multiletter control sequences out of 15000+600000
  469251 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,7n,122p,1318b,531s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 116i,7n,122p,1318b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local
 /texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2
 021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-
@@ -1293,7 +1293,7 @@ blic/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lms
 y7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symb
 ols/msbm7.pfb>
-Output written on "An Alternative to Quantum Tunneling.pdf" (15 pages, 951118 b
+Output written on "An Alternative to Quantum Tunneling.pdf" (15 pages, 951454 b
 ytes).
 PDF statistics:
  311 PDF objects out of 1000 (max. 8388607)
