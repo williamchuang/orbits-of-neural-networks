@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  8 OCT 2023 23:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  15 OCT 2023 10:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1206,71 +1206,72 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
  [4] [5]
 [6]
-<8.png, id=146, 1162.3425pt x 456.70625pt>
+<8.png, id=150, 1162.3425pt x 456.70625pt>
 File: 8.png Graphic file (type png)
 <use 8.png>
-Package pdftex.def Info: 8.png  used on input line 493.
+Package pdftex.def Info: 8.png  used on input line 496.
 (pdftex.def)             Requested size: 341.11533pt x 134.03029pt.
-<9.png, id=148, 442.65375pt x 758.835pt>
+ [7]
+<9.png, id=157, 442.65375pt x 758.835pt>
 File: 9.png Graphic file (type png)
 <use 9.png>
-Package pdftex.def Info: 9.png  used on input line 499.
+Package pdftex.def Info: 9.png  used on input line 502.
 (pdftex.def)             Requested size: 341.11533pt x 584.80266pt.
- [7pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
+ [8pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.501 
+l.504 
        <./8.png>]
 Overfull \vbox (38.57758pt too high) has occurred while \output is active []
 
 
-[8pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
+[9pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.501 
+l.504 
        <./9.png>]
-<6.png, id=162, 729.72626pt x 741.77126pt>
+<6.png, id=170, 729.72626pt x 741.77126pt>
 File: 6.png Graphic file (type png)
 <use 6.png>
-Package pdftex.def Info: 6.png  used on input line 505.
+Package pdftex.def Info: 6.png  used on input line 508.
 (pdftex.def)             Requested size: 341.11533pt x 346.74236pt.
-<5.png, id=163, 776.9025pt x 475.7775pt>
+<5.png, id=171, 776.9025pt x 475.7775pt>
 File: 5.png Graphic file (type png)
 <use 5.png>
-Package pdftex.def Info: 5.png  used on input line 511.
+Package pdftex.def Info: 5.png  used on input line 514.
 (pdftex.def)             Requested size: 341.11533pt x 208.89989pt.
- [9pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
- has been already used, duplicate ignored
+ [10pdfTeX warning (ext4): destination with the same identifier (name{figure.3}
+) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.513 
-       <./6.png>] [10pdfTeX warning (ext4): destination with the same identifie
+l.516 
+       <./6.png>] [11pdfTeX warning (ext4): destination with the same identifie
 r (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.546 
-       <./5.png>] [11] [12] (./An Alternative to Quantum Tunneling.bbl
+l.550 
+       <./5.png>] [12] [13] (./An Alternative to Quantum Tunneling.bbl
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 5
 7.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [13]) [14]
+) [14]) [15]
 (./An Alternative to Quantum Tunneling.aux)
 Package rerunfilecheck Info: File `"An Alternative to Quantum Tunneling".out' h
 as not changed.
-(rerunfilecheck)             Checksum: E496D8FD2E9F5E52C049E2CD04537C22;1407.
+(rerunfilecheck)             Checksum: 0037E3884B6F8F7E5FB07811031364A2;1538.
  ) 
 Here is how much of TeX's memory you used:
- 32696 strings out of 478542
- 661770 string characters out of 5850401
+ 32699 strings out of 478542
+ 661797 string characters out of 5850401
  1106810 words of memory out of 5000000
- 49969 multiletter control sequences out of 15000+600000
+ 49970 multiletter control sequences out of 15000+600000
  469251 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,6n,122p,1318b,531s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 116i,7n,122p,1318b,531s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local
 /texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2
 021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-
@@ -1292,11 +1293,11 @@ blic/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lms
 y7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symb
 ols/msbm7.pfb>
-Output written on "An Alternative to Quantum Tunneling.pdf" (14 pages, 948834 b
+Output written on "An Alternative to Quantum Tunneling.pdf" (15 pages, 951118 b
 ytes).
 PDF statistics:
- 303 PDF objects out of 1000 (max. 8388607)
- 215 compressed objects within 3 object streams
- 51 named destinations out of 1000 (max. 500000)
- 233 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 311 PDF objects out of 1000 (max. 8388607)
+ 222 compressed objects within 3 object streams
+ 53 named destinations out of 1000 (max. 500000)
+ 241 words of extra memory for PDF output out of 10000 (max. 10000000)
 
