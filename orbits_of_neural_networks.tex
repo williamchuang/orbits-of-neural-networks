@@ -281,7 +281,7 @@ graphicx,enumerate,setspace,verbatim,tocloft,rotating}
 
 \begin{document}
 
-\title{The orbits of neural networks}
+\title{Training from the orbits of neural networks}
 
 \author{William Chuang}
 
@@ -302,13 +302,18 @@ let a training set and a trained neural network be given, can the neural network
 %where the trained neural network already converged to a local minimum, then can the model be
 %let a training set and a trained neural network be given where the trained neural network already converged to a local minimum, meaning given a positive real number $\epsilon>0$, then each sample $X_i$ in the given training set, there is $N\in\mathbb{N}$ such that for the number of epoch greater than $N$, the model is in the epsilon ball around the local minimum of the loss surface (i.e. its parameter space or moduli space).
 
+Defining the following notions to describe the questions more precisely:
 \begin{definition}
-\textit{Two models are equivalent} if they both give identical outputs on a fixed training set as the input.
+\textit{A neural network model (function) is converged} if it reaches one of local minima in its moduli space (i.e. loss surface).
+\end{definition}
+
+\begin{definition}
+\textit{Two converged neural network models (functions) are equivalent} if they both give identical outputs on a fixed training set as the input.
 \end{definition}
 
 In other words, if the given model is denoted by $f_{\text{model}}$ which was trained by using samples in the training set $X$, since it is a function, consider a set of all $(f_{\text{model}},O)$, where $O$ is a neighborhood that contains $X$, then its equivalent model can be defined:
 \begin{definition}
-Two models (functions) $f$ and $g$ trained within $O_1$ and $O_2$ are denoted by pairs $(f,O_1)$ and $(g,O_2)$. Furthermore, $(f,O_1)$ and $(g,O_2)$ are equivalent, if there exists an open set $O\subset O_1 \cap O_2$ containing $x$ such that $f(x)=g(x)$ when $f$ and $g$ are restricted to the open set $O$.
+Two converged neural network models (functions) $f$ and $g$ trained within $O_1$ and $O_2$ are denoted by pairs $(f,O_1)$ and $(g,O_2)$. Furthermore, $(f,O_1)$ and $(g,O_2)$ are equivalent, if there exists an open set $O\subset O_1 \cap O_2$ containing $x$ such that $f(x)=g(x)$ when $f$ and $g$ are restricted to the open set $O$.
 \end{definition}
 \begin{proposition}\cite{tu2011manifolds}
 The set of equivalent functions of $f$ is an equivalent class.
@@ -319,20 +324,21 @@ To use random matrix theory to study the eigenvalue distribution of the model, o
 
 Hence, here is the \textbf{the essential question} that answered by this paper: \textbf{For any given neural network model}, is there a way to generate (infinitely many) equivalent models of a given (trained) model and \textbf{each generated equivalent model can have non-trivial feedback gradients during the training mode using back-propagation, and the generated equivalent models can give different output compared the given model when the input is out-of-sample}?
 
-In other words, let $f$ be the given model that is trained using samples in the set $X$. Then, the goal is to find an equivalent $F$ in the equivalent class of $(f,O_1)$ such that
+In other words, let $f$ be the given converged model that is trained using samples in the set $X$. Then, the goal is to find an equivalent converged $F$ in the equivalent class of $(f,O_1)$ such that
 \begin{itemize}
 \item[(i)] $F(x)=f(x), \forall x\in X$, 
 \item[(ii)] there exists a set $X'$ that are not measure zero and $X'\neq X$ such that 
 $$\mathbb{E} \left[ F(X') \right] \neq \mathbb{E} \left[ f(X') \right] \text{ and, }$$
-\item[(iii)] The weights of $F(x)$ are not an affine images of the weights of $f(x)$ so that $F(x)$ can have non-trivial gradients while running gradient descent and back-propagation algorithm on it.
+\item[(iii)] The weights of the converged $F(x)$ are not an affine images of the weights of the converged $f(x)$ so that $F(x)$ can have non-trivial gradients while running gradient descent and back-propagation algorithm on it to reach a new local or global minimum.
 \end{itemize}
 
-With the condition $(ii)$, the weights of $F$ cannot be a trivial composition of functions, e.g. $g^{-1}\circ g\circ f$, and with the condition $(iii)$, the weights of $F$ cannot be an affine transformation of $f$. 
+With the condition $(ii)$, $F$ cannot be a trivial composition of functions, e.g. $g^{-1}\circ g\circ f$, and with the condition $(iii)$, the weights of the converged $F$ cannot be an affine transformation of the converged $f$. 
 
 It is necessary to ask this question so that the trained model can be understood better to a point that the distribution of its weights can be studied using random matrix theory, and if all the other equivalent models can be derived instantaneously, then this can be considered an alternative to apply quantum computing to find all those equivalent solutions in parallel.
 
-If a model can be replaced by another equivalent model, then the other model might be at the different point on the loss surface, then the barrier between the local minimum to the nearest lower local minimum might have a lower height or in some better case with a negative height, meaning the model can be trained to a better model with a smaller error by using a new set of training data to descent to that lower local minimum. Hence, it is also sufficient to ask the question: how to find equivalent models of a given trained model? If the answer to this question is unknown, suppose a trained model cannot distinguish the fake data generated by an adversary model from the true data, or if a model needs to go through a debugging process for some false classified input, then the model not only has to be retrained, but it cannot be justified it is the best solution due to the process to reach the solution is random. Thus, on the contrary, if all of its equivalent models can be found immediately, then chances are, within the set of equivalent models, there might exist a model that will not take the fake input or falsely classified a corner case, meaning a model can be replaced instantly without going through a new training process.
+If a model can be replaced by another equivalent model, then the other model might be at the different point on the loss surface, then the barrier between the local minimum to the nearest lower local minimum might have a lower height or in some better case with a negative height, meaning the model can be trained to a better model with a smaller error by using a new set of training data to descent to that lower local minimum. Hence, it is also sufficient to ask the question: how to find equivalent models of a given trained model? If the answer to this question is unknown, suppose a trained model cannot distinguish the fake data generated by an adversary model from the true data, or if a model needs to go through a debugging process for some false classified input, then the model not only has to be retrained, but it cannot be justified it is the best solution due to the process to reach the solution is random. 
 
+Thus, on the contrary, if all of its equivalent models can be found immediately after a short period of time of training using the same (shuffled) training set without the new training samples such as the input generated by adversarial models, then chances are, \textbf{within the set of equivalent converged models, there might exist a converged model} that will not take the fake input or falsely classified a corner case.
 
 \section{Hyperbolic-length Product}
 
@@ -417,7 +423,7 @@ $$
 
 The question that aimed to solve by using this algorithm was mentioned in the first section. The goal is to replace matrix multiplication with a caveat that the situation mostly does not include finding inverses.
 
-In summary, there are two cases to apply the hyperbolic-orbit algorithm. Let a model $W$ and a training set $X$ be given.
+Let a converged model $W$ and a training set $X$ be given. The goal is to find its converged equivalences.
 
 \begin{definition}
 Hyperbolic-orbit Algorithm is an algorithm that implements hyperbolic-length products to replace matrix products.
@@ -449,7 +455,7 @@ The following section introduces the hyperbolic-orbit algorithm.
 %\end{itemize}
 \section{Hyperbolic-orbit Algorithm}
 
-Let $A$ and $B$ be \textbf{any} two matrices in \textbf{any} neural network model $f$ that was implemented with a matrix multiplication between $A$ and $B$. \textbf{It is prefer to let at least one of $A$ and $B$ to be a weight matrix (tensor) of the model $f$. In general, $A$ could be any weight matrix (tensor) in any given neural network $f$, and let $B$ be the identity matrix (tensor).}
+Let $A$ and $B$ be \textbf{any} two matrices in \textbf{any} converged neural network model $f$ that was implemented with a matrix multiplication between $A$ and $B$. \textbf{It is prefer to let at least one of $A$ and $B$ to be a weight matrix (tensor) of the model $f$. In general, $A$ could be any weight matrix (tensor) in any given neural network $f$, and let $B$ be the identity matrix (tensor).}
 \begin{itemize}
 \item[Case 1] Let $f$ be \textbf{any} neural network model that was trained.
 
@@ -464,6 +470,7 @@ Embed entries of $AB$ to $\mathbb{H}^2$ by mapping each column vector of $AB$ to
 \item[Step 4] Pick an element $g\in\text{PSL}(2,\mathbb{R})$, derive a linear fractional mapping from $g$, and denote it by $T_g(z)=\frac{az+b}{cz+d}, z\in\mathbb{H}^2$. 
 \item[Step 5] Apply $T_g$ to every entry $z$ of $\phi(AB)$ and $C$ to map every entry (could be trillions) of both matrices to their images $T_g(z)$ to derive the new weights of the given model, i.e. to derive an equivalent model.
 
+\item[Step 6] Apply gradient descent back-propagation algorithm on the whole model to reach a new local or global minimum with the same in-sample (but could be shuffled) training set.
 \end{itemize}
 
 
@@ -478,6 +485,7 @@ Embed entries of $AB$ to $\mathbb{H}^2$ by mapping each column vector of $AB$ to
 \item[Step 3] Pick an element $g\in\text{PSL}(2,\mathbb{R})$, derive a linear fractional mapping from $g$, and denote it by $T_g(z)=\frac{az+b}{cz+d}, z\in\mathbb{H}^2$. 
 \item[Step 4] Apply $T_g$ to every entry $z$ of $\phi(A)$ and $\phi(B)$ to map every entry (could be trillions) of both matrices to their images $T_g(z)$ to derive the new weights of the given model, i.e. to derive an equivalent model.
 
+\item[Step 5] Apply gradient descent back-propagation algorithm on the whole model to reach a new local or global minimum with the same in-sample (but could be shuffled) training set.
 \end{itemize}
 \end{itemize}
 \end{itemize}
@@ -548,12 +556,16 @@ In Case 1, since each step from step 1 to step 3 is invertible, after these oper
 
 Furthermore, the isometry group of $\mathbb{H}^n$ is a group of M\"{o}bius mapping, hence its group elements preserve not only hyperbolic length but angles, thus the information of the sign of each $a_{ki}b_{il}$ could be preserved.
 
-With the hyperbolic-orbit algorithm, it is possible to find an appropriate M\"{o}bius mapping that is corresponding to $M\in\text{PSL}(2,\mathbb{R})$ such that training a 3-node neural network become not necessarily NP-hard in \cite{blum1988training}. Further, if every layer of a given neural network is implemented with the hyperbolic-orbit algorithm introduced in this paper, by combining with perturbations and parallel computing, the steepest descent path toward the global minimum could be designed. The algorithm introduced by the paper can help to save training time for parallel computing in the ensemble method, that is, instead of starting over from the beginning to train $N'$ models in parallel, $N'\in\mathbb{N}$, the training can start with $N'$ models that are equivalent to a trained model that already has an error that cannot be reduced by using the old training set--but on the orbits of the trained model, each equivalent model on the orbit can be kept training with a new training set by updating the weight matrices using back-propagation with the gradient descent algorithm. Then, in each epoch, the best model could be selected and instantaneously its $N'$ equivalent models could be obtained using the hyperbolic-orbit algorithm.
+With the hyperbolic-orbit algorithm, it is possible to find an appropriate M\"{o}bius mapping that is corresponding to $M\in\text{PSL}(2,\mathbb{R})$ such that training a 3-node neural network become not necessarily NP-hard in \cite{blum1988training}. Further, if every layer of a given converged neural network is implemented with the hyperbolic-orbit algorithm introduced in this paper, by combining with perturbations and parallel computing, the steepest descent path toward the global minimum could be designed. 
+
+The algorithm introduced by the paper can help to save training time for parallel computing in the ensemble method, that is, instead of starting over from the beginning to train $N'$ models in parallel, $N'\in\mathbb{N}$, the training can start with $N'$ converged models that are equivalent to the given converged model with the same in-sample (but could be shuffled) training set and are converged to different minima in the moduli space.
 
 
-Since the moduli space of any given neural network is determined by the range of images of $T_g\in\text{PSL}(2,\mathbb{R})$, i.e. its orbits. By choosing a different set of isometries to form $T_g$ could determine a different fundamental group and a corresponding hyperbolic surface $M$. The set of equivalence class of the metrics on the the surface $M$ could be investigated using its corresponding Teichm\"{u}ller space (the moduli space of hyperbolic surfaces). Since on Teichm\"{u}ller space, there is a unique K\"{a}hler-Einstein metric \cite{cheng1980existence}, and the geometry and topology of loss surface of any given neural network are determined by the weights of that neural net, the geometry and topology of loss surface could be investigated using recent results of K\"{a}hler-Einstein metric and Teichm\"{u}ller space.
 
-The range of $T_g\in\text{PSL}(2,\mathbb{R})$ determines the range of orbits of a given neural network. The number of possible ranges are determined by the hyperbolic surface that is determined by the group generated by all $T_g$ that were used to map the orbits. The number of these hyperbolic surfaces could also be enumerated using the method introduced in\cite{chuang2015implications} which gives not only a systematic way to enumerate these hyperbolic surfaces, but also can be used to enumerate the number of ways to transform any given neural net on its orbit by machines in a systematically.
+
+Since the moduli space of any given converged neural network is determined by the range of images of $T_g\in\text{PSL}(2,\mathbb{R})$, i.e. its orbits. By choosing a different set of isometries to form $T_g$ could determine a different fundamental group and a corresponding hyperbolic surface $M$. The set of equivalence class of the metrics on the the surface $M$ could be investigated using its corresponding the moduli space of hyperbolic surfaces (which is also known as the Teichm\"{u}ller space). There is a unique K\"{a}hler-Einstein metric \cite{cheng1980existence}, and the geometry and topology of loss surface of any given converged neural network are determined by the weights of that neural net, the geometry and topology of the family loss surfaces could be investigated using recent results of K\"{a}hler-Einstein metric.
+
+The range of $T_g\in\text{PSL}(2,\mathbb{R})$ determines the range of orbits of a given converged neural network. The number of possible ranges are determined by the hyperbolic surface that is determined by the group generated by all $T_g$ that were used to map the orbits. The number of these hyperbolic surfaces could also be enumerated using the method introduced in\cite{chuang2015implications} which gives not only a systematic way to enumerate these hyperbolic surfaces, but also can be used to enumerate the number of ways to transform any given neural net on its orbit by machines in a systematically.
 
 Since each $T_g$ is a continuous open mapping, there exists an open set $O$ to cover all of images of the weight tensor of a given model $f$. By studying the topology and geometry of the moduli space that this open set $O$ can move over, the topology and geometry of loss surface could be investigated. In other words, this paper also demonstrates a correspondence between the moduli space of $T_g$, i.e. the Teichm\"{u}ller space, and the loss surface (landscape) of any given model.
 
@@ -561,8 +573,8 @@ Since each $T_g$ is a continuous open mapping, there exists an open set $O$ to c
 Furthermore, this algorithm could also be applied for non-linear encryption. For instance, the cardinality of the orbit of $A$ and $B$ is infinite, thus there are infinitely many ways to encrypt messages in A or $B$. Let message be embedded in $(T_1(A)\odot_{\mathbb{H}^n}T_1(B))^N$ by using $T_1$. Then the message can only be deciphered if the receiver knows the two correct isometries $T_3$ and $T_2$ and a large integer $N$ as keys to decode two encrypted matrices: $T_2(B)$ and $T_3(A)$ to reconstruct the message in $(T_1(A)\odot_{\mathbb{H}^n}T_1(B))^N$ using $(T_1(A)\odot_{\mathbb{H}^n}T_1(B))^N = (A\odot_{\mathbb{H}^n}B)^N$. The meaning of the matrix $B$ is not only a lock, but it can obfuscate the frequency of characters used in the message in a random method. Since $T_2$ and $T_3$ are linear fractional, i.e. they have the form $\frac{az+b}{cz+d}$, thus the keys only need eight real numbers plus a large integer.
 
 
-\section{Limitation}
-The hyperbolic-orbit algorithm has a limitation when it is applied to case 2 if the model was trained. To show the limitation, consider an example where there are two points $a_1$, and $a_2$ from $A$, and two points $b_1$ and $b_2$ in $B$. In $\mathbb{H}^n, n\geq 3$, suppose the hyperbolic length between $b_1$ to $a_1$ and $b_2$ to $a_1$ are both zero, and the hyperbolic length between $b_1$ and $a_2$ is $L$. But, for $b_2$, the hyperbolic length between $b_2$ and $a_2$ is $2L$. If this happens, it might be possible to find an auxiliary invertible matrix $C$ and instead of applying hyperbolic-orbit algorithm on $A$ times $B$, applying it to $AB$ times $C$ and multiply the final result with $C$ inverse such that the matrix product $ABC$ is positive and does not have any case like the one mentioned in this section. %This is the starting point of designing case 1 in the algorithm
+%\section{Limitation}
+%The hyperbolic-orbit algorithm has a limitation when it is applied to case 2 if the model was trained. To show the limitation, consider an example where there are two points $a_1$, and $a_2$ from $A$, and two points $b_1$ and $b_2$ in $B$. In $\mathbb{H}^n, n\geq 3$, suppose the hyperbolic length between $b_1$ to $a_1$ and $b_2$ to $a_1$ are both zero, and the hyperbolic length between $b_1$ and $a_2$ is $L$. But, for $b_2$, the hyperbolic length between $b_2$ and $a_2$ is $2L$. If this happens, it might be possible to find an auxiliary invertible matrix $C$ and instead of applying hyperbolic-orbit algorithm on $A$ times $B$, applying it to $AB$ times $C$ and multiply the final result with $C$ inverse such that the matrix product $ABC$ is positive and does not have any case like the one mentioned in this section. %This is the starting point of designing case 1 in the algorithm
 
 %If this case happen, then it might be able to solve by randomly embedding $A$ and $B$ to $\mathbb{H}^n$, then applying isometries of $\mathbb{H}^n$ to rotate those zeros to other points such that none of the entries in $A$ and $B$ are zeros before applying the hyperbolic-orbit algorithm.
 
