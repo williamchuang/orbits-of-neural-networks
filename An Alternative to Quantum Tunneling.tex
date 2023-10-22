@@ -611,7 +611,7 @@ Compared to starting over to train a new model, the advantage of this hyperbolic
 
 Without using the hyperbolic-orbit algorithm, to train a converged model, it might take a long time with a large data set to move the model out of a local or global minimum and then move it to another minimum that can take care of not only the old training set but also the new training set. Further, a usual technique is to slice the model\cite{zhang2022toward} which could be costly when the model is large (e.g. with trillions of parameters).
 
-Using the hyperbolic-orbit algorithm, it is very likely that after using a small set of new data, the model can converge to a new minimum without losing features that it already learned, i.e. the model could give the same output if the input is from the old training set. Furthermore, \textbf{it is possible that the model was mapped to a new local or global minimum, and so a new training is not necessary, i.e. the hyperbolic-orbit algorithm can possibly give a zero-shot result}.
+Using the hyperbolic-orbit algorithm, it is very likely that after using a small set of new data, the model can converge to a new minimum without losing features that it already learned, i.e. the model could give the same output if the input is from the old training set. %Furthermore, \textbf{it is possible that the model was mapped to a new local or global minimum, and so a new training is not necessary, i.e. the hyperbolic-orbit algorithm can possibly give a zero-shot result--NTS}.
 
 
 %\section{Limitation}
