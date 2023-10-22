@@ -3,53 +3,54 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: An Alternative to Quantum Tunneling.aux
 The style file: amsplain.bst
 Database file #1: refs.bib
-Repeated entry---line 318 of file refs.bib
+Repeated entry---line 349 of file refs.bib
  : @mastersthesis{chuang2022hausdorff
  :                                   ,
 I'm skipping whatever remains of this entry
 Warning--missing pages in blum1988training
 Warning--missing pages in chuang2015implications
+Warning--missing pages in tramer2017ensemble
 Warning--missing pages in vaswani2017attention
 Warning--missing pages in yun2017global
-You've used 14 entries,
+You've used 18 entries,
             2213 wiz_defined-function locations,
-            599 strings with 6201 characters,
-and the built_in function-call counts, 3931 in all, are:
-= -- 329
-> -- 166
+            620 strings with 7267 characters,
+and the built_in function-call counts, 5753 in all, are:
+= -- 494
+> -- 273
 < -- 3
-+ -- 70
-- -- 53
-* -- 329
-:= -- 644
-add.period$ -- 14
-call.type$ -- 14
-change.case$ -- 69
++ -- 112
+- -- 91
+* -- 470
+:= -- 924
+add.period$ -- 18
+call.type$ -- 18
+change.case$ -- 100
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 178
-empty$ -- 352
-format.name$ -- 53
-if$ -- 804
+cite$ -- 23
+duplicate$ -- 251
+empty$ -- 487
+format.name$ -- 91
+if$ -- 1196
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 31
-newline$ -- 52
-num.names$ -- 27
-pop$ -- 85
+int.to.str$ -- 18
+missing$ -- 39
+newline$ -- 64
+num.names$ -- 35
+pop$ -- 126
 preamble$ -- 1
-purify$ -- 55
+purify$ -- 82
 quote$ -- 0
-skip$ -- 100
+skip$ -- 166
 stack$ -- 0
-substring$ -- 189
-swap$ -- 38
+substring$ -- 292
+swap$ -- 63
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 48
-warning$ -- 4
-while$ -- 36
-width$ -- 16
-write$ -- 136
+type$ -- 64
+warning$ -- 5
+while$ -- 53
+width$ -- 20
+write$ -- 171
 (There was 1 error message)

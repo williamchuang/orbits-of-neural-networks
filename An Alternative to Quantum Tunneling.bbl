@@ -12,6 +12,12 @@ Lars~V. Ahlfors, \emph{M\"{o}bius transformations in several dimensions},
   Ordway Professorship Lectures in Mathematics, University of Minnesota, School
   of Mathematics, Minneapolis, Minn., 1981. \MR{725161}
 
+\bibitem{athalye2018obfuscated}
+Anish Athalye, Nicholas Carlini, and David Wagner, \emph{Obfuscated gradients
+  give a false sense of security: Circumventing defenses to adversarial
+  examples}, International conference on machine learning, PMLR, 2018,
+  pp.~274--283.
+
 \bibitem{beardon2012geometry}
 Alan~F. Beardon, \emph{The geometry of discrete groups}, Graduate Texts in
   Mathematics, vol.~91, Springer-Verlag, New York, 1995, Corrected reprint of
@@ -52,6 +58,13 @@ Michael Kapovich, \emph{Kleinian groups in higher dimensions}, Geometry and
   dynamics of groups and spaces, Progr. Math., vol. 265, Birkh\"{a}user, Basel,
   2008, pp.~487--564. \MR{2402415}
 
+\bibitem{ma2018mode}
+Shiqing Ma, Yingqi Liu, Wen-Chuan Lee, Xiangyu Zhang, and Ananth Grama,
+  \emph{Mode: automated neural network model debugging via state differential
+  analysis and input selection}, Proceedings of the 2018 26th ACM Joint Meeting
+  on European Software Engineering Conference and Symposium on the Foundations
+  of Software Engineering, 2018, pp.~175--186.
+
 \bibitem{MR4221225}
 John~G. Ratcliffe, \emph{Foundations of hyperbolic manifolds}, Graduate Texts
   in Mathematics, vol. 149, Springer, Cham, [2019] \copyright 2019, Third
@@ -61,6 +74,11 @@ John~G. Ratcliffe, \emph{Foundations of hyperbolic manifolds}, Graduate Texts
 Jos\'{e} Seade and Alberto Verjovsky, \emph{Higher dimensional complex
   {K}leinian groups}, Math. Ann. \textbf{322} (2002), no.~2, 279--300.
   \MR{1893917}
+
+\bibitem{tramer2017ensemble}
+Florian Tram{\`e}r, Alexey Kurakin, Nicolas Papernot, Ian Goodfellow, Dan
+  Boneh, and Patrick McDaniel, \emph{Ensemble adversarial training: Attacks and
+  defenses}, arXiv preprint arXiv:1705.07204 (2017).
 
 \bibitem{tu2011manifolds}
 Loring~W Tu, \emph{Manifolds}, An Introduction to Manifolds, Springer, 2011.
@@ -74,5 +92,11 @@ Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
 \bibitem{yun2017global}
 Chulhee Yun, Suvrit Sra, and Ali Jadbabaie, \emph{Global optimality conditions
   for deep neural networks}, arXiv preprint arXiv:1707.02444 (2017).
+
+\bibitem{zhang2022toward}
+Yingyi Zhang, Zan Wang, Jiajun Jiang, Hanmo You, and Junjie Chen, \emph{Toward
+  improving the robustness of deep learning models via model transformation},
+  Proceedings of the 37th IEEE/ACM International Conference on Automated
+  Software Engineering, 2022, pp.~1--13.
 
 \end{thebibliography}
