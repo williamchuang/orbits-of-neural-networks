@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  22 OCT 2023 13:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  22 OCT 2023 13:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1258,19 +1258,19 @@ File: 11.png Graphic file (type png)
 <use 11.png>
 Package pdftex.def Info: 11.png  used on input line 594.
 (pdftex.def)             Requested size: 341.11533pt x 434.4053pt.
- [14]
-<12.png, id=210, 572.1375pt x 569.12625pt>
+ [14] [15pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.598 
+       <./11.png>]
+<12.png, id=216, 572.1375pt x 569.12625pt>
 File: 12.png Graphic file (type png)
 <use 12.png>
 Package pdftex.def Info: 12.png  used on input line 602.
 (pdftex.def)             Requested size: 341.11533pt x 339.3247pt.
- [15pdfTeX warning (ext4): destination with the same identifier (name{figure.5}
+ [16pdfTeX warning (ext4): destination with the same identifier (name{figure.6}
 ) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.603 \end{figure}
-                   <./11.png>] [16pdfTeX warning (ext4): destination with the s
-ame identifier (name{figure.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.609 
@@ -1293,7 +1293,7 @@ Here is how much of TeX's memory you used:
  49985 multiletter control sequences out of 15000+600000
  469251 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,7n,122p,1005b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 116i,7n,122p,1005b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local
 /texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2
 021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-
@@ -1315,7 +1315,7 @@ blic/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lms
 y7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symb
 ols/msbm7.pfb>
-Output written on "An Alternative to Quantum Tunneling.pdf" (19 pages, 1228986 
+Output written on "An Alternative to Quantum Tunneling.pdf" (19 pages, 1229311 
 bytes).
 PDF statistics:
  341 PDF objects out of 1000 (max. 8388607)
