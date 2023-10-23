@@ -325,15 +325,17 @@ To use random matrix theory to study the eigenvalue distribution of the model, o
 
 Hence, here is the \textbf{the essential question} that answered by this paper: \textbf{For any given neural network model}, is there a way to generate (infinitely many) equivalent models of a given (trained) model and \textbf{each generated equivalent model can have non-trivial feedback gradients during the training mode using back-propagation, and the generated equivalent models can give different output compared the given model when the input is out-of-sample}?
 
-In other words, let $f$ be the given converged model that is trained using samples in the set $X$. Then, the goal is to find an equivalent converged $F$ in the equivalent class of $(f,O_1)$ such that
+In other words, let $\epsilon$ be a small positive number ($\epsilon< 1$), and let $f$ be the given converged model that is trained using samples in the set $X$. Then, the goal is to find an equivalent converged $F$ in the equivalent class of $(f,O_1)$ such that
 \begin{itemize}
-\item[(i)] $\mathbb{E}\left[ F(X) \right] = \mathbb{E}\left[ f(X) \right]$, 
-\item[(ii)] there exists a set $X'$ that are not measure zero and $X'\neq X$ such that 
-$$\mathbb{E} \left[ F(X') \right] \neq \mathbb{E} \left[ f(X') \right] \text{ and, }$$
-\item[(iii)] The weights of the converged $F(x)$ are not an affine images of the weights of the converged $f(x)$ so that $F(x)$ can have non-trivial gradients while running gradient descent and back-propagation algorithm on it using a new training set to reach a new local or global minimum.
+\item[(i)] the probability that the output of $F$ is different to the output of $f$ when the input is from $X$ is less then $\epsilon$,
+%$\mathbb{E}\left[ F(X) \right] = \mathbb{E}\left[ f(X) \right]$, 
+\item[(ii)] the probability that the output of $F$ is different to the output of $f$ when the input is from the complement of $X$ is greater than $1-\epsilon$, and
+%there exists a set $X'$ that are not measure zero and $X'\neq X$ such that 
+%$$\mathbb{E} \left[ F(X') \right] \neq \mathbb{E} \left[ f(X') \right] \text{ and, }$$
+\item[(iii)] the weights of the converged $F(x)$ are not an affine transformations of the weights of the converged $f(x)$ 
 \end{itemize}
 
-With the condition $(ii)$, $F$ cannot be a trivial composition of functions, e.g. $g^{-1}\circ g\circ f$, and with the condition $(iii)$, the weights of the converged $F$ cannot be an affine transformation of the converged $f$. 
+With the condition $(ii)$, $F$ cannot be a trivial composition of functions, e.g. $g^{-1}\circ g\circ f$, and with the condition $(iii)$, the weights of the converged $F$ cannot be an affine transformation of the converged $f$ so that $F(x)$ can have non-trivial gradients while running gradient descent and back-propagation algorithm on it using a new training set to reach a new local or global minimum.
 
 It is necessary to ask this question so that the trained model can be understood better to a point that the distribution of its weights can be studied using random matrix theory, and if all the other equivalent models can be derived instantaneously, then this can be considered an alternative to apply quantum computing to find all those equivalent solutions in parallel to make the model become robust.
 
