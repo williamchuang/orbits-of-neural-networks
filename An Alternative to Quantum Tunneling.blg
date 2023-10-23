@@ -3,54 +3,57 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: An Alternative to Quantum Tunneling.aux
 The style file: amsplain.bst
 Database file #1: refs.bib
-Repeated entry---line 356 of file refs.bib
+Repeated entry---line 415 of file refs.bib
  : @mastersthesis{chuang2022hausdorff
  :                                   ,
 I'm skipping whatever remains of this entry
 Warning--missing pages in blum1988training
 Warning--missing pages in chuang2015implications
+Warning--missing pages in freeman2016topology
+Warning--missing pages in garipov2018loss
+Warning--missing pages in li2018visualizing
 Warning--missing pages in tramer2017ensemble
 Warning--missing pages in vaswani2017attention
 Warning--missing pages in yun2017global
-You've used 19 entries,
+You've used 25 entries,
             2213 wiz_defined-function locations,
-            624 strings with 7390 characters,
-and the built_in function-call counts, 5999 in all, are:
-= -- 512
-> -- 286
+            653 strings with 8304 characters,
+and the built_in function-call counts, 8257 in all, are:
+= -- 711
+> -- 413
 < -- 3
-+ -- 117
-- -- 95
-* -- 485
-:= -- 966
-add.period$ -- 19
-call.type$ -- 19
-change.case$ -- 105
++ -- 168
+- -- 139
+* -- 676
+:= -- 1321
+add.period$ -- 25
+call.type$ -- 25
+change.case$ -- 145
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 263
-empty$ -- 511
-format.name$ -- 95
-if$ -- 1248
+cite$ -- 33
+duplicate$ -- 355
+empty$ -- 680
+format.name$ -- 139
+if$ -- 1721
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 42
-newline$ -- 67
-num.names$ -- 37
-pop$ -- 135
+int.to.str$ -- 25
+missing$ -- 54
+newline$ -- 85
+num.names$ -- 49
+pop$ -- 185
 preamble$ -- 1
-purify$ -- 86
+purify$ -- 120
 quote$ -- 0
-skip$ -- 174
+skip$ -- 246
 stack$ -- 0
-substring$ -- 297
-swap$ -- 64
+substring$ -- 414
+swap$ -- 93
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 66
-warning$ -- 5
-while$ -- 55
-width$ -- 21
-write$ -- 179
+type$ -- 90
+warning$ -- 8
+while$ -- 74
+width$ -- 27
+write$ -- 229
 (There was 1 error message)

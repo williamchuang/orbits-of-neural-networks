@@ -43,6 +43,26 @@ William~Huanshan Chuang, \emph{The hausdorff dimension of limit sets of
 \bysame, \emph{An invariant between hyperbolic surfaces and lattice spin
   models}, arXiv preprint arXiv:1511.02291 (2023).
 
+\bibitem{draxler2018essentially}
+Felix Draxler, Kambis Veschgini, Manfred Salmhofer, and Fred Hamprecht,
+  \emph{Essentially no barriers in neural network energy landscape},
+  International conference on machine learning, PMLR, 2018, pp.~1309--1318.
+
+\bibitem{du2019gradient}
+Simon Du, Jason Lee, Haochuan Li, Liwei Wang, and Xiyu Zhai, \emph{Gradient
+  descent finds global minima of deep neural networks}, International
+  conference on machine learning, PMLR, 2019, pp.~1675--1685.
+
+\bibitem{freeman2016topology}
+C~Daniel Freeman and Joan Bruna, \emph{Topology and geometry of half-rectified
+  network optimization}, arXiv preprint arXiv:1611.01540 (2016).
+
+\bibitem{garipov2018loss}
+Timur Garipov, Pavel Izmailov, Dmitrii Podoprikhin, Dmitry~P Vetrov, and
+  Andrew~G Wilson, \emph{Loss surfaces, mode connectivity, and fast ensembling
+  of dnns}, Advances in neural information processing systems \textbf{31}
+  (2018).
+
 \bibitem{judd1990neural}
 J~Stephen Judd, \emph{Neural network design and the complexity of learning},
   MIT press, 1990.
@@ -58,12 +78,21 @@ Michael Kapovich, \emph{Kleinian groups in higher dimensions}, Geometry and
   dynamics of groups and spaces, Progr. Math., vol. 265, Birkh\"{a}user, Basel,
   2008, pp.~487--564. \MR{2402415}
 
+\bibitem{li2018visualizing}
+Hao Li, Zheng Xu, Gavin Taylor, Christoph Studer, and Tom Goldstein,
+  \emph{Visualizing the loss landscape of neural nets}, Advances in neural
+  information processing systems \textbf{31} (2018).
+
 \bibitem{ma2018mode}
 Shiqing Ma, Yingqi Liu, Wen-Chuan Lee, Xiangyu Zhang, and Ananth Grama,
   \emph{Mode: automated neural network model debugging via state differential
   analysis and input selection}, Proceedings of the 2018 26th ACM Joint Meeting
   on European Software Engineering Conference and Symposium on the Foundations
   of Software Engineering, 2018, pp.~175--186.
+
+\bibitem{malan2021survey}
+Katherine~Mary Malan, \emph{A survey of advances in landscape analysis for
+  optimisation}, Algorithms \textbf{14} (2021), no.~2, 40.
 
 \bibitem{MR4221225}
 John~G. Ratcliffe, \emph{Foundations of hyperbolic manifolds}, Graduate Texts
