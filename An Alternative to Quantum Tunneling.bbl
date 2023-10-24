@@ -23,6 +23,15 @@ Alan~F. Beardon, \emph{The geometry of discrete groups}, Graduate Texts in
   Mathematics, vol.~91, Springer-Verlag, New York, 1995, Corrected reprint of
   the 1983 original. \MR{1393195}
 
+\bibitem{benedetti20072+}
+Riccardo Benedetti and Francesco Bonsante, \emph{(2+ 1)-einstein spacetimes of
+  finite type}, arXiv preprint arXiv:0704.2152 (2007).
+
+\bibitem{bers1981finite}
+Lipman Bers, \emph{Finite dimensional teichm{\"u}ller spaces and
+  generalizations}, Bulletin of the American Mathematical Society \textbf{5}
+  (1981), no.~2, 131--172.
+
 \bibitem{blum1988training}
 Avrim Blum and Ronald Rivest, \emph{Training a 3-node neural network is
   np-complete}, Advances in neural information processing systems \textbf{1}
@@ -63,6 +72,11 @@ Timur Garipov, Pavel Izmailov, Dmitrii Podoprikhin, Dmitry~P Vetrov, and
   of dnns}, Advances in neural information processing systems \textbf{31}
   (2018).
 
+\bibitem{gromov1981hyperbolic}
+Mikhael Gromov, \emph{Hyperbolic manifolds, groups and actions}, Riemann
+  surfaces and related topics: Proceedings of the 1978 Stony Brook Conference
+  (State Univ. New York, Stony Brook, NY, 1978), vol.~97, 1981, pp.~183--213.
+
 \bibitem{judd1990neural}
 J~Stephen Judd, \emph{Neural network design and the complexity of learning},
   MIT press, 1990.
@@ -94,6 +108,11 @@ Shiqing Ma, Yingqi Liu, Wen-Chuan Lee, Xiangyu Zhang, and Ananth Grama,
 Katherine~Mary Malan, \emph{A survey of advances in landscape analysis for
   optimisation}, Algorithms \textbf{14} (2021), no.~2, 40.
 
+\bibitem{mcmullen1992riemann}
+Curt McMullen, \emph{Riemann surfaces and the geometrization of 3-manifolds},
+  Bulletin of the American mathematical society \textbf{27} (1992), no.~2,
+  207--216.
+
 \bibitem{MR4221225}
 John~G. Ratcliffe, \emph{Foundations of hyperbolic manifolds}, Graduate Texts
   in Mathematics, vol. 149, Springer, Cham, [2019] \copyright 2019, Third
@@ -107,6 +126,18 @@ Jos\'{e} Seade and Alberto Verjovsky, \emph{Higher dimensional complex
 \bibitem{seppala2011geometry}
 Mika Sepp{\"a}l{\"a} and Tuomas Sorvali, \emph{Geometry of riemann surfaces and
   teichm{\"u}ller spaces}, Elsevier, 2011.
+
+\bibitem{sullivan1979hyperbolic}
+Dennis Sullivan, \emph{Hyperbolic geometry and homeomorphisms}, Geometric
+  topology, Elsevier, 1979, pp.~543--555.
+
+\bibitem{thurston1982three}
+William~P Thurston, \emph{Three dimensional manifolds, kleinian groups and
+  hyperbolic geometry},  (1982).
+
+\bibitem{thurston2022geometry}
+\bysame, \emph{The geometry and topology of three-manifolds: With a preface by
+  steven p. kerckhoff}, vol.~27, American Mathematical Society, 2022.
 
 \bibitem{tramer2017ensemble}
 Florian Tram{\`e}r, Alexey Kurakin, Nicolas Papernot, Ian Goodfellow, Dan

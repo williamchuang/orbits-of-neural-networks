@@ -500,15 +500,15 @@ $$
 $$
 where $x_{ij}$ is the $i$-th row and $j$-th column from $AB$, and $a,b,c$ are some real numbers such that $(ax+b)+ci\in\mathbb{H}^2$.
 \begin{figure}[H]
-\caption{The computational graph of case 1.}
 \centering
 \includegraphics[width=0.8\textwidth]{8.png}
+\caption{The computational graph of case 1.}
 \end{figure}
 
 \begin{figure}[H]
-\caption{An illustration on how to embed \textbf{any} given product of matrices $AB$ in \textbf{any neural network models} to hyperbolic space $\mathbb{H}^2$.}
 \centering
 \includegraphics[width=0.8\textwidth]{9.png}
+\caption{An illustration on how to embed \textbf{any} given product of matrices $AB$ in \textbf{any neural network models} to hyperbolic space $\mathbb{H}^2$.}
 \end{figure}
 
 %\begin{figure}[H]
@@ -518,9 +518,9 @@ where $x_{ij}$ is the $i$-th row and $j$-th column from $AB$, and $a,b,c$ are so
 %end{figure}
 
 \begin{figure}[H]
-\caption{The computational graph of Case 2 when a hyperbolic-length product is implemented to the model directly before training.}
 \centering
 \includegraphics[width=0.8\textwidth]{5.png}
+\caption{The computational graph of Case 2 when a hyperbolic-length product is implemented to the model directly before training.}
 \end{figure}
 
 
@@ -582,29 +582,35 @@ With the hyperbolic-orbit algorithm, it is possible to find an appropriate M\"{o
 The algorithm introduced by the paper can help to save training time for parallel computing in the ensemble method, that is, instead of starting over from the beginning to train $N'$ models in parallel, $N'\in\mathbb{N}$, the training can start with $N'$ converged models that are equivalent to the given converged model are converged to different minima in the moduli space using a new training set.
 
 \begin{figure}[H]
-\caption{Using an open set $B_r(p)$ centered at $p\in\mathbb{H}^2$ with radius $r>0$ that covers all embedded weights of the given converged model to study the correspondence between the location of $B_r(p)$ in $\mathbb{H}^2$ and the location of the model in the loss surface.}
 \centering
 \includegraphics[width=0.8\textwidth]{10.png}
+\caption{Using an open set $B_r(p)$ centered at $p\in\mathbb{H}^2$ with radius $r>0$ that covers all embedded weights of the given converged model to study the correspondence between the location of $B_r(p)$ in $\mathbb{H}^2$ and the location of the model in the loss surface.}
 \end{figure}
 
 
-Since the moduli space of any given converged neural network is determined by the range of images of $T_g\in\text{PSL}(2,\mathbb{R})$, i.e. its orbits. By choosing a different set of isometries to form $T_g$ could determine a different fundamental group and a corresponding hyperbolic surface $M$. The set of equivalence classes of the metrics on the surface $M$ could be investigated using its corresponding moduli space of hyperbolic surfaces (which is also known as the Teichm\"{u}ller space\cite{seppala2011geometry}). There is a unique K\"{a}hler-Einstein metric \cite{cheng1980existence}, and the geometry and topology of loss surface of any given converged neural network are determined by the weights of that neural net, the geometry and topology of the family loss surfaces could be investigated using recent results of K\"{a}hler-Einstein metric.
+Since the moduli space of any given converged neural network is determined by the range of images of $T_g\in\text{PSL}(2,\mathbb{R})$, i.e. its orbits. By choosing a different set of isometries to form $T_g$ could determine a different fundamental group and a corresponding hyperbolic surface $M$. The set of equivalence classes of the metrics on the surface $M$ could be investigated using its corresponding moduli space of hyperbolic surfaces (which is also known as the Teichm\"{u}ller space\cite{seppala2011geometry, bers1981finite}). There is a unique K\"{a}hler-Einstein metric \cite{cheng1980existence}, and the geometry and topology of loss surface of any given converged neural network are determined by the weights of that neural net, the geometry and topology of the family loss surfaces could be investigated using recent results of K\"{a}hler-Einstein metric.
 
 \begin{figure}[H]
-\caption{Focusing on a two-generator subgroup of $\text{PSL}(2,\mathbb{R})$ (it can be called a Schottky group, Fuchsian group, or Kleinian group) and its fundamental domain in $\mathbb{H}^2$. \textbf{The geometry, topology, and the group generators of the hyperbolic manifold\cite{seppala2011geometry} determine the gradients that are provided by the hyperbolic-orbit algorithm.}}
 \centering
 \includegraphics[width=0.8\textwidth]{11.png}
+\caption{Focusing on a two-generator subgroup of $\text{PSL}(2,\mathbb{R})$ (it can be called a Schottky group, Fuchsian group, or Kleinian group) and its fundamental domain in $\mathbb{H}^2$. \textbf{The geometry, topology, and the group generators of the hyperbolic manifold\cite{thurston2022geometry, seppala2011geometry, gromov1981hyperbolic, thurston1982three, mcmullen1992riemann, benedetti20072+} determine the gradients that are provided by the hyperbolic-orbit algorithm.}}
 \end{figure}
 
 The range of $T_g\in\text{PSL}(2,\mathbb{R})$ determines the range of orbits of a given converged neural network. The number of possible ranges are determined by the hyperbolic surface that is determined by the group generated by all $T_g$ that were used to map the orbits. The number of these hyperbolic surfaces could also be enumerated using the method introduced in\cite{chuang2015implications} which gives not only a systematic way to enumerate these hyperbolic surfaces, but also can be used to enumerate the number of ways to transform any given neural net on its orbit by machines in a systematically.
 
 \begin{figure}[H]
-\caption{Possible scenarios of loss surface. Each possible scenario of the new loss surface after applying fractional linear mapping (which is corresponding to an element to the two-generator group) to the weights of the given converged model. Notice that it is possible that the model was mapped to the deleted neighborhood of a new local minimum or the global minimum.}
 \centering
-\includegraphics[width=0.8\textwidth]{12.png}
+\includegraphics[width=0.8\textwidth]{13.png}
+\caption{Different configurations can provide different oriented Riemannian manifold.}
 \end{figure}
 
-Since each $T_g$ is a continuous open mapping, there exists an open set $O$ to cover all images of the weight tensor of a given model $f$. By studying the topology and geometry of the moduli space that this open set $O$ can move over, the topology and geometry of the loss surface could be investigated. In other words, this paper also demonstrates a correspondence between the moduli space of $T_g$\cite{seppala2011geometry}, and the loss surface (landscape)\cite{li2018visualizing,garipov2018loss, malan2021survey, draxler2018essentially, freeman2016topology, du2019gradient} of any given model.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{12.png}
+\caption{Possible scenarios of loss surface. Each possible scenario of the new loss surface after applying fractional linear mapping (which is corresponding to an element to the two-generator group) to the weights of the given converged model. Notice that it is possible that the model was mapped to the deleted neighborhood of a new local minimum or the global minimum.}
+\end{figure}
+
+Since each $T_g$ is a continuous open mapping, there exists an open set $O$ to cover all images of the weight tensor of a given model $f$. By studying the topology and geometry of the moduli space that this open set $O$ can move over, the topology and geometry of the loss surface could be investigated. In other words, this paper also demonstrates a correspondence between the moduli space of $T_g$\cite{seppala2011geometry, sullivan1979hyperbolic}, and the loss surface (landscape)\cite{li2018visualizing,garipov2018loss, malan2021survey, draxler2018essentially, freeman2016topology, du2019gradient} of any given model.
 
 
 Furthermore, this algorithm could also be applied for non-linear encryption. For instance, the cardinality of the orbit of $A$ and $B$ is infinite, thus there are infinitely many ways to encrypt messages in A or $B$. Let message be embedded in $(T_1(A)\odot_{\mathbb{H}^n}T_1(B))^N$ by using $T_1$. Then the message can only be deciphered if the receiver knows the two correct isometries $T_3$ and $T_2$ and a large integer $N$ as keys to decode two encrypted matrices: $T_2(B)$ and $T_3(A)$ to reconstruct the message in $(T_1(A)\odot_{\mathbb{H}^n}T_1(B))^N$ using $(T_1(A)\odot_{\mathbb{H}^n}T_1(B))^N = (A\odot_{\mathbb{H}^n}B)^N$. The meaning of the matrix $B$ is not only a lock, but it can obfuscate the frequency of characters used in the message in a random method. Since $T_2$ and $T_3$ are linear fractional, i.e. they have the form $\frac{az+b}{cz+d}$, thus the keys only need eight real numbers plus a large integer.

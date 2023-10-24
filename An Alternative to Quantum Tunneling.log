@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  23 OCT 2023 00:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  24 OCT 2023 12:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1209,12 +1209,12 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 <8.png, id=176, 1162.3425pt x 456.70625pt>
 File: 8.png Graphic file (type png)
 <use 8.png>
-Package pdftex.def Info: 8.png  used on input line 505.
+Package pdftex.def Info: 8.png  used on input line 504.
 (pdftex.def)             Requested size: 341.11533pt x 134.03029pt.
 <9.png, id=178, 442.65375pt x 758.835pt>
 File: 9.png Graphic file (type png)
 <use 9.png>
-Package pdftex.def Info: 9.png  used on input line 511.
+Package pdftex.def Info: 9.png  used on input line 510.
 (pdftex.def)             Requested size: 341.11533pt x 584.80266pt.
  [8pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
  has been already used, duplicate ignored
@@ -1222,7 +1222,7 @@ Package pdftex.def Info: 9.png  used on input line 511.
                                                   \__shipout_drop_firstpage_...
 l.513 
        <./8.png>]
-Overfull \vbox (38.57758pt too high) has occurred while \output is active []
+Overfull \vbox (42.5871pt too high) has occurred while \output is active []
 
 
 [9pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
@@ -1234,7 +1234,7 @@ l.513
 <5.png, id=191, 776.9025pt x 475.7775pt>
 File: 5.png Graphic file (type png)
 <use 5.png>
-Package pdftex.def Info: 5.png  used on input line 523.
+Package pdftex.def Info: 5.png  used on input line 522.
 (pdftex.def)             Requested size: 341.11533pt x 208.89989pt.
  [10pdfTeX warning (ext4): destination with the same identifier (name{figure.3}
 ) has been already used, duplicate ignored
@@ -1245,7 +1245,7 @@ l.561
 <10.png, id=208, 527.9725pt x 695.59875pt>
 File: 10.png Graphic file (type png)
 <use 10.png>
-Package pdftex.def Info: 10.png  used on input line 587.
+Package pdftex.def Info: 10.png  used on input line 586.
 (pdftex.def)             Requested size: 341.11533pt x 449.41666pt.
  [12] [13pdfTeX warning (ext4): destination with the same identifier (name{figu
 re.4}) has been already used, duplicate ignored
@@ -1253,10 +1253,10 @@ re.4}) has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.592 
        <./10.png>]
-<11.png, id=224, 587.19376pt x 747.79375pt>
+<11.png, id=223, 587.19376pt x 747.79375pt>
 File: 11.png Graphic file (type png)
 <use 11.png>
-Package pdftex.def Info: 11.png  used on input line 596.
+Package pdftex.def Info: 11.png  used on input line 595.
 (pdftex.def)             Requested size: 341.11533pt x 434.4053pt.
  [14] [15pdfTeX warning (ext4): destination with the same identifier (name{figu
 re.5}) has been already used, duplicate ignored
@@ -1264,33 +1264,43 @@ re.5}) has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.600 
        <./11.png>]
-<12.png, id=238, 572.1375pt x 569.12625pt>
+<13.png, id=255, 847.165pt x 792.9625pt>
+File: 13.png Graphic file (type png)
+<use 13.png>
+Package pdftex.def Info: 13.png  used on input line 603.
+(pdftex.def)             Requested size: 341.11533pt x 319.28471pt.
+<12.png, id=256, 572.1375pt x 569.12625pt>
 File: 12.png Graphic file (type png)
 <use 12.png>
-Package pdftex.def Info: 12.png  used on input line 604.
+Package pdftex.def Info: 12.png  used on input line 609.
 (pdftex.def)             Requested size: 341.11533pt x 339.3247pt.
  [16pdfTeX warning (ext4): destination with the same identifier (name{figure.6}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.611 
-       <./12.png>] (./An Alternative to Quantum Tunneling.bbl [17] [18]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 9
-9.
+l.612 
+       <./13.png>] [17pdfTeX warning (ext4): destination with the same identifi
+er (name{figure.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.617 
+       <./12.png>] (./An Alternative to Quantum Tunneling.bbl [18] [19]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+18.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [19]) [20]
+) [20]) [21]
 (./An Alternative to Quantum Tunneling.aux)
 Package rerunfilecheck Info: File `"An Alternative to Quantum Tunneling".out' h
 as not changed.
 (rerunfilecheck)             Checksum: 4C897D6A05E6DE98838C9C61001EACCC;1445.
  ) 
 Here is how much of TeX's memory you used:
- 32741 strings out of 478542
- 662437 string characters out of 5850401
- 1108247 words of memory out of 5000000
- 49992 multiletter control sequences out of 15000+600000
+ 32764 strings out of 478542
+ 662828 string characters out of 5850401
+ 1108536 words of memory out of 5000000
+ 50005 multiletter control sequences out of 15000+600000
  469251 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,7n,122p,1112b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1315,11 +1325,11 @@ blic/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lms
 y7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symb
 ols/msbm7.pfb>
-Output written on "An Alternative to Quantum Tunneling.pdf" (20 pages, 1232258 
+Output written on "An Alternative to Quantum Tunneling.pdf" (21 pages, 1472265 
 bytes).
 PDF statistics:
- 375 PDF objects out of 1000 (max. 8388607)
- 276 compressed objects within 3 object streams
- 71 named destinations out of 1000 (max. 500000)
- 243 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 404 PDF objects out of 1000 (max. 8388607)
+ 297 compressed objects within 3 object streams
+ 80 named destinations out of 1000 (max. 500000)
+ 248 words of extra memory for PDF output out of 10000 (max. 10000000)
 
