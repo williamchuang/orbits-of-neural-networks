@@ -3,66 +3,75 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: An Alternative to Quantum Tunneling.aux
 The style file: amsplain.bst
 Database file #1: refs.bib
-Repeated entry---line 60 of file refs.bib
+Repeated entry---line 190 of file refs.bib
  : @inproceedings{gromov1981hyperbolic
  :                                    ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "chuang2022hausdorff" isn't style-file defined
---line 173 of file refs.bib
-Repeated entry---line 483 of file refs.bib
+--line 303 of file refs.bib
+Repeated entry---line 613 of file refs.bib
  : @mastersthesis{chuang2022hausdorff
  :                                   ,
 I'm skipping whatever remains of this entry
 Warning--missing pages in benedetti20072+
 Warning--missing pages in blum1988training
+Warning--missing pages in bronstein2021geometric
 Warning--missing pages in chuang2015implications
 Warning--missing pages in freeman2016topology
 Warning--missing pages in garipov2018loss
+Warning--missing pages in goodfellow2014qualitatively
+Warning--missing journal name in im2016empirical
+Warning--missing pages in im2016empirical
+Warning--missing pages in kawaguchi2017generalization
+Warning--missing pages in kumar2023black
 Warning--missing pages in li2018visualizing
+Warning--missing pages in neyshabur2017exploring
+Warning--missing pages in nguyen2018loss
+Warning--missing pages in poole2016exponential
 Warning--missing journal name in thurston1982three
 Warning--missing pages in thurston1982three
 Warning--missing pages in tramer2017ensemble
 Warning--missing pages in vaswani2017attention
 Warning--missing pages in yun2017global
-You've used 32 entries,
+You've used 48 entries,
             2213 wiz_defined-function locations,
-            690 strings with 9284 characters,
-and the built_in function-call counts, 10311 in all, are:
-= -- 901
-> -- 465
+            763 strings with 11953 characters,
+and the built_in function-call counts, 16203 in all, are:
+= -- 1430
+> -- 777
 < -- 5
-+ -- 191
-- -- 154
-* -- 827
-:= -- 1621
-add.period$ -- 32
-call.type$ -- 32
-change.case$ -- 174
++ -- 317
+- -- 260
+* -- 1317
+:= -- 2541
+add.period$ -- 48
+call.type$ -- 48
+change.case$ -- 275
 chr.to.int$ -- 0
-cite$ -- 43
-duplicate$ -- 457
-empty$ -- 886
-format.name$ -- 154
-if$ -- 2173
+cite$ -- 68
+duplicate$ -- 697
+empty$ -- 1339
+format.name$ -- 260
+if$ -- 3409
 int.to.chr$ -- 0
-int.to.str$ -- 32
-missing$ -- 69
-newline$ -- 106
-num.names$ -- 62
-pop$ -- 231
+int.to.str$ -- 48
+missing$ -- 100
+newline$ -- 154
+num.names$ -- 94
+pop$ -- 360
 preamble$ -- 1
-purify$ -- 142
+purify$ -- 227
 quote$ -- 0
-skip$ -- 317
+skip$ -- 502
 stack$ -- 0
-substring$ -- 564
-swap$ -- 121
+substring$ -- 908
+swap$ -- 194
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 116
-warning$ -- 11
-while$ -- 97
-width$ -- 34
-write$ -- 288
+type$ -- 180
+warning$ -- 20
+while$ -- 148
+width$ -- 50
+write$ -- 421
 (There were 2 error messages)

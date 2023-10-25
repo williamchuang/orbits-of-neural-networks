@@ -37,11 +37,21 @@ Avrim Blum and Ronald Rivest, \emph{Training a 3-node neural network is
   np-complete}, Advances in neural information processing systems \textbf{1}
   (1988).
 
+\bibitem{bronstein2021geometric}
+Michael~M Bronstein, Joan Bruna, Taco Cohen, and Petar Veli{\v{c}}kovi{\'c},
+  \emph{Geometric deep learning: Grids, groups, graphs, geodesics, and gauges},
+  arXiv preprint arXiv:2104.13478 (2021).
+
 \bibitem{cheng1980existence}
 Shiu-Yuen Cheng and Shing-Tung Yau, \emph{On the existence of a complete
   k{\"a}hler metric on non-compact complex manifolds and the regularity of
   fefferman's equation}, Communications on Pure and Applied Mathematics
   \textbf{33} (1980), no.~4, 507--544.
+
+\bibitem{choromanska2015loss}
+Anna Choromanska, Mikael Henaff, Michael Mathieu, G{\'e}rard~Ben Arous, and
+  Yann LeCun, \emph{The loss surfaces of multilayer networks}, Artificial
+  intelligence and statistics, PMLR, 2015, pp.~192--204.
 
 \bibitem{chuang2022hausdorff}
 William~Huanshan Chuang, \emph{The hausdorff dimension of limit sets of
@@ -50,6 +60,11 @@ William~Huanshan Chuang, \emph{The hausdorff dimension of limit sets of
 \bibitem{chuang2015implications}
 \bysame, \emph{An invariant between hyperbolic surfaces and lattice spin
   models}, arXiv preprint arXiv:1511.02291 (2023).
+
+\bibitem{dinh2017sharp}
+Laurent Dinh, Razvan Pascanu, Samy Bengio, and Yoshua Bengio, \emph{Sharp
+  minima can generalize for deep nets}, International Conference on Machine
+  Learning, PMLR, 2017, pp.~1019--1028.
 
 \bibitem{draxler2018essentially}
 Felix Draxler, Kambis Veschgini, Manfred Salmhofer, and Fred Hamprecht,
@@ -71,10 +86,19 @@ Timur Garipov, Pavel Izmailov, Dmitrii Podoprikhin, Dmitry~P Vetrov, and
   of dnns}, Advances in neural information processing systems \textbf{31}
   (2018).
 
+\bibitem{goodfellow2014qualitatively}
+Ian~J Goodfellow, Oriol Vinyals, and Andrew~M Saxe, \emph{Qualitatively
+  characterizing neural network optimization problems}, arXiv preprint
+  arXiv:1412.6544 (2014).
+
 \bibitem{gromov1981hyperbolic}
 Mikhael Gromov, \emph{Hyperbolic manifolds, groups and actions}, Riemann
   surfaces and related topics: Proceedings of the 1978 Stony Brook Conference
   (State Univ. New York, Stony Brook, NY, 1978), vol.~97, 1981, pp.~183--213.
+
+\bibitem{im2016empirical}
+Daniel~Jiwoong Im, Michael Tao, and Kristin Branson, \emph{An empirical
+  analysis of deep network loss surfaces},  (2016).
 
 \bibitem{judd1990neural}
 J~Stephen Judd, \emph{Neural network design and the complexity of learning},
@@ -91,10 +115,27 @@ Michael Kapovich, \emph{Kleinian groups in higher dimensions}, Geometry and
   dynamics of groups and spaces, Progr. Math., vol. 265, Birkh\"{a}user, Basel,
   2008, pp.~487--564. \MR{2402415}
 
+\bibitem{kawaguchi2017generalization}
+Kenji Kawaguchi, Leslie~Pack Kaelbling, and Yoshua Bengio, \emph{Generalization
+  in deep learning}, arXiv preprint arXiv:1710.05468 \textbf{1} (2017), no.~8.
+
+\bibitem{kumar2023black}
+Pranav Kumar, Taniya Mandal, and Swapnamay Mondal, \emph{Black holes and the
+  loss landscape in machine learning}, arXiv preprint arXiv:2306.14817 (2023).
+
 \bibitem{li2018visualizing}
 Hao Li, Zheng Xu, Gavin Taylor, Christoph Studer, and Tom Goldstein,
   \emph{Visualizing the loss landscape of neural nets}, Advances in neural
   information processing systems \textbf{31} (2018).
+
+\bibitem{louart2018random}
+Cosme Louart, Zhenyu Liao, and Romain Couillet, \emph{A random matrix approach
+  to neural networks}, The Annals of Applied Probability \textbf{28} (2018),
+  no.~2, 1190--1248.
+
+\bibitem{lucas2022optimization}
+James Lucas, \emph{Optimization and loss landscape geometry of deep learning},
+  Ph.D. thesis, University of Toronto (Canada), 2022.
 
 \bibitem{ma2018mode}
 Shiqing Ma, Yingqi Liu, Wen-Chuan Lee, Xiangyu Zhang, and Ananth Grama,
@@ -112,6 +153,32 @@ Curt McMullen, \emph{Riemann surfaces and the geometrization of 3-manifolds},
   Bulletin of the American mathematical society \textbf{27} (1992), no.~2,
   207--216.
 
+\bibitem{neyshabur2017exploring}
+Behnam Neyshabur, Srinadh Bhojanapalli, David McAllester, and Nati Srebro,
+  \emph{Exploring generalization in deep learning}, Advances in neural
+  information processing systems \textbf{30} (2017).
+
+\bibitem{nguyen2017loss}
+Quynh Nguyen and Matthias Hein, \emph{The loss surface of deep and wide neural
+  networks}, International conference on machine learning, PMLR, 2017,
+  pp.~2603--2612.
+
+\bibitem{nguyen2018loss}
+Quynh Nguyen, Mahesh~Chandra Mukkamala, and Matthias Hein, \emph{On the loss
+  landscape of a class of deep neural networks with no bad local valleys},
+  arXiv preprint arXiv:1809.10749 (2018).
+
+\bibitem{pennington2017geometry}
+Jeffrey Pennington and Yasaman Bahri, \emph{Geometry of neural network loss
+  surfaces via random matrix theory}, International conference on machine
+  learning, PMLR, 2017, pp.~2798--2806.
+
+\bibitem{poole2016exponential}
+Ben Poole, Subhaneil Lahiri, Maithra Raghu, Jascha Sohl-Dickstein, and Surya
+  Ganguli, \emph{Exponential expressivity in deep neural networks through
+  transient chaos}, Advances in neural information processing systems
+  \textbf{29} (2016).
+
 \bibitem{MR4221225}
 John~G. Ratcliffe, \emph{Foundations of hyperbolic manifolds}, Graduate Texts
   in Mathematics, vol. 149, Springer, Cham, [2019] \copyright 2019, Third
@@ -121,6 +188,12 @@ John~G. Ratcliffe, \emph{Foundations of hyperbolic manifolds}, Graduate Texts
 Jos\'{e} Seade and Alberto Verjovsky, \emph{Higher dimensional complex
   {K}leinian groups}, Math. Ann. \textbf{322} (2002), no.~2, 279--300.
   \MR{1893917}
+
+\bibitem{seddik2020random}
+Mohamed El~Amine Seddik, Cosme Louart, Mohamed Tamaazousti, and Romain
+  Couillet, \emph{Random matrix theory proves that deep learning
+  representations of gan-data behave as gaussian mixtures}, International
+  Conference on Machine Learning, PMLR, 2020, pp.~8573--8582.
 
 \bibitem{seppala2011geometry}
 Mika Sepp{\"a}l{\"a} and Tuomas Sorvali, \emph{Geometry of riemann surfaces and
@@ -155,6 +228,11 @@ Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
 \bibitem{yun2017global}
 Chulhee Yun, Suvrit Sra, and Ali Jadbabaie, \emph{Global optimality conditions
   for deep neural networks}, arXiv preprint arXiv:1707.02444 (2017).
+
+\bibitem{zhang2021embedding}
+Yaoyu Zhang, Zhongwang Zhang, Tao Luo, and Zhiqin~J Xu, \emph{Embedding
+  principle of loss landscape of deep neural networks}, Advances in Neural
+  Information Processing Systems \textbf{34} (2021), 14848--14859.
 
 \bibitem{zhang2022toward}
 Yingyi Zhang, Zan Wang, Jiajun Jiang, Hanmo You, and Junjie Chen, \emph{Toward
