@@ -3,13 +3,13 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: An Alternative to Quantum Tunneling.aux
 The style file: amsplain.bst
 Database file #1: refs.bib
-Repeated entry---line 190 of file refs.bib
+Repeated entry---line 198 of file refs.bib
  : @inproceedings{gromov1981hyperbolic
  :                                    ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "chuang2022hausdorff" isn't style-file defined
---line 303 of file refs.bib
-Repeated entry---line 613 of file refs.bib
+--line 311 of file refs.bib
+Repeated entry---line 621 of file refs.bib
  : @mastersthesis{chuang2022hausdorff
  :                                   ,
 I'm skipping whatever remains of this entry
@@ -33,45 +33,45 @@ Warning--missing pages in thurston1982three
 Warning--missing pages in tramer2017ensemble
 Warning--missing pages in vaswani2017attention
 Warning--missing pages in yun2017global
-You've used 48 entries,
+You've used 49 entries,
             2213 wiz_defined-function locations,
-            763 strings with 11953 characters,
-and the built_in function-call counts, 16203 in all, are:
-= -- 1430
-> -- 777
-< -- 5
-+ -- 317
-- -- 260
-* -- 1317
-:= -- 2541
-add.period$ -- 48
-call.type$ -- 48
-change.case$ -- 275
+            769 strings with 12038 characters,
+and the built_in function-call counts, 16423 in all, are:
+= -- 1446
+> -- 784
+< -- 6
++ -- 320
+- -- 262
+* -- 1331
+:= -- 2578
+add.period$ -- 49
+call.type$ -- 49
+change.case$ -- 279
 chr.to.int$ -- 0
-cite$ -- 68
-duplicate$ -- 697
-empty$ -- 1339
-format.name$ -- 260
-if$ -- 3409
+cite$ -- 69
+duplicate$ -- 710
+empty$ -- 1363
+format.name$ -- 262
+if$ -- 3456
 int.to.chr$ -- 0
-int.to.str$ -- 48
-missing$ -- 100
-newline$ -- 154
-num.names$ -- 94
-pop$ -- 360
+int.to.str$ -- 49
+missing$ -- 103
+newline$ -- 157
+num.names$ -- 96
+pop$ -- 367
 preamble$ -- 1
-purify$ -- 227
+purify$ -- 230
 quote$ -- 0
-skip$ -- 502
+skip$ -- 508
 stack$ -- 0
-substring$ -- 908
-swap$ -- 194
-text.length$ -- 5
+substring$ -- 913
+swap$ -- 196
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 180
+type$ -- 182
 warning$ -- 20
-while$ -- 148
-width$ -- 50
-write$ -- 421
+while$ -- 150
+width$ -- 51
+write$ -- 430
 (There were 2 error messages)
