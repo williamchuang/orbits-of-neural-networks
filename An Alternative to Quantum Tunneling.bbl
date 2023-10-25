@@ -37,6 +37,11 @@ Avrim Blum and Ronald Rivest, \emph{Training a 3-node neural network is
   np-complete}, Advances in neural information processing systems \textbf{1}
   (1988).
 
+\bibitem{borthwick2007spectral}
+David Borthwick, \emph{Spectral theory of infinite-area hyperbolic surfaces},
+  second ed., Progress in Mathematics, vol. 318, Birkh\"{a}user/Springer,
+  [Cham], 2016. \MR{3497464}
+
 \bibitem{bronstein2021geometric}
 Michael~M Bronstein, Joan Bruna, Taco Cohen, and Petar Veli{\v{c}}kovi{\'c},
   \emph{Geometric deep learning: Grids, groups, graphs, geodesics, and gauges},

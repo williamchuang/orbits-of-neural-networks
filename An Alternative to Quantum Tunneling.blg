@@ -33,45 +33,45 @@ Warning--missing pages in thurston1982three
 Warning--missing pages in tramer2017ensemble
 Warning--missing pages in vaswani2017attention
 Warning--missing pages in yun2017global
-You've used 49 entries,
+You've used 50 entries,
             2213 wiz_defined-function locations,
-            769 strings with 12038 characters,
-and the built_in function-call counts, 16423 in all, are:
-= -- 1446
-> -- 784
-< -- 6
-+ -- 320
-- -- 262
-* -- 1331
-:= -- 2578
-add.period$ -- 49
-call.type$ -- 49
-change.case$ -- 279
+            778 strings with 12205 characters,
+and the built_in function-call counts, 16656 in all, are:
+= -- 1464
+> -- 791
+< -- 7
++ -- 323
+- -- 264
+* -- 1351
+:= -- 2616
+add.period$ -- 50
+call.type$ -- 50
+change.case$ -- 284
 chr.to.int$ -- 0
-cite$ -- 69
-duplicate$ -- 710
-empty$ -- 1363
-format.name$ -- 262
-if$ -- 3456
+cite$ -- 70
+duplicate$ -- 723
+empty$ -- 1387
+format.name$ -- 264
+if$ -- 3505
 int.to.chr$ -- 0
-int.to.str$ -- 49
-missing$ -- 103
-newline$ -- 157
-num.names$ -- 96
-pop$ -- 367
+int.to.str$ -- 50
+missing$ -- 106
+newline$ -- 160
+num.names$ -- 98
+pop$ -- 371
 preamble$ -- 1
-purify$ -- 230
+purify$ -- 233
 quote$ -- 0
-skip$ -- 508
+skip$ -- 514
 stack$ -- 0
-substring$ -- 913
-swap$ -- 196
-text.length$ -- 6
+substring$ -- 918
+swap$ -- 200
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 182
+type$ -- 184
 warning$ -- 20
-while$ -- 150
-width$ -- 51
-write$ -- 430
+while$ -- 152
+width$ -- 52
+write$ -- 441
 (There were 2 error messages)
