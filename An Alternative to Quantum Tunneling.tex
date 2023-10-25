@@ -26,21 +26,21 @@
 
 \usepackage{listings}
 \lstset{
-   breaklines=true,
-   %
-   extendedchars=true,
-   literate=
-   {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
-   {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
-   {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
-   {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
-   {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
-   {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
-   {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
-   { }{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
-   {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
-   {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
-   {€}{{\EUR}}1 {£}{{\pounds}}1
+  breaklines=true,
+  %
+  extendedchars=true,
+  literate=
+  {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+  {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+  {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+  {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+  {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+  {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+  { }{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+  {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+  {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+  {€}{{\EUR}}1 {£}{{\pounds}}1
 }
 
 %%
@@ -49,77 +49,77 @@
 %% modified by me (should not have empty lines)
 %%
 \lstdefinelanguage{iPython}{
-   morekeywords={access,and,break,class,continue,def,del,elif,else,except,exec,finally,for,from,global,if,import,in,is,lambda,not,or,pass,print,raise,return,try,while},%
-   %
-   % Built-ins
-   morekeywords=[2]{abs,all,any,basestring,bin,bool,bytearray,callable,chr,classmethod,cmp,compile,complex,delattr,dict,dir,divmod,enumerate,eval,execfile,file,filter,float,format,frozenset,getattr,globals,hasattr,hash,help,hex,id,input,int,isinstance,issubclass,iter,len,list,locals,long,map,max,memoryview,min,next,object,oct,open,ord,pow,property,range,raw_input,reduce,reload,repr,reversed,round,set,setattr,slice,sorted,staticmethod,str,sum,super,tuple,type,unichr,unicode,vars,xrange,zip,apply,buffer,coerce,intern},%
-   %
-   sensitive=true,%
-   morecomment=[l]\#,%
-   morestring=[b]',%
-   morestring=[b]",%
-   %
-   morestring=[s]{'''}{'''},% used for documentation text (mulitiline strings)
-   morestring=[s]{"""}{"""},% added by Philipp Matthias Hahn
-   %
-   morestring=[s]{r'}{'},% `raw' strings
-   morestring=[s]{r"}{"},%
-   morestring=[s]{r'''}{'''},%
-   morestring=[s]{r"""}{"""},%
-   morestring=[s]{u'}{'},% unicode strings
-   morestring=[s]{u"}{"},%
-   morestring=[s]{u'''}{'''},%
-   morestring=[s]{u"""}{"""},%
-   %
-   % {replace}{replacement}{lenght of replace}
-   % *{-}{-}{1} will not replace in comments and so on
-   literate=
-   {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
-   {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
-   {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
-   {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
-   {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
-   {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
-   {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
-   { }{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
-   {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
-   {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
-   {€}{{\EUR}}1 {£}{{\pounds}}1
-   %
-   {^}{{{\color{ipython_purple}\^{}}}}1
-   {=}{{{\color{ipython_purple}=}}}1
-   %
-   {+}{{{\color{ipython_purple}+}}}1
-   {*}{{{\color{ipython_purple}$^\ast$}}}1
-   {/}{{{\color{ipython_purple}/}}}1
-   %
-   {+=}{{{+=}}}1
-   {-=}{{{-=}}}1
-   {*=}{{{$^\ast$=}}}1
-   {/=}{{{/=}}}1,
-   literate=
-   *{-}{{{\color{ipython_purple}-}}}1
-    {?}{{{\color{ipython_purple}?}}}1,
-   %
-   identifierstyle=\color{black}\ttfamily,
-   commentstyle=\color{ipython_cyan}\ttfamily,
-   stringstyle=\color{ipython_red}\ttfamily,
-   keepspaces=true,
-   showspaces=false,
-   showstringspaces=false,
-   %
-   rulecolor=\color{ipython_frame},
-   frame=single,
-   frameround={t}{t}{t}{t},
-   framexleftmargin=6mm,
-   numbers=left,
-   numberstyle=\tiny\color{halfgray},
-   %
-   %
-   backgroundcolor=\color{ipython_bg},
-   %   extendedchars=true,
-   basicstyle=\scriptsize,
-   keywordstyle=\color{ipython_green}\ttfamily,
+  morekeywords={access,and,break,class,continue,def,del,elif,else,except,exec,finally,for,from,global,if,import,in,is,lambda,not,or,pass,print,raise,return,try,while},%
+  %
+  % Built-ins
+  morekeywords=[2]{abs,all,any,basestring,bin,bool,bytearray,callable,chr,classmethod,cmp,compile,complex,delattr,dict,dir,divmod,enumerate,eval,execfile,file,filter,float,format,frozenset,getattr,globals,hasattr,hash,help,hex,id,input,int,isinstance,issubclass,iter,len,list,locals,long,map,max,memoryview,min,next,object,oct,open,ord,pow,property,range,raw_input,reduce,reload,repr,reversed,round,set,setattr,slice,sorted,staticmethod,str,sum,super,tuple,type,unichr,unicode,vars,xrange,zip,apply,buffer,coerce,intern},%
+  %
+  sensitive=true,%
+  morecomment=[l]\#,%
+  morestring=[b]',%
+  morestring=[b]",%
+  %
+  morestring=[s]{'''}{'''},% used for documentation text (mulitiline strings)
+  morestring=[s]{"""}{"""},% added by Philipp Matthias Hahn
+  %
+  morestring=[s]{r'}{'},% `raw' strings
+  morestring=[s]{r"}{"},%
+  morestring=[s]{r'''}{'''},%
+  morestring=[s]{r"""}{"""},%
+  morestring=[s]{u'}{'},% unicode strings
+  morestring=[s]{u"}{"},%
+  morestring=[s]{u'''}{'''},%
+  morestring=[s]{u"""}{"""},%
+  %
+  % {replace}{replacement}{lenght of replace}
+  % *{-}{-}{1} will not replace in comments and so on
+  literate=
+  {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+  {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+  {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+  {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+  {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+  {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+  { }{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+  {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+  {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+  {€}{{\EUR}}1 {£}{{\pounds}}1
+  %
+  {^}{{{\color{ipython_purple}\^{}}}}1
+  {=}{{{\color{ipython_purple}=}}}1
+  %
+  {+}{{{\color{ipython_purple}+}}}1
+  {*}{{{\color{ipython_purple}$^\ast$}}}1
+  {/}{{{\color{ipython_purple}/}}}1
+  %
+  {+=}{{{+=}}}1
+  {-=}{{{-=}}}1
+  {*=}{{{$^\ast$=}}}1
+  {/=}{{{/=}}}1,
+  literate=
+  *{-}{{{\color{ipython_purple}-}}}1
+   {?}{{{\color{ipython_purple}?}}}1,
+  %
+  identifierstyle=\color{black}\ttfamily,
+  commentstyle=\color{ipython_cyan}\ttfamily,
+  stringstyle=\color{ipython_red}\ttfamily,
+  keepspaces=true,
+  showspaces=false,
+  showstringspaces=false,
+  %
+  rulecolor=\color{ipython_frame},
+  frame=single,
+  frameround={t}{t}{t}{t},
+  framexleftmargin=6mm,
+  numbers=left,
+  numberstyle=\tiny\color{halfgray},
+  %
+  %
+  backgroundcolor=\color{ipython_bg},
+  %   extendedchars=true,
+  basicstyle=\scriptsize,
+  keywordstyle=\color{ipython_green}\ttfamily,
 }
 
 %%%%flowchart
@@ -131,12 +131,12 @@
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
 \tikzstyle{decision} = [rectangle, rounded corners, draw, fill=blue!20,
-   text width=15em, text badly centered, node distance=2.2cm, inner sep=0pt]
+  text width=15em, text badly centered, node distance=2.2cm, inner sep=0pt]
 \tikzstyle{block} = [rectangle, draw, fill=blue!20,
-   text width=5em, text centered, rounded corners, minimum height=4em]
+  text width=5em, text centered, rounded corners, minimum height=4em]
 \tikzstyle{line} = [draw, -latex']
 \tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
-   minimum height=2em]
+  minimum height=2em]
 %\usepackage[english]{babel}
 %\usepackage[utf8]{inputenc}
 %\usepackage[margin=1in]{geometry}
@@ -253,12 +253,12 @@ graphicx,enumerate,setspace,verbatim,tocloft,rotating}
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
 \tikzstyle{decision} = [rectangle, rounded corners, draw, fill=blue!20,
-   text width=15em, text badly centered, node distance=2.2cm, inner sep=0pt]
+  text width=15em, text badly centered, node distance=2.2cm, inner sep=0pt]
 \tikzstyle{block} = [rectangle, draw, fill=blue!20,
-   text width=5em, text centered, rounded corners, minimum height=4em]
+  text width=5em, text centered, rounded corners, minimum height=4em]
 \tikzstyle{line} = [draw, -latex']
 \tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
-   minimum height=2em]
+  minimum height=2em]
 %\usepackage[english]{babel}
 %\usepackage[utf8]{inputenc}
 %\usepackage[margin=1in]{geometry}
@@ -328,23 +328,23 @@ Hence, here is the \textbf{the essential question} that answered by this paper: 
 
 In other words, let $\epsilon$ be a small positive number ($\epsilon< 1$), and let $f$ be the given converged model that is trained using samples in the set $X$. Then, the goal is to find an equivalent converged $F$ in the equivalent class of $(f,O_1)$ such that
 \begin{itemize}
-\item[(i)] the probability of the output of $F$ is different to the output of $f$ when the input is from $X$ is less then $\epsilon$,
-%$\mathbb{E}\left[ F(X) \right] = \mathbb{E}\left[ f(X) \right]$, 
+\item[(i)] the probability of the output of $F$ is different to the output of $f$ when the input is from $X$ is less than $\epsilon$,
+%$\mathbb{E}\left[ F(X) \right] = \mathbb{E}\left[ f(X) \right]$,
 \item[(ii)] the probability of the output of $F$ is different to the output of $f$ when the input is from the complement of $X$ is greater than $1-\epsilon$, and
-%there exists a set $X'$ that are not measure zero and $X'\neq X$ such that 
+%there exists a set $X'$ that are not measure zero and $X'\neq X$ such that
 %$$\mathbb{E} \left[ F(X') \right] \neq \mathbb{E} \left[ f(X') \right] \text{ and, }$$
-\item[(iii)] the weights of the converged $F(x)$ are not an affine transformations of the weights of the converged $f(x)$ 
+\item[(iii)] the weights of the converged $F(x)$ are not an affine transformations of the weights of the converged $f(x)$
 \end{itemize}
 
 With the condition $(ii)$, $F$ cannot be a trivial composition of functions, e.g. $g^{-1}\circ g\circ f$, and with the condition $(iii)$, the weights of the converged $F$ cannot be an affine transformation of the converged $f$ so that $F(x)$ can have non-trivial gradients while running gradient descent and back-propagation algorithm on it using a new training set to reach a new local or global minimum.
 
 It is necessary to ask this question so that the trained model can be understood better to a point that the distribution of its weights can be studied using random matrix theory, and if all the other equivalent models can be derived instantaneously, then this can be considered an alternative to apply quantum computing to find all those equivalent solutions in parallel to make the model become robust.
 
-If a model can be replaced by another equivalent model, then the other model might be at the different point on the loss surface\cite{li2018visualizing,garipov2018loss, malan2021survey, draxler2018essentially, freeman2016topology, du2019gradient}, and the barrier between the local minimum to the nearest lower local minimum might have a lower height or in some better case with a negative height, meaning the model can be trained to a better model with a smaller error by using a new set of training data to descent to that lower local minimum. Hence, it is also sufficient to ask the question: how to find equivalent models of a given trained model? If the answer to this question is unknown, suppose a converged model cannot distinguish the fake data generated by an adversary model from the true data, or if a model needs to go through a debugging process for some false classified input, then the model not only has to be retrained, but it cannot be justified if it is a robust solution due to the process to reach the solution is random. 
+If a model can be replaced by another equivalent model, then the other model might be at the different point on the loss surface\cite{li2018visualizing,garipov2018loss, malan2021survey, draxler2018essentially, freeman2016topology, du2019gradient}, and the barrier between the local minimum to the nearest lower local minimum might have a lower height or in some better case with a negative height, meaning the model can be trained to a better model with a smaller error by using a new set of training data to descent to that lower local minimum. Hence, it is also sufficient to ask the question: how to find equivalent models of a given trained model? If the answer to this question is unknown, suppose a converged model cannot distinguish the fake data generated by an adversary model from the true data, or if a model needs to go through a debugging process for some false classified input, then the model not only has to be retrained, but it cannot be justified if it is a robust solution due to the process to reach the solution is random.
 
-Thus, on the contrary, if its equivalent converged models can be found immediately after a short period of time of training using using a new training set such as the input generated by adversarial models, then chances are, \textbf{within the set of equivalent converged models, there might exist a converged model} that will not take the fake input or falsely classified a corner case. 
+Thus, on the contrary, if its equivalent converged models can be found immediately after a short period of time of training using using a new training set such as the input generated by adversarial models, then chances are, \textbf{within the set of equivalent converged models, there might exist a converged model} that will not take the fake input or falsely classified a corner case.
 
-Applying symmetry group in machine learning, particularly in training neural networks, is not a new idea. For instance, the idea of applying gauge groups on input data\cite{bronstein2021geometric}. However, to the best of author's knowledge, to applying group action on the neural network function itself has not appeared in the literature. \textbf{An geometric analogy that could help to better build an intuition and understanding of the work introduced in this paper is to consider the comparison of two ideas in linear algebra: Gauss elimination and invariant subspace.} \textbf{In Gauss elimination, the coordinate system, i.e. the observer of the input geometric data is fixed, but the input was transformed (using elementary row operations) so that the solutions (the intersections of hyperplanes) could be observed using the fixed coordinate system. In the contrary, in finding the basis of invariant subspace, i.e. the latent vectors or eigenvectors, the procedure is equivalent to rotate the coordinate system to describe the input data--in this case, the input is fixed, but the bases are transformed which is parallel to the idea introduced in this paper as a comparison to the idea of transforming the input data\cite{bronstein2021geometric}.} In this paper, neural network functions have a similar role of bases in invariant subspace and the neural nets were transformed using group actions to their orbits. Furthermore, the method introduced in this paper can be extended so that the input data can also be transformed using group action (by embedding the input to the hyperbolic space using the algorithm introduced in the following sections, then the input can be transformed to its orbits).
+Applying symmetry groups in machine learning, particularly in training neural networks, is not a new idea. For instance, the idea of applying gauge groups on input data\cite{bronstein2021geometric}. However, to the best of the author's knowledge, applying group action on the neural network function itself has not appeared in the literature. \textbf{An geometric analogy that could help to better build an intuition and understanding of the work introduced in this paper is to consider the comparison of two ideas in linear algebra: Gauss elimination and invariant subspace.} \textbf{In Gauss elimination, the coordinate system, i.e. the observer of the input geometric data is fixed, but the input was transformed (using elementary row operations) so that the solutions (the intersections of hyperplanes) could be observed using the fixed coordinate system. In the contrary, in finding the basis of invariant subspace, i.e. the latent vectors or eigenvectors, the procedure is equivalent to rotate the coordinate system to describe the input data--in this case, the input is fixed, but the bases are transformed which is parallel to the idea introduced in this paper as a comparison to the idea of transforming the input data\cite{bronstein2021geometric}.} In this paper, neural network functions have a similar role of bases in invariant subspace and the neural nets were transformed using group actions to their orbits. Furthermore, the method introduced in this paper can be extended so that the input data can also be transformed using group action (by embedding the input to the hyperbolic space using the algorithm introduced in the following sections, then the input can be transformed to its orbits).
 
 
 \section{Hyperbolic-length Product}
@@ -377,7 +377,7 @@ $$
 Then on the upper-half plane, the projective special linear group $\text{PSL}(2,\mathbb{R})$ is its automorphism group. Furthermore, elements of the group are conformal mapping that preserve not only angles but hyperbolic distance. Hence, $\text{PSL}(2,\mathbb{R})$ is also the isometry group of the upper-half plane.
 
 
-To derive an equivalent model, take any $M\in \text{PSL}(2,\mathbb{R})\setminus\left\lbrace \text{id}\right\rbrace$, then there exists an isomorphism to map $M$ to a linear fractional (M\"{o}bius) map $T_M(z)=\frac{az+b}{cz+d}, a,b,c,d\in\mathbb{R},z\in\mathbb{C}$. It can be showed that this fractional linear transformation is isomorphic to a (2+1)-dimension Lorentz boost or (2+1)-dimension Lorentz transformation in physics.
+To derive an equivalent model, take any $M\in \text{PSL}(2,\mathbb{R})\setminus\left\lbrace \text{id}\right\rbrace$, then there exists an isomorphism to map $M$ to a linear fractional (M\"{o}bius) map $T_M(z)=\frac{az+b}{cz+d}, a,b,c,d\in\mathbb{R},z\in\mathbb{C}$. It can be shown that this fractional linear transformation is isomorphic to a (2+1)-dimensional Lorentz boost or (2+1)-dimensional Lorentz transformation in physics.
 \begin{definition}[Hyperbolic-length product]
 Define \textit{the hyperbolic-length product} is the following new operation:
 $$
@@ -438,7 +438,7 @@ Let a converged model $W$ and a training set $X$ be given. The goal is to find i
 \begin{definition}
 Hyperbolic-orbit Algorithm is an algorithm that implements hyperbolic-length products to replace matrix products.
 \end{definition}
-The following section introduces the hyperbolic-orbit algorithm. 
+The following section introduces the hyperbolic-orbit algorithm.
 
 
 %\item[Case 1] $W$ was trained. A special case when $d=2$ for the matrix $B$:
@@ -449,17 +449,17 @@ The following section introduces the hyperbolic-orbit algorithm.
 %\begin{itemize}
 %\item For $k=1$ to $k=n$ and fix $l$ at $l=1$.
 %\begin{itemize}
-%\item[(i)] If $a_{ki}b_{il}=0$, then map the edge $(a_{ki},b_{il})$ to a plane that is orthogonal to $y^3$-axis and has a zero projection to $y^3$-axis. 
-%\item[(ii)] If $a_{ki}b_{il}>0$, then map the edge $(a_{ki},b_{il})$ to a plane that is parallel to $y^3$-axis and has a positive projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y^3$-axis. 
-%\item[(iii)] If $a_{ki}b_{il}<0$, then map the edge $(a_{ki},b_{il})$ to a plane that is parallel to $y^3$-axis and has a negative projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y^3$-axis. 
+%\item[(i)] If $a_{ki}b_{il}=0$, then map the edge $(a_{ki},b_{il})$ to a plane that is orthogonal to $y^3$-axis and has a zero projection to $y^3$-axis.
+%\item[(ii)] If $a_{ki}b_{il}>0$, then map the edge $(a_{ki},b_{il})$ to a plane that is parallel to $y^3$-axis and has a positive projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y^3$-axis.
+%\item[(iii)] If $a_{ki}b_{il}<0$, then map the edge $(a_{ki},b_{il})$ to a plane that is parallel to $y^3$-axis and has a negative projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y^3$-axis.
 %\end{itemize}
 
 %\item For $k=1$ to $k=n$ and fix $l$ at $l=2$.
 %\begin{itemize}
 %\item[(i)] Let $b_{i2}$ have the same $y^1$ and $y^2$ coordinates as $b_{i2}$.
-%\item[(ii)] If $a_{ki}b_{i2}=0$, then move $b_{i2}$ along its $y^3$ coordinate such that the edge $(a_{ki},b_{il})$ has a zero projection to $y^3$-axis. 
-%\item[(iii)] If $a_{ki}b_{i2}>0$, then move $b_{i2}$ along $y_3$-axis such that the edge $(a_{ki},b_{il})$ has a positive projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y^3$-axis. 
-%\item[(iv)] If $a_{ki}b_{i2}<0$, then move $b_{i2}$ along $y_3$-axis such that the edge $(a_{ki},b_{il})$ has a negative projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y^3$-axis. 
+%\item[(ii)] If $a_{ki}b_{i2}=0$, then move $b_{i2}$ along its $y^3$ coordinate such that the edge $(a_{ki},b_{il})$ has a zero projection to $y^3$-axis.
+%\item[(iii)] If $a_{ki}b_{i2}>0$, then move $b_{i2}$ along $y_3$-axis such that the edge $(a_{ki},b_{il})$ has a positive projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y^3$-axis.
+%\item[(iv)] If $a_{ki}b_{i2}<0$, then move $b_{i2}$ along $y_3$-axis such that the edge $(a_{ki},b_{il})$ has a negative projection with an absolute hyperbolic value equal to $a_{ki}b_{il}$ to $y^3$-axis.
 %\end{itemize}
 %\end{itemize}
 %\end{itemize}
@@ -477,7 +477,7 @@ Embed entries of $AB$ to $\mathbb{H}^2$ by mapping each column vector of $AB$ to
 \item[Step 2] Constructing an invertible matrix $C$ by taking points on a line that is parallel to $y^2$-axis without any overlapping in their coordinates and forming edges to its corresponding set of embedded entries from the column vector in $AB$--the correspondence is determined by matrix multiplication $(AB)C$. (See the following figure for an example when $\phi(AB)$ and $C$ are 4 by 4.)
 \item[Step 3] Measuring all the hyperbolic length of edges in each $K_{n,d}$-graph (composed by vertices on the hyperbolic circle and the line that passes through its center), and sum all the lengths in each $K_{n,d}$-graph to make an entry of matrix $M$.
 
-\item[Step 4] Pick an element $g\in\text{PSL}(2,\mathbb{R})$, derive a linear fractional mapping from $g$, and denote it by $T_g(z)=\frac{az+b}{cz+d}, z\in\mathbb{H}^2$. 
+\item[Step 4] Pick an element $g\in\text{PSL}(2,\mathbb{R})$, derive a linear fractional mapping from $g$, and denote it by $T_g(z)=\frac{az+b}{cz+d}, z\in\mathbb{H}^2$.
 \item[Step 5] Apply $T_g$ to every entry $z$ of $\phi(AB)$ and $C$ to map every entry (could be trillions) of both matrices to their images $T_g(z)$ to derive the new weights of the given model, i.e. to derive an equivalent model.
 
 \item[Step 6] Apply gradient descent back-propagation algorithm on the whole model to reach a new local or global minimum with a new training set.
@@ -491,8 +491,8 @@ Embed entries of $AB$ to $\mathbb{H}^2$ by mapping each column vector of $AB$ to
 \item[Method 3] Implement the hyperbolic-length product into $W$ directly.
 \begin{itemize}
 \item[Step 1] The selected matrices $A$ and $B$ can be embedded freely to hyperbolic space as long as the hyperbolic-length product can work properly in the usual training process. Denote the embedding images by $\phi(A)$ and $\phi(B)$.
-\item[Step 2] The dimension of hyperbolic space could start with two dimensions to optimize the memory usage. 
-\item[Step 3] Pick an element $g\in\text{PSL}(2,\mathbb{R})$, derive a linear fractional mapping from $g$, and denote it by $T_g(z)=\frac{az+b}{cz+d}, z\in\mathbb{H}^2$. 
+\item[Step 2] The dimension of hyperbolic space could start with two dimensions to optimize the memory usage.
+\item[Step 3] Pick an element $g\in\text{PSL}(2,\mathbb{R})$, derive a linear fractional mapping from $g$, and denote it by $T_g(z)=\frac{az+b}{cz+d}, z\in\mathbb{H}^2$.
 \item[Step 4] Apply $T_g$ to every entry $z$ of $\phi(A)$ and $\phi(B)$ to map every entry (could be trillions) of both matrices to their images $T_g(z)$ to derive the new weights of the given model, i.e. to derive an equivalent model.
 
 \item[Step 5] Apply gradient descent back-propagation algorithm on the whole model to reach a new local or global minimum with a new training set.
@@ -538,7 +538,7 @@ where $x_{ij}$ is the $i$-th row and $j$-th column from $AB$, and $a,b,c$ are so
 \section{Examples}
 \subsection{Self-attention mechanism in any transformer-based models with the hyperbolic-length product implemented before training}
 All layers of a given neural network model can be implemented with the above hyperbolic-orbit algorithm. The following is an example when the hyperbolic-orbit algorithm is applied to the self-attention mechanism, i.e. transformer-based models.
-Let $A=Q\in \mathbb{C}^{n\times d_q}$ and $B=K^t\in \mathbb{C}^{d_k\times n}$ in self-attention mechanism\cite{vaswani2017attention} using dynamic scaling factor $\beta$ (defined in our another work in progress), and by convention let $d_q=d_k$. Then, for each entry of the matrix $QK^T$, its denominator is a finite Poincar\'{e} series\cite{chuang2022hausdorff}, and its dynamic scaling factor (work in progress) is corresponding to the entropy of the system, e.g. a system could be words in an input string. 
+Let $A=Q\in \mathbb{C}^{n\times d_q}$ and $B=K^t\in \mathbb{C}^{d_k\times n}$ in self-attention mechanism\cite{vaswani2017attention} using dynamic scaling factor $\beta$ (defined in our another work in progress), and by convention let $d_q=d_k$. Then, for each entry of the matrix $QK^T$, its denominator is a finite Poincar\'{e} series\cite{chuang2022hausdorff}, and its dynamic scaling factor (work in progress) is corresponding to the entropy of the system, e.g. a system could be words in an input string.
 
 
 
@@ -562,8 +562,8 @@ Let $A=Q\in \mathbb{C}^{n\times d_q}$ and $B=K^t\in \mathbb{C}^{d_k\times n}$ in
 Work in progress. The off-line code could be finished after the quals.
 
 \section{Discussion}
-It is crucial to know that when applying back-propagation, the gradients of hyperbolic product, i.e. the derivative of a hyperbolic length is not derived by taking derivative by using general formulas of hyperbolic length. Instead, the hyperbolic curve (a geodesic) is mapped to the $y^2$-axis first, then taking derivative on the transformed function that described this vertical line (which is also a geodesic). In this way, the model can converge with a stable gradient (that is not either a constant function, an identity function, zero function, or diverging to infinity) derived from a composition of fraction linear functions.
-For instance, assume there are two weights (e.g. entries of $T_g(C)$ and $T_g(\phi (AB))$) that are represented as two distinct points in the hyperbolic space $x, y\in\mathbb{H}^2$, and $x, y$ are not on the positive $y^2$-axis. 
+It is crucial to know that when applying back-propagation, the gradients of the hyperbolic product, i.e. the derivative of a hyperbolic length is not derived by taking the derivative by using general formulas of hyperbolic length. Instead, the hyperbolic curve (a geodesic) is mapped to the $y^2$-axis first, then taking a derivative on the transformed function that describes this vertical line (which is also a geodesic). In this way, the model can converge with a stable gradient (that is not either a constant function, an identity function, zero function, or diverging to infinity) derived from a composition of fraction linear functions.
+For instance, assume there are two weights (e.g. entries of $T_g(C)$ and $T_g(\phi (AB))$) that are represented as two distinct points in the hyperbolic space $x, y\in\mathbb{H}^2$, and $x, y$ are not on the positive $y^2$-axis.
 Then the hyperbolic length between $x$ and $y$ is the length of a geodesic that connects $x$ and $y$ measured by hyperbolic metric.
 
 Let $S$ be a fractional linear map that is also constructed by an element in the isometry group $\text{PSL}(2,\mathbb{R})$, i.e. $S$ is not an arbitrary fractional linear mapping that maps $x,y$ to the positive $y^2$-axis, it must satisfy the condition that its determinant of four coefficients is equal to one. Then
@@ -584,7 +584,7 @@ In Case 1, since each step from step 1 to step 3 is invertible, after these oper
 
 Furthermore, the isometry group of $\mathbb{H}^n$ is a group of M\"{o}bius mapping, hence its group elements preserve not only hyperbolic length but angles, thus the information of the sign of each $a_{ki}b_{il}$ could be preserved.
 
-With the hyperbolic-orbit algorithm, it is possible to find an appropriate M\"{o}bius mapping that is corresponding to $M\in\text{PSL}(2,\mathbb{R})$ such that training a 3-node neural network become not necessarily NP-hard in \cite{blum1988training}. Further, if every layer of a given converged neural network is implemented with the hyperbolic-orbit algorithm introduced in this paper, by combining with perturbations and parallel computing, the steepest descent path toward the global minimum could be designed. 
+With the hyperbolic-orbit algorithm, it is possible to find an appropriate M\"{o}bius mapping that is corresponding to $M\in\text{PSL}(2,\mathbb{R})$ such that training a 3-node neural network become not necessarily NP-hard in \cite{blum1988training}. Further, if every layer of a given converged neural network is implemented with the hyperbolic-orbit algorithm introduced in this paper, by combining with perturbations and parallel computing, the steepest descent path toward the global minimum could be designed.
 
 The algorithm introduced by the paper can help to save training time for parallel computing in the ensemble method, that is, instead of starting over from the beginning to train $N'$ models in parallel, $N'\in\mathbb{N}$, the training can start with $N'$ converged models that are equivalent to the given converged model are converged to different minima in the moduli space using a new training set.
 
@@ -608,7 +608,7 @@ The range of $T_g\in\text{PSL}(2,\mathbb{R})$ determines the range of orbits of 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{13.png}
-\caption{Different configurations can provide different oriented Riemannian manifold.}
+\caption{Different configurations can provide different oriented Riemannian manifolds.}
 \end{figure}
 
 \begin{figure}[H]
@@ -620,18 +620,18 @@ The range of $T_g\in\text{PSL}(2,\mathbb{R})$ determines the range of orbits of 
 Since each $T_g$ is a continuous open mapping, there exists an open set $O$ to cover all images of the weight tensor of a given model $f$. By studying the topology and geometry of the moduli space that this open set $O$ can move over, the topology and geometry of the loss surface could be investigated. In other words, this paper also demonstrates a correspondence between the moduli space of $T_g$\cite{seppala2011geometry, sullivan1979hyperbolic}, and the loss surface (landscape)\cite{li2018visualizing,garipov2018loss, malan2021survey, draxler2018essentially, freeman2016topology, du2019gradient} of any given model.
 
 There is an intuitive understanding from the physics of classical gravity:
-Since each fractional linear mapping $T_g$ can be parameterized\cite{seppala2011geometry, ford2004automorphic}, the gradients from back-propagation can also be set to modified the parameters of $T_g$. If it is without letting gradients to go through the parameter set of $T_g$, then the group action of neural networks could be considered a pure transformation on the (spacetime) Riemannian manifold without affecting the platform, i.e. the (spacetime) Riemannian manifold. However, if the gradients are allowed to go through the parameter set of $T_g$, then the the (spacetime) Riemannian manifold is affected (interacted), then in addition to use moduli space of Riemannian manifold, the back-propagation procedure could also have a control over the geometry and topology of the Riemannian manifold.
+Since each fractional linear mapping $T_g$ can be parameterized\cite{seppala2011geometry, ford2004automorphic}, the gradients from back-propagation can also be set to modify the parameters of $T_g$. If it is without letting gradients to go through the parameter set of $T_g$, then the group action of neural networks could be considered a pure transformation on the (spacetime) Riemannian manifold without affecting the platform, i.e. the (spacetime) Riemannian manifold. However, if the gradients are allowed to go through the parameter set of $T_g$, then the the (spacetime) Riemannian manifold is affected (interacted), then in addition to use moduli space of Riemannian manifold, the back-propagation procedure could also have a control over the geometry and topology of the Riemannian manifold.
 In brief, if the fractional linear mapping $T_g$ is allowed to interact with the platform of particles (embedded weights are the locations that label where particles are created or excited in spacetime and the platform is the Riemannian manifold), then it is a general relativity perspective\cite{misner1973gravitation}; if not, then it is a perspective from special relativity\cite{misner1973gravitation}.
 
 There is also a further intuitive understanding from the physics of quantum physics for the Riemannian manifold (algebraic curve): it is possible to quantize the platform of particles and derive its eigenvalues, Laplacian, and L-function\cite{borthwick2007spectral}.
 
 Furthermore, this algorithm could also be applied for non-linear encryption. For instance, the cardinality of the orbit of $A$ and $B$ is infinite, thus there are infinitely many ways to encrypt messages in A or $B$. Let message be embedded in $(T_1(A)\odot_{\mathbb{H}^n}T_1(B))^N$ by using $T_1$. Then the message can only be deciphered if the receiver knows the two correct isometries $T_3$ and $T_2$ and a large integer $N$ as keys to decode two encrypted matrices: $T_2(B)$ and $T_3(A)$ to reconstruct the message in $(T_1(A)\odot_{\mathbb{H}^n}T_1(B))^N$ using $(T_1(A)\odot_{\mathbb{H}^n}T_1(B))^N = (A\odot_{\mathbb{H}^n}B)^N$. The meaning of the matrix $B$ is not only a lock, but it can obfuscate the frequency of characters used in the message in a random method. Since $T_2$ and $T_3$ are linear fractional, i.e. they have the form $\frac{az+b}{cz+d}$, thus the keys only need eight real numbers plus a large integer.
 
-Compared to starting over to train a new model, the advantage of this hyperbolic-orbit algorithm is that it can preserve most of the learned features in the model while reaching a new local or global minimum. Since the loss surface is changed by the hyperbolic-orbit algorithm (since the weights of the model were mapped to new images in the hyperbolic space by a fractional linear mapping), the old local or global minimum might be mapped to a hill or halfway up a mountain. 
+Compared to starting over to train a new model, the advantage of this hyperbolic-orbit algorithm is that it can preserve most of the learned features in the model while reaching a new local or global minimum. Since the loss surface is changed by the hyperbolic-orbit algorithm (since the weights of the model were mapped to new images in the hyperbolic space by a fractional linear mapping), the old local or global minimum might be mapped to a hill or halfway up a mountain.
 
 Without using the hyperbolic-orbit algorithm, to train a converged model, it might take a long time with a large data set to move the model out of a local or global minimum and then move it to another minimum that can take care of not only the old training set but also the new training set. Further, a usual technique is to slice the model\cite{zhang2022toward} which could be costly when the model is large (e.g. with trillions of parameters).
 
-Using the hyperbolic-orbit algorithm, it is very likely that after using a small set of new data, the model can converge to a new minimum without losing features that it already learned, i.e. the model could give the same output if the input is from the old training set. Furthermore, \textbf{it is possible that the model was mapped to a deleted neighborhood of a new local minimum or the global minimum}. It it is mapped to any place that is not a local minimum, then when a new training is applied, the model would start to converge to a local minimum that has the steepest gradient near the starting point which means the weights of the new model would be modified immediately.
+Using the hyperbolic-orbit algorithm, it is very likely that after using a small set of new data, the model can converge to a new minimum without losing features that it already learned, i.e. the model could give the same output if the input is from the old training set. Furthermore, \textbf{it is possible that the model was mapped to a deleted neighborhood of a new local minimum or the global minimum}. If it is mapped to any place that is not a local minimum, then when a new training is applied, the model would start to converge to a local minimum that has the steepest gradient near the starting point which means the weights of the new model would be modified immediately.
 
 
 %\section{Limitation}
@@ -659,6 +659,8 @@ Using the hyperbolic-orbit algorithm, it is very likely that after using a small
 \bibliographystyle{amsplain} % We choose the "plain" reference style
 \bibliography{refs} % Entries are in the refs.bib file
 \end{document}
+
+
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  25 OCT 2023 07:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  25 OCT 2023 12:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1299,11 +1299,11 @@ as not changed.
 Here is how much of TeX's memory you used:
  32806 strings out of 478542
  663711 string characters out of 5850401
- 1108333 words of memory out of 5000000
+ 1108334 words of memory out of 5000000
  50024 multiletter control sequences out of 15000+600000
  469251 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,7n,122p,1780b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 116i,7n,122p,1782b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local
 /texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2
 021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-
@@ -1325,7 +1325,7 @@ blic/lm/lmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lms
 y7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symb
 ols/msbm7.pfb>
-Output written on "An Alternative to Quantum Tunneling.pdf" (25 pages, 1483970 
+Output written on "An Alternative to Quantum Tunneling.pdf" (25 pages, 1483938 
 bytes).
 PDF statistics:
  468 PDF objects out of 1000 (max. 8388607)
