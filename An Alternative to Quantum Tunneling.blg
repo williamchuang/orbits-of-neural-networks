@@ -7,6 +7,8 @@ Repeated entry---line 60 of file refs.bib
  : @inproceedings{gromov1981hyperbolic
  :                                    ,
 I'm skipping whatever remains of this entry
+Warning--entry type for "chuang2022hausdorff" isn't style-file defined
+--line 173 of file refs.bib
 Repeated entry---line 483 of file refs.bib
  : @mastersthesis{chuang2022hausdorff
  :                                   ,
@@ -25,33 +27,33 @@ Warning--missing pages in yun2017global
 You've used 32 entries,
             2213 wiz_defined-function locations,
             690 strings with 9284 characters,
-and the built_in function-call counts, 10309 in all, are:
-= -- 903
+and the built_in function-call counts, 10311 in all, are:
+= -- 901
 > -- 465
 < -- 5
 + -- 191
 - -- 154
-* -- 829
-:= -- 1627
+* -- 827
+:= -- 1621
 add.period$ -- 32
 call.type$ -- 32
 change.case$ -- 174
 chr.to.int$ -- 0
 cite$ -- 43
-duplicate$ -- 458
-empty$ -- 881
+duplicate$ -- 457
+empty$ -- 886
 format.name$ -- 154
-if$ -- 2169
+if$ -- 2173
 int.to.chr$ -- 0
 int.to.str$ -- 32
 missing$ -- 69
 newline$ -- 106
 num.names$ -- 62
-pop$ -- 226
+pop$ -- 231
 preamble$ -- 1
 purify$ -- 142
 quote$ -- 0
-skip$ -- 316
+skip$ -- 317
 stack$ -- 0
 substring$ -- 564
 swap$ -- 121
@@ -62,5 +64,5 @@ type$ -- 116
 warning$ -- 11
 while$ -- 97
 width$ -- 34
-write$ -- 290
+write$ -- 288
 (There were 2 error messages)
