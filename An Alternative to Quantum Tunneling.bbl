@@ -24,7 +24,7 @@ Alan~F. Beardon, \emph{The geometry of discrete groups}, Graduate Texts in
   the 1983 original. \MR{1393195}
 
 \bibitem{benedetti20072+}
-Riccardo Benedetti and Francesco Bonsante, \emph{(2+1)-einstein spacetimes of
+Riccardo Benedetti and Francesco Bonsante, \emph{(2+1)-{E}instein spacetimes of
   finite type}, arXiv preprint arXiv:0704.2152 (2007).
 
 \bibitem{bers1981finite}
@@ -104,6 +104,9 @@ Ian~J Goodfellow, Oriol Vinyals, and Andrew~M Saxe, \emph{Qualitatively
 Mikhael Gromov, \emph{Hyperbolic manifolds, groups and actions}, Riemann
   surfaces and related topics: Proceedings of the 1978 Stony Brook Conference
   (State Univ. New York, Stony Brook, NY, 1978), vol.~97, 1981, pp.~183--213.
+
+\bibitem{hori2003mirror}
+Kentaro Hori, \emph{Mirror symmetry}, vol.~1, American Mathematical Soc., 2003.
 
 \bibitem{im2016empirical}
 Daniel~Jiwoong Im, Michael Tao, and Kristin Branson, \emph{An empirical
