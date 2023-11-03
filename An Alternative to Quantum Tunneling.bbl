@@ -106,11 +106,17 @@ Mikhael Gromov, \emph{Hyperbolic manifolds, groups and actions}, Riemann
   (State Univ. New York, Stony Brook, NY, 1978), vol.~97, 1981, pp.~183--213.
 
 \bibitem{hori2003mirror}
-Kentaro Hori, \emph{Mirror symmetry}, vol.~1, American Mathematical Soc., 2003.
+Kentaro Hori, Sheldon Katz, Albrecht Klemm, Rahul Pandharipande, Richard
+  Thomas, Cumrun Vafa, Ravi Vakil, and Eric Zaslow, \emph{Mirror symmetry},
+  vol.~1, American Mathematical Soc., 2003.
 
 \bibitem{im2016empirical}
 Daniel~Jiwoong Im, Michael Tao, and Kristin Branson, \emph{An empirical
   analysis of deep network loss surfaces},  (2016).
+
+\bibitem{jacquet2006automorphic}
+Herv{\'e} Jacquet and Robert~P Langlands, \emph{Automorphic forms on gl (2):
+  Part 1}, vol. 114, Springer, 2006.
 
 \bibitem{judd1990neural}
 J~Stephen Judd, \emph{Neural network design and the complexity of learning},
@@ -183,6 +189,12 @@ Quynh Nguyen and Matthias Hein, \emph{The loss surface of deep and wide neural
 Quynh Nguyen, Mahesh~Chandra Mukkamala, and Matthias Hein, \emph{On the loss
   landscape of a class of deep neural networks with no bad local valleys},
   arXiv preprint arXiv:1809.10749 (2018).
+
+\bibitem{nlab:selberg_zeta_function}
+{nLab authors}, \emph{{{S}}elberg zeta function},
+  \url{https://ncatlab.org/nlab/show/Selberg+zeta+function}, November 2023,
+  \href{https://ncatlab.org/nlab/revision/Selberg+zeta+function/14}{Revision
+  14}.
 
 \bibitem{pennington2017geometry}
 Jeffrey Pennington and Yasaman Bahri, \emph{Geometry of neural network loss
