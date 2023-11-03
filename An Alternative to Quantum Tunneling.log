@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  2 NOV 2023 22:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.8.18)  2 NOV 2023 22:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1337,11 +1337,11 @@ y7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></u
 sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.
 pfb>
-Output written on "An Alternative to Quantum Tunneling.pdf" (25 pages, 1508575 
+Output written on "An Alternative to Quantum Tunneling.pdf" (25 pages, 1508809 
 bytes).
 PDF statistics:
- 483 PDF objects out of 1000 (max. 8388607)
- 369 compressed objects within 4 object streams
+ 484 PDF objects out of 1000 (max. 8388607)
+ 370 compressed objects within 4 object streams
  106 named destinations out of 1000 (max. 500000)
  248 words of extra memory for PDF output out of 10000 (max. 10000000)
 
