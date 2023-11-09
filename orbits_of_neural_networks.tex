@@ -224,6 +224,7 @@ graphicx,enumerate,setspace,verbatim,tocloft,rotating}
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
 \newtheorem*{ulemma}{Lemma}
+\newtheorem{conjecture}{Conjecture}
 \newtheorem{definition}[theorem]{Definition}
 
 \theoremstyle{definition}  % Heading is bold, text is roman
@@ -562,6 +563,8 @@ Let $A=Q\in \mathbb{C}^{n\times d_q}$ and $B=K^t\in \mathbb{C}^{d_k\times n}$ in
 Work in progress. The off-line code could be finished after the quals.
 
 \section{Discussion}
+
+
 It is crucial to know that when applying back-propagation, the gradients of the hyperbolic product, i.e. the derivative of a hyperbolic length is not derived by taking the derivative by using general formulas of hyperbolic length. Instead, the hyperbolic curve (a geodesic) is mapped to the $y^2$-axis first, then taking a derivative on the transformed function that describes this vertical line (which is also a geodesic). In this way, the model can converge with a stable gradient (that is not either a constant function, an identity function, zero function, or diverging to infinity) derived from a composition of fraction linear functions.
 For instance, assume there are two weights (e.g. entries of $T_g(C)$ and $T_g(\phi (AB))$) that are represented as two distinct points in the hyperbolic space $x, y\in\mathbb{H}^2$, and $x, y$ are not on the positive $y^2$-axis.
 Then the hyperbolic length between $x$ and $y$ is the length of a geodesic that connects $x$ and $y$ measured by hyperbolic metric.
@@ -624,6 +627,9 @@ Since each fractional linear mapping $T_g$ can be parameterized\cite{seppala2011
 In brief, if the fractional linear mapping $T_g$ is allowed to interact with the platform of particles (embedded weights are the locations that label where particles are created or excited in spacetime and the platform is the Riemannian manifold), then it is a general relativity perspective\cite{misner1973gravitation}; if not, then it is a perspective from special relativity\cite{misner1973gravitation}.
 
 There is also a further intuitive understanding from the physics of quantum physics for the Riemannian manifold (algebraic curve\cite{hori2003mirror}): it is possible to quantize the platform of particles and derive its eigenvalues, Laplacian, Selberg Zeta function, and Selberg trace formula\cite{borthwick2007spectral, nlab:selberg_zeta_function, jacquet2006automorphic}. A sketch of proof of Selberg trace formula and one of its nice applications can be found in Jacquet and Langlands' \textit{Automorphic Forms on GL(2)}\cite{jacquet2006automorphic}.
+Since the location of a neural network that has hyperbolic-product implemented in it in its landscape (loss surface) can be determined by the locations of its weights in Riemannian sphere ($\mathbb{C}\cup \left\lbrace \infty \right\rbrace$), it is possible to show that the solutions of a neural network function can be determine or described by using duality within Langlands philosophy. For instance, using geometry and topology to describe solutions, then solutions can be expected to exist at certain locations of some Riemannian surface, then solutions can be obtained by deriving those Riemannian surfaces. That is, 
+\begin{conjecture} instead of computing solutions every time (and hence the methods are restricted to algorithms of Monte Carlo type), it might be possible to derive them from another perspective, e.g. if for a given neural net function, its solutions have a generating function. 
+\end{conjecture}
 
 Please mind that the above two intuitive understandings do not imply whether the Riemannian manifold (i.e. the hyperbolic surface, algebraic curve) has any connection to the spacetime of our universe or not. The geometry of the spacetime is similar to the latent space of a usual neural network. Furthermore, it is similar to the development of the theory of differential equations: the original use of differential equations is for describing the motion of a moving particle in kinetics. However, this does not mean that differential equations can only be used to describe motions of moving particles. Likewise, the math of gravity could not only be used to describe gravity, but also possibly many other phenomena that share the same mathematical structure or could be described using the same framework.  
 
@@ -661,6 +667,7 @@ Using the hyperbolic-orbit algorithm, it is very likely that after using a small
 \bibliographystyle{amsplain} % We choose the "plain" reference style
 \bibliography{refs} % Entries are in the refs.bib file
 \end{document}
+
 
 
 
